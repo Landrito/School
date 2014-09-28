@@ -1,0 +1,30 @@
+Chapter 3 Test Questions:
+=========================
+
+True/False:
+A vector does not have a fixed location in space.
+True
+Page 116
+
+Multiple Choice:
+The result of adding a Vector, v, with a point, Q, yields an object of type:
+A. Vector
+B. Point
+C. Scalar
+D. None of the Above
+
+B. Point
+Page 120
+
+Fill in the Blank:
+In vector space, a set of vectors is _________________________, if we cannont represent one of the vectors in terms of the others using scalar-vector addition.
+
+Linearly Independant
+Page 123
+
+Short Answer:
+What is an advantage of using a homogeneous-coordinate system?
+
+1. All affine transformations can be represented as matrix multiplications in homogeneous coordinates.
+2. Less arithmetic work is involved when using homogeneous-coordinate systems.
+3. The Uniformity of the affine transformations makes carrying out successive transformations far easier than in three dimensional space.
