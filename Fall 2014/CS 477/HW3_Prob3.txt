@@ -1,0 +1,7 @@
+Consider an array that is to be become the merged array of the following two arrays A and B:
+A[] = [1, 2, 3, 4, 5]
+B[] = [500, 400, 300, 200, 100]
+
+When running the merge function, it is apparent that the every value in array A will be inserted to the resulting before any value in array B. After the first set of insertions in merge, a resulting insertion will happen by inserting the values of the leftover non-empty array in order. If the array B is inserted in order, the resulting array will not be sorted.
+
+R[] = [1, 2, 3, 4, 5, 500, 400, 300, 200, 100]
