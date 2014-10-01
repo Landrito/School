@@ -1,0 +1,112 @@
+\indexentry{Greater$<$ Key\discretionary {-}{}{}Type $>$@{Greater$<$ Key\discretionary {-}{}{}Type $>$}|hyperpage}{7}
+\indexentry{Greater@{Greater}!operator()@{operator()}|hyperpage}{7}
+\indexentry{operator()@{operator()}!Greater@{Greater}|hyperpage}{7}
+\indexentry{Heap$<$ Data\discretionary {-}{}{}Type, Key\discretionary {-}{}{}Type, Comparator $>$@{Heap$<$ Data\discretionary {-}{}{}Type, Key\discretionary {-}{}{}Type, Comparator $>$}|hyperpage}{7}
+\indexentry{Heap@{Heap}!Heap@{Heap}|hyperpage}{8}
+\indexentry{Heap@{Heap}!Heap@{Heap}|hyperpage}{8}
+\indexentry{Heap@{Heap}!Heap@{Heap}|hyperpage}{8}
+\indexentry{Heap@{Heap}!Heap@{Heap}|hyperpage}{8}
+\indexentry{Heap@{Heap}!$\sim $\discretionary {-}{}{}Heap@{$\sim $\discretionary {-}{}{}Heap}|hyperpage}{8}
+\indexentry{$\sim $\discretionary {-}{}{}Heap@{$\sim $\discretionary {-}{}{}Heap}!Heap@{Heap}|hyperpage}{8}
+\indexentry{Heap@{Heap}!clear@{clear}|hyperpage}{9}
+\indexentry{clear@{clear}!Heap@{Heap}|hyperpage}{9}
+\indexentry{Heap@{Heap}!insert@{insert}|hyperpage}{9}
+\indexentry{insert@{insert}!Heap@{Heap}|hyperpage}{9}
+\indexentry{Heap@{Heap}!is\discretionary {-}{}{}Empty@{is\discretionary {-}{}{}Empty}|hyperpage}{9}
+\indexentry{is\discretionary {-}{}{}Empty@{is\discretionary {-}{}{}Empty}!Heap@{Heap}|hyperpage}{9}
+\indexentry{Heap@{Heap}!is\discretionary {-}{}{}Full@{is\discretionary {-}{}{}Full}|hyperpage}{9}
+\indexentry{is\discretionary {-}{}{}Full@{is\discretionary {-}{}{}Full}!Heap@{Heap}|hyperpage}{9}
+\indexentry{Heap@{Heap}!operator=@{operator=}|hyperpage}{10}
+\indexentry{operator=@{operator=}!Heap@{Heap}|hyperpage}{10}
+\indexentry{Heap@{Heap}!remove@{remove}|hyperpage}{10}
+\indexentry{remove@{remove}!Heap@{Heap}|hyperpage}{10}
+\indexentry{Heap@{Heap}!show\discretionary {-}{}{}Structure@{show\discretionary {-}{}{}Structure}|hyperpage}{11}
+\indexentry{show\discretionary {-}{}{}Structure@{show\discretionary {-}{}{}Structure}!Heap@{Heap}|hyperpage}{11}
+\indexentry{Heap@{Heap}!write\discretionary {-}{}{}Levels@{write\discretionary {-}{}{}Levels}|hyperpage}{11}
+\indexentry{write\discretionary {-}{}{}Levels@{write\discretionary {-}{}{}Levels}!Heap@{Heap}|hyperpage}{11}
+\indexentry{Heap@{Heap}!D\discretionary {-}{}{}E\discretionary {-}{}{}F\discretionary {-}{}{}A\discretionary {-}{}{}U\discretionary {-}{}{}L\discretionary {-}{}{}T\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}M\discretionary {-}{}{}A\discretionary {-}{}{}X\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}H\discretionary {-}{}{}E\discretionary {-}{}{}A\discretionary {-}{}{}P\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}S\discretionary {-}{}{}I\discretionary {-}{}{}Z\discretionary {-}{}{}E@{D\discretionary {-}{}{}E\discretionary {-}{}{}F\discretionary {-}{}{}A\discretionary {-}{}{}U\discretionary {-}{}{}L\discretionary {-}{}{}T\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}M\discretionary {-}{}{}A\discretionary {-}{}{}X\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}H\discretionary {-}{}{}E\discretionary {-}{}{}A\discretionary {-}{}{}P\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}S\discretionary {-}{}{}I\discretionary {-}{}{}Z\discretionary {-}{}{}E}|hyperpage}{11}
+\indexentry{D\discretionary {-}{}{}E\discretionary {-}{}{}F\discretionary {-}{}{}A\discretionary {-}{}{}U\discretionary {-}{}{}L\discretionary {-}{}{}T\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}M\discretionary {-}{}{}A\discretionary {-}{}{}X\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}H\discretionary {-}{}{}E\discretionary {-}{}{}A\discretionary {-}{}{}P\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}S\discretionary {-}{}{}I\discretionary {-}{}{}Z\discretionary {-}{}{}E@{D\discretionary {-}{}{}E\discretionary {-}{}{}F\discretionary {-}{}{}A\discretionary {-}{}{}U\discretionary {-}{}{}L\discretionary {-}{}{}T\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}M\discretionary {-}{}{}A\discretionary {-}{}{}X\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}H\discretionary {-}{}{}E\discretionary {-}{}{}A\discretionary {-}{}{}P\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}S\discretionary {-}{}{}I\discretionary {-}{}{}Z\discretionary {-}{}{}E}!Heap@{Heap}|hyperpage}{11}
+\indexentry{Less$<$ Key\discretionary {-}{}{}Type $>$@{Less$<$ Key\discretionary {-}{}{}Type $>$}|hyperpage}{11}
+\indexentry{Less@{Less}!operator()@{operator()}|hyperpage}{12}
+\indexentry{operator()@{operator()}!Less@{Less}|hyperpage}{12}
+\indexentry{Priority\discretionary {-}{}{}Queue$<$ Data\discretionary {-}{}{}Type, Key\discretionary {-}{}{}Type, Comparator $>$@{Priority\discretionary {-}{}{}Queue$<$ Data\discretionary {-}{}{}Type, Key\discretionary {-}{}{}Type, Comparator $>$}|hyperpage}{12}
+\indexentry{Priority\discretionary {-}{}{}Queue@{Priority\discretionary {-}{}{}Queue}!Priority\discretionary {-}{}{}Queue@{Priority\discretionary {-}{}{}Queue}|hyperpage}{12}
+\indexentry{Priority\discretionary {-}{}{}Queue@{Priority\discretionary {-}{}{}Queue}!PriorityQueue@{Priority\discretionary {-}{}{}Queue}|hyperpage}{12}
+\indexentry{Priority\discretionary {-}{}{}Queue@{Priority\discretionary {-}{}{}Queue}!Priority\discretionary {-}{}{}Queue@{Priority\discretionary {-}{}{}Queue}|hyperpage}{12}
+\indexentry{Priority\discretionary {-}{}{}Queue@{Priority\discretionary {-}{}{}Queue}!PriorityQueue@{Priority\discretionary {-}{}{}Queue}|hyperpage}{12}
+\indexentry{Priority\discretionary {-}{}{}Queue@{Priority\discretionary {-}{}{}Queue}!$\sim $\discretionary {-}{}{}Priority\discretionary {-}{}{}Queue@{$\sim $\discretionary {-}{}{}Priority\discretionary {-}{}{}Queue}|hyperpage}{12}
+\indexentry{$\sim $\discretionary {-}{}{}Priority\discretionary {-}{}{}Queue@{$\sim $\discretionary {-}{}{}Priority\discretionary {-}{}{}Queue}!PriorityQueue@{Priority\discretionary {-}{}{}Queue}|hyperpage}{12}
+\indexentry{Priority\discretionary {-}{}{}Queue@{Priority\discretionary {-}{}{}Queue}!clear@{clear}|hyperpage}{13}
+\indexentry{clear@{clear}!PriorityQueue@{Priority\discretionary {-}{}{}Queue}|hyperpage}{13}
+\indexentry{Priority\discretionary {-}{}{}Queue@{Priority\discretionary {-}{}{}Queue}!dequeue@{dequeue}|hyperpage}{13}
+\indexentry{dequeue@{dequeue}!PriorityQueue@{Priority\discretionary {-}{}{}Queue}|hyperpage}{13}
+\indexentry{Priority\discretionary {-}{}{}Queue@{Priority\discretionary {-}{}{}Queue}!enqueue@{enqueue}|hyperpage}{13}
+\indexentry{enqueue@{enqueue}!PriorityQueue@{Priority\discretionary {-}{}{}Queue}|hyperpage}{13}
+\indexentry{Priority\discretionary {-}{}{}Queue@{Priority\discretionary {-}{}{}Queue}!is\discretionary {-}{}{}Empty@{is\discretionary {-}{}{}Empty}|hyperpage}{13}
+\indexentry{is\discretionary {-}{}{}Empty@{is\discretionary {-}{}{}Empty}!PriorityQueue@{Priority\discretionary {-}{}{}Queue}|hyperpage}{13}
+\indexentry{Priority\discretionary {-}{}{}Queue@{Priority\discretionary {-}{}{}Queue}!is\discretionary {-}{}{}Full@{is\discretionary {-}{}{}Full}|hyperpage}{14}
+\indexentry{is\discretionary {-}{}{}Full@{is\discretionary {-}{}{}Full}!PriorityQueue@{Priority\discretionary {-}{}{}Queue}|hyperpage}{14}
+\indexentry{Priority\discretionary {-}{}{}Queue@{Priority\discretionary {-}{}{}Queue}!operator=@{operator=}|hyperpage}{14}
+\indexentry{operator=@{operator=}!PriorityQueue@{Priority\discretionary {-}{}{}Queue}|hyperpage}{14}
+\indexentry{Task\discretionary {-}{}{}Data@{Task\discretionary {-}{}{}Data}|hyperpage}{15}
+\indexentry{Task\discretionary {-}{}{}Data@{Task\discretionary {-}{}{}Data}!get\discretionary {-}{}{}Priority@{get\discretionary {-}{}{}Priority}|hyperpage}{15}
+\indexentry{get\discretionary {-}{}{}Priority@{get\discretionary {-}{}{}Priority}!TaskData@{Task\discretionary {-}{}{}Data}|hyperpage}{15}
+\indexentry{Task\discretionary {-}{}{}Data@{Task\discretionary {-}{}{}Data}!get\discretionary {-}{}{}Priority@{get\discretionary {-}{}{}Priority}|hyperpage}{15}
+\indexentry{get\discretionary {-}{}{}Priority@{get\discretionary {-}{}{}Priority}!TaskData@{Task\discretionary {-}{}{}Data}|hyperpage}{15}
+\indexentry{Task\discretionary {-}{}{}Data@{Task\discretionary {-}{}{}Data}!arrived@{arrived}|hyperpage}{15}
+\indexentry{arrived@{arrived}!TaskData@{Task\discretionary {-}{}{}Data}|hyperpage}{15}
+\indexentry{Task\discretionary {-}{}{}Data@{Task\discretionary {-}{}{}Data}!priority@{priority}|hyperpage}{15}
+\indexentry{priority@{priority}!TaskData@{Task\discretionary {-}{}{}Data}|hyperpage}{15}
+\indexentry{Test\discretionary {-}{}{}Data@{Test\discretionary {-}{}{}Data}|hyperpage}{15}
+\indexentry{Test\discretionary {-}{}{}Data@{Test\discretionary {-}{}{}Data}!get\discretionary {-}{}{}Priority@{get\discretionary {-}{}{}Priority}|hyperpage}{16}
+\indexentry{get\discretionary {-}{}{}Priority@{get\discretionary {-}{}{}Priority}!TestData@{Test\discretionary {-}{}{}Data}|hyperpage}{16}
+\indexentry{Test\discretionary {-}{}{}Data@{Test\discretionary {-}{}{}Data}!get\discretionary {-}{}{}Priority@{get\discretionary {-}{}{}Priority}|hyperpage}{16}
+\indexentry{get\discretionary {-}{}{}Priority@{get\discretionary {-}{}{}Priority}!TestData@{Test\discretionary {-}{}{}Data}|hyperpage}{16}
+\indexentry{Test\discretionary {-}{}{}Data@{Test\discretionary {-}{}{}Data}!set\discretionary {-}{}{}Priority@{set\discretionary {-}{}{}Priority}|hyperpage}{16}
+\indexentry{set\discretionary {-}{}{}Priority@{set\discretionary {-}{}{}Priority}!TestData@{Test\discretionary {-}{}{}Data}|hyperpage}{16}
+\indexentry{Test\discretionary {-}{}{}Data@{Test\discretionary {-}{}{}Data}!set\discretionary {-}{}{}Priority@{set\discretionary {-}{}{}Priority}|hyperpage}{16}
+\indexentry{set\discretionary {-}{}{}Priority@{set\discretionary {-}{}{}Priority}!TestData@{Test\discretionary {-}{}{}Data}|hyperpage}{16}
+\indexentry{Test\discretionary {-}{}{}Data\discretionary {-}{}{}Item$<$ Key\discretionary {-}{}{}Type $>$@{Test\discretionary {-}{}{}Data\discretionary {-}{}{}Item$<$ Key\discretionary {-}{}{}Type $>$}|hyperpage}{16}
+\indexentry{Test\discretionary {-}{}{}Data\discretionary {-}{}{}Item@{Test\discretionary {-}{}{}Data\discretionary {-}{}{}Item}!Test\discretionary {-}{}{}Data\discretionary {-}{}{}Item@{Test\discretionary {-}{}{}Data\discretionary {-}{}{}Item}|hyperpage}{16}
+\indexentry{Test\discretionary {-}{}{}Data\discretionary {-}{}{}Item@{Test\discretionary {-}{}{}Data\discretionary {-}{}{}Item}!TestDataItem@{Test\discretionary {-}{}{}Data\discretionary {-}{}{}Item}|hyperpage}{16}
+\indexentry{Test\discretionary {-}{}{}Data\discretionary {-}{}{}Item@{Test\discretionary {-}{}{}Data\discretionary {-}{}{}Item}!get\discretionary {-}{}{}Priority@{get\discretionary {-}{}{}Priority}|hyperpage}{16}
+\indexentry{get\discretionary {-}{}{}Priority@{get\discretionary {-}{}{}Priority}!TestDataItem@{Test\discretionary {-}{}{}Data\discretionary {-}{}{}Item}|hyperpage}{16}
+\indexentry{Test\discretionary {-}{}{}Data\discretionary {-}{}{}Item@{Test\discretionary {-}{}{}Data\discretionary {-}{}{}Item}!set\discretionary {-}{}{}Priority@{set\discretionary {-}{}{}Priority}|hyperpage}{16}
+\indexentry{set\discretionary {-}{}{}Priority@{set\discretionary {-}{}{}Priority}!TestDataItem@{Test\discretionary {-}{}{}Data\discretionary {-}{}{}Item}|hyperpage}{16}
+\indexentry{config.\discretionary {-}{}{}h@{config.\discretionary {-}{}{}h}|hyperpage}{17}
+\indexentry{config.\discretionary {-}{}{}h@{config.\discretionary {-}{}{}h}!L\discretionary {-}{}{}A\discretionary {-}{}{}B11\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T1@{L\discretionary {-}{}{}A\discretionary {-}{}{}B11\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T1}|hyperpage}{17}
+\indexentry{L\discretionary {-}{}{}A\discretionary {-}{}{}B11\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T1@{L\discretionary {-}{}{}A\discretionary {-}{}{}B11\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T1}!config.h@{config.\discretionary {-}{}{}h}|hyperpage}{17}
+\indexentry{Heap.\discretionary {-}{}{}cpp@{Heap.\discretionary {-}{}{}cpp}|hyperpage}{17}
+\indexentry{Heap.\discretionary {-}{}{}h@{Heap.\discretionary {-}{}{}h}|hyperpage}{17}
+\indexentry{Heap2.\discretionary {-}{}{}cpp@{Heap2.\discretionary {-}{}{}cpp}|hyperpage}{17}
+\indexentry{heapsort.\discretionary {-}{}{}cs@{heapsort.\discretionary {-}{}{}cs}|hyperpage}{18}
+\indexentry{heapsort.\discretionary {-}{}{}cs@{heapsort.\discretionary {-}{}{}cs}!heap\discretionary {-}{}{}Sort@{heap\discretionary {-}{}{}Sort}|hyperpage}{18}
+\indexentry{heap\discretionary {-}{}{}Sort@{heap\discretionary {-}{}{}Sort}!heapsort.cs@{heapsort.\discretionary {-}{}{}cs}|hyperpage}{18}
+\indexentry{heapsort.\discretionary {-}{}{}cs@{heapsort.\discretionary {-}{}{}cs}!move\discretionary {-}{}{}Down@{move\discretionary {-}{}{}Down}|hyperpage}{18}
+\indexentry{move\discretionary {-}{}{}Down@{move\discretionary {-}{}{}Down}!heapsort.cs@{heapsort.\discretionary {-}{}{}cs}|hyperpage}{18}
+\indexentry{ossim.\discretionary {-}{}{}cpp@{ossim.\discretionary {-}{}{}cpp}|hyperpage}{18}
+\indexentry{ossim.\discretionary {-}{}{}cpp@{ossim.\discretionary {-}{}{}cpp}!main@{main}|hyperpage}{18}
+\indexentry{main@{main}!ossim.cpp@{ossim.\discretionary {-}{}{}cpp}|hyperpage}{18}
+\indexentry{ossim.\discretionary {-}{}{}cs@{ossim.\discretionary {-}{}{}cs}|hyperpage}{18}
+\indexentry{ossim.\discretionary {-}{}{}cs@{ossim.\discretionary {-}{}{}cs}!main@{main}|hyperpage}{19}
+\indexentry{main@{main}!ossim.cs@{ossim.\discretionary {-}{}{}cs}|hyperpage}{19}
+\indexentry{Priority\discretionary {-}{}{}Queue.\discretionary {-}{}{}cpp@{Priority\discretionary {-}{}{}Queue.\discretionary {-}{}{}cpp}|hyperpage}{19}
+\indexentry{Priority\discretionary {-}{}{}Queue.\discretionary {-}{}{}h@{Priority\discretionary {-}{}{}Queue.\discretionary {-}{}{}h}|hyperpage}{19}
+\indexentry{Priority\discretionary {-}{}{}Queue.\discretionary {-}{}{}h@{Priority\discretionary {-}{}{}Queue.\discretionary {-}{}{}h}!def\discretionary {-}{}{}Max\discretionary {-}{}{}Queue\discretionary {-}{}{}Size@{def\discretionary {-}{}{}Max\discretionary {-}{}{}Queue\discretionary {-}{}{}Size}|hyperpage}{19}
+\indexentry{def\discretionary {-}{}{}Max\discretionary {-}{}{}Queue\discretionary {-}{}{}Size@{def\discretionary {-}{}{}Max\discretionary {-}{}{}Queue\discretionary {-}{}{}Size}!PriorityQueue.h@{Priority\discretionary {-}{}{}Queue.\discretionary {-}{}{}h}|hyperpage}{19}
+\indexentry{show11.\discretionary {-}{}{}cpp@{show11.\discretionary {-}{}{}cpp}|hyperpage}{19}
+\indexentry{test11.\discretionary {-}{}{}cpp@{test11.\discretionary {-}{}{}cpp}|hyperpage}{19}
+\indexentry{test11.\discretionary {-}{}{}cpp@{test11.\discretionary {-}{}{}cpp}!main@{main}|hyperpage}{20}
+\indexentry{main@{main}!test11.cpp@{test11.\discretionary {-}{}{}cpp}|hyperpage}{20}
+\indexentry{test11.\discretionary {-}{}{}cpp@{test11.\discretionary {-}{}{}cpp}!print\discretionary {-}{}{}Help@{print\discretionary {-}{}{}Help}|hyperpage}{20}
+\indexentry{print\discretionary {-}{}{}Help@{print\discretionary {-}{}{}Help}!test11.cpp@{test11.\discretionary {-}{}{}cpp}|hyperpage}{20}
+\indexentry{test11hs.\discretionary {-}{}{}cpp@{test11hs.\discretionary {-}{}{}cpp}|hyperpage}{20}
+\indexentry{test11hs.\discretionary {-}{}{}cpp@{test11hs.\discretionary {-}{}{}cpp}!main@{main}|hyperpage}{20}
+\indexentry{main@{main}!test11hs.cpp@{test11hs.\discretionary {-}{}{}cpp}|hyperpage}{20}
+\indexentry{test11hs.\discretionary {-}{}{}cpp@{test11hs.\discretionary {-}{}{}cpp}!M\discretionary {-}{}{}A\discretionary {-}{}{}X\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}N\discretionary {-}{}{}U\discretionary {-}{}{}M\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}D\discretionary {-}{}{}A\discretionary {-}{}{}T\discretionary {-}{}{}A\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}I\discretionary {-}{}{}T\discretionary {-}{}{}E\discretionary {-}{}{}M\discretionary {-}{}{}S@{M\discretionary {-}{}{}A\discretionary {-}{}{}X\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}N\discretionary {-}{}{}U\discretionary {-}{}{}M\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}D\discretionary {-}{}{}A\discretionary {-}{}{}T\discretionary {-}{}{}A\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}I\discretionary {-}{}{}T\discretionary {-}{}{}E\discretionary {-}{}{}M\discretionary {-}{}{}S}|hyperpage}{20}
+\indexentry{M\discretionary {-}{}{}A\discretionary {-}{}{}X\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}N\discretionary {-}{}{}U\discretionary {-}{}{}M\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}D\discretionary {-}{}{}A\discretionary {-}{}{}T\discretionary {-}{}{}A\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}I\discretionary {-}{}{}T\discretionary {-}{}{}E\discretionary {-}{}{}M\discretionary {-}{}{}S@{M\discretionary {-}{}{}A\discretionary {-}{}{}X\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}N\discretionary {-}{}{}U\discretionary {-}{}{}M\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}D\discretionary {-}{}{}A\discretionary {-}{}{}T\discretionary {-}{}{}A\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}I\discretionary {-}{}{}T\discretionary {-}{}{}E\discretionary {-}{}{}M\discretionary {-}{}{}S}!test11hs.cpp@{test11hs.\discretionary {-}{}{}cpp}|hyperpage}{20}
+\indexentry{test11pq.\discretionary {-}{}{}cpp@{test11pq.\discretionary {-}{}{}cpp}|hyperpage}{20}
+\indexentry{test11pq.\discretionary {-}{}{}cpp@{test11pq.\discretionary {-}{}{}cpp}!main@{main}|hyperpage}{21}
+\indexentry{main@{main}!test11pq.cpp@{test11pq.\discretionary {-}{}{}cpp}|hyperpage}{21}
+\indexentry{test11pq.\discretionary {-}{}{}cpp@{test11pq.\discretionary {-}{}{}cpp}!print\discretionary {-}{}{}Help@{print\discretionary {-}{}{}Help}|hyperpage}{21}
+\indexentry{print\discretionary {-}{}{}Help@{print\discretionary {-}{}{}Help}!test11pq.cpp@{test11pq.\discretionary {-}{}{}cpp}|hyperpage}{21}

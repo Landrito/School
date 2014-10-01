@@ -1,0 +1,44 @@
+\indexentry{traffic@{traffic}|hyperpage}{5}
+\indexentry{traffic@{traffic}!traffic@{traffic}|hyperpage}{5}
+\indexentry{traffic@{traffic}!traffic@{traffic}|hyperpage}{5}
+\indexentry{traffic@{traffic}!can\discretionary {-}{}{}Move\discretionary {-}{}{}Back@{can\discretionary {-}{}{}Move\discretionary {-}{}{}Back}|hyperpage}{6}
+\indexentry{can\discretionary {-}{}{}Move\discretionary {-}{}{}Back@{can\discretionary {-}{}{}Move\discretionary {-}{}{}Back}!traffic@{traffic}|hyperpage}{6}
+\indexentry{traffic@{traffic}!can\discretionary {-}{}{}Move\discretionary {-}{}{}Forward@{can\discretionary {-}{}{}Move\discretionary {-}{}{}Forward}|hyperpage}{6}
+\indexentry{can\discretionary {-}{}{}Move\discretionary {-}{}{}Forward@{can\discretionary {-}{}{}Move\discretionary {-}{}{}Forward}!traffic@{traffic}|hyperpage}{6}
+\indexentry{traffic@{traffic}!get\discretionary {-}{}{}Data@{get\discretionary {-}{}{}Data}|hyperpage}{6}
+\indexentry{get\discretionary {-}{}{}Data@{get\discretionary {-}{}{}Data}!traffic@{traffic}|hyperpage}{6}
+\indexentry{traffic@{traffic}!move\discretionary {-}{}{}Backward@{move\discretionary {-}{}{}Backward}|hyperpage}{7}
+\indexentry{move\discretionary {-}{}{}Backward@{move\discretionary {-}{}{}Backward}!traffic@{traffic}|hyperpage}{7}
+\indexentry{traffic@{traffic}!move\discretionary {-}{}{}Forward@{move\discretionary {-}{}{}Forward}|hyperpage}{7}
+\indexentry{move\discretionary {-}{}{}Forward@{move\discretionary {-}{}{}Forward}!traffic@{traffic}|hyperpage}{7}
+\indexentry{traffic@{traffic}!print\discretionary {-}{}{}Moves@{print\discretionary {-}{}{}Moves}|hyperpage}{7}
+\indexentry{print\discretionary {-}{}{}Moves@{print\discretionary {-}{}{}Moves}!traffic@{traffic}|hyperpage}{7}
+\indexentry{traffic@{traffic}!rec\discretionary {-}{}{}Solve@{rec\discretionary {-}{}{}Solve}|hyperpage}{8}
+\indexentry{rec\discretionary {-}{}{}Solve@{rec\discretionary {-}{}{}Solve}!traffic@{traffic}|hyperpage}{8}
+\indexentry{traffic@{traffic}!set\discretionary {-}{}{}Default@{set\discretionary {-}{}{}Default}|hyperpage}{8}
+\indexentry{set\discretionary {-}{}{}Default@{set\discretionary {-}{}{}Default}!traffic@{traffic}|hyperpage}{8}
+\indexentry{vehicle@{vehicle}|hyperpage}{9}
+\indexentry{vehicle@{vehicle}!vehicle@{vehicle}|hyperpage}{9}
+\indexentry{vehicle@{vehicle}!vehicle@{vehicle}|hyperpage}{9}
+\indexentry{vehicle@{vehicle}!vehicle@{vehicle}|hyperpage}{9}
+\indexentry{vehicle@{vehicle}!vehicle@{vehicle}|hyperpage}{9}
+\indexentry{vehicle@{vehicle}!id@{id}|hyperpage}{10}
+\indexentry{id@{id}!vehicle@{vehicle}|hyperpage}{10}
+\indexentry{vehicle@{vehicle}!just\discretionary {-}{}{}Moved\discretionary {-}{}{}Backward@{just\discretionary {-}{}{}Moved\discretionary {-}{}{}Backward}|hyperpage}{10}
+\indexentry{just\discretionary {-}{}{}Moved\discretionary {-}{}{}Backward@{just\discretionary {-}{}{}Moved\discretionary {-}{}{}Backward}!vehicle@{vehicle}|hyperpage}{10}
+\indexentry{vehicle@{vehicle}!just\discretionary {-}{}{}Moved\discretionary {-}{}{}Forward@{just\discretionary {-}{}{}Moved\discretionary {-}{}{}Forward}|hyperpage}{10}
+\indexentry{just\discretionary {-}{}{}Moved\discretionary {-}{}{}Forward@{just\discretionary {-}{}{}Moved\discretionary {-}{}{}Forward}!vehicle@{vehicle}|hyperpage}{10}
+\indexentry{vehicle@{vehicle}!left\discretionary {-}{}{}X@{left\discretionary {-}{}{}X}|hyperpage}{10}
+\indexentry{left\discretionary {-}{}{}X@{left\discretionary {-}{}{}X}!vehicle@{vehicle}|hyperpage}{10}
+\indexentry{vehicle@{vehicle}!orientation@{orientation}|hyperpage}{10}
+\indexentry{orientation@{orientation}!vehicle@{vehicle}|hyperpage}{10}
+\indexentry{vehicle@{vehicle}!size@{size}|hyperpage}{10}
+\indexentry{size@{size}!vehicle@{vehicle}|hyperpage}{10}
+\indexentry{vehicle@{vehicle}!top\discretionary {-}{}{}Y@{top\discretionary {-}{}{}Y}|hyperpage}{10}
+\indexentry{top\discretionary {-}{}{}Y@{top\discretionary {-}{}{}Y}!vehicle@{vehicle}|hyperpage}{10}
+\indexentry{rush\discretionary {-}{}{}Hour.\discretionary {-}{}{}cpp@{rush\discretionary {-}{}{}Hour.\discretionary {-}{}{}cpp}|hyperpage}{11}
+\indexentry{rush\discretionary {-}{}{}Hour.\discretionary {-}{}{}cpp@{rush\discretionary {-}{}{}Hour.\discretionary {-}{}{}cpp}!main@{main}|hyperpage}{11}
+\indexentry{main@{main}!rushHour.cpp@{rush\discretionary {-}{}{}Hour.\discretionary {-}{}{}cpp}|hyperpage}{11}
+\indexentry{rush\discretionary {-}{}{}Hour.\discretionary {-}{}{}h@{rush\discretionary {-}{}{}Hour.\discretionary {-}{}{}h}|hyperpage}{11}
+\indexentry{rush\discretionary {-}{}{}Hour.\discretionary {-}{}{}h@{rush\discretionary {-}{}{}Hour.\discretionary {-}{}{}h}!E\discretionary {-}{}{}M\discretionary {-}{}{}P\discretionary {-}{}{}T\discretionary {-}{}{}Y\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}V\discretionary {-}{}{}A\discretionary {-}{}{}L@{E\discretionary {-}{}{}M\discretionary {-}{}{}P\discretionary {-}{}{}T\discretionary {-}{}{}Y\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}V\discretionary {-}{}{}A\discretionary {-}{}{}L}|hyperpage}{11}
+\indexentry{E\discretionary {-}{}{}M\discretionary {-}{}{}P\discretionary {-}{}{}T\discretionary {-}{}{}Y\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}V\discretionary {-}{}{}A\discretionary {-}{}{}L@{E\discretionary {-}{}{}M\discretionary {-}{}{}P\discretionary {-}{}{}T\discretionary {-}{}{}Y\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}V\discretionary {-}{}{}A\discretionary {-}{}{}L}!rushHour.h@{rush\discretionary {-}{}{}Hour.\discretionary {-}{}{}h}|hyperpage}{11}

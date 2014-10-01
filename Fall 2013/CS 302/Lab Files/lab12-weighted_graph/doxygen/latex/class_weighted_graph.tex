@@ -1,0 +1,631 @@
+\hypertarget{class_weighted_graph}{\section{Weighted\-Graph Class Reference}
+\label{class_weighted_graph}\index{Weighted\-Graph@{Weighted\-Graph}}
+}
+
+
+{\ttfamily \#include $<$Weighted\-Graph.\-h$>$}
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_weighted_graph_1_1_vertex}{Vertex}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_weighted_graph_a9255d382e53db8d520ef1e2b63814c81}{Weighted\-Graph} (int max\-Number=\hyperlink{class_weighted_graph_af9b34017e5b494cd3aca2dbc8335fc3c}{M\-A\-X\-\_\-\-G\-R\-A\-P\-H\-\_\-\-S\-I\-Z\-E})
+\item 
+\hyperlink{class_weighted_graph_a294fd717db213e761dc0eb65bbfcb7ab}{Weighted\-Graph} (const \hyperlink{class_weighted_graph}{Weighted\-Graph} \&other)
+\item 
+\hyperlink{class_weighted_graph}{Weighted\-Graph} \& \hyperlink{class_weighted_graph_aa5982a507e944af28e4749cdc06543c6}{operator=} (const \hyperlink{class_weighted_graph}{Weighted\-Graph} \&other)
+\item 
+\hyperlink{class_weighted_graph_ad7b4a5c8206772f9f4fb5906c0d64923}{$\sim$\-Weighted\-Graph} ()
+\item 
+void \hyperlink{class_weighted_graph_aec4ef3455e3cc0d73a42e042adb7ac40}{insert\-Vertex} (const \hyperlink{class_weighted_graph_1_1_vertex}{Vertex} \&new\-Vertex)  throw ( logic\-\_\-error )
+\item 
+void \hyperlink{class_weighted_graph_a6f59ad223d921324c3ec629d0d6e4eea}{insert\-Edge} (const string \&v1, const string \&v2, int wt)  throw ( logic\-\_\-error )
+\item 
+bool \hyperlink{class_weighted_graph_a3afabc2236c99dac950f5161f715f114}{retrieve\-Vertex} (const string \&v, \hyperlink{class_weighted_graph_1_1_vertex}{Vertex} \&v\-Data) const 
+\item 
+bool \hyperlink{class_weighted_graph_ab136044e7378313087be69eb43e7f042}{get\-Edge\-Weight} (const string \&v1, const string \&v2, int \&wt) const   throw ( logic\-\_\-error )
+\item 
+void \hyperlink{class_weighted_graph_abaaa572a9b1a60ec3cd99d8db9d9590e}{remove\-Vertex} (const string \&v)  throw ( logic\-\_\-error )
+\item 
+void \hyperlink{class_weighted_graph_a1db455249fa7fedf70aa5683487a17df}{remove\-Edge} (const string \&v1, const string \&v2)  throw ( logic\-\_\-error )
+\item 
+void \hyperlink{class_weighted_graph_a26890ebf74d23821a6e4dbcf803b5002}{clear} ()
+\item 
+bool \hyperlink{class_weighted_graph_a1c03a0f68447cf88fed97c2076501702}{is\-Empty} () const 
+\item 
+bool \hyperlink{class_weighted_graph_a22e56836e3967031a657cfa9ea5b9843}{is\-Full} () const 
+\item 
+void \hyperlink{class_weighted_graph_ad7f20a989073ea5401d504d944182347}{show\-Structure} () const 
+\item 
+void \hyperlink{class_weighted_graph_a91740718926ca2862726d297e7b28b7f}{show\-Shortest\-Paths} () const 
+\item 
+bool \hyperlink{class_weighted_graph_a60be8bab10a9142846093cb768855efd}{has\-Proper\-Coloring} () const 
+\item 
+bool \hyperlink{class_weighted_graph_a03884e32b9e093b10e3a44add7eaa928}{are\-All\-Even} () const 
+\item 
+\hyperlink{class_weighted_graph_acf8f5b4f212bc8daf4b12f0b88899180}{Weighted\-Graph} (int max\-Number=\hyperlink{_weighted_graph3_8h_a5a62135a2c33201a5b5d22eda348cbcb}{def\-Max\-Graph\-Size})
+\item 
+\hyperlink{class_weighted_graph_a294fd717db213e761dc0eb65bbfcb7ab}{Weighted\-Graph} (const \hyperlink{class_weighted_graph}{Weighted\-Graph} \&other)
+\item 
+\hyperlink{class_weighted_graph}{Weighted\-Graph} \& \hyperlink{class_weighted_graph_a32c3057c0f746f427068be4a9b408845}{operator=} (const \hyperlink{class_weighted_graph}{Weighted\-Graph} \&other)
+\item 
+\hyperlink{class_weighted_graph_ad7b4a5c8206772f9f4fb5906c0d64923}{$\sim$\-Weighted\-Graph} ()
+\item 
+void \hyperlink{class_weighted_graph_a164845f6fecf25a25f5f14f69d42d975}{insert\-Vertex} (\hyperlink{class_weighted_graph_1_1_vertex}{Vertex} new\-Vertex)  throw ( logic\-\_\-error )
+\item 
+void \hyperlink{class_weighted_graph_ad5e4bb96c2b3b5ace4be251bb3b47621}{insert\-Edge} (char $\ast$v1, char $\ast$v2, int wt)  throw ( logic\-\_\-error )
+\item 
+bool \hyperlink{class_weighted_graph_add447f0f2354c8c776045bf3bec865d8}{retrieve\-Vertex} (char $\ast$v, \hyperlink{class_weighted_graph_1_1_vertex}{Vertex} \&v\-Data) const 
+\item 
+int \hyperlink{class_weighted_graph_a80b2b095e7a05df4841383d2067e4345}{edge\-Weight} (char $\ast$v1, char $\ast$v2, int \&wt) const   throw ( logic\-\_\-error )
+\item 
+bool \hyperlink{class_weighted_graph_a0ff5197e169472040ab88b81049340d9}{get\-Edge\-Weight} (char $\ast$v1, char $\ast$v2, int \&wt) const   throw ( logic\-\_\-error )
+\item 
+void \hyperlink{class_weighted_graph_a0eb59d893befdedcda67add1466b9fdd}{remove\-Vertex} (char $\ast$v)  throw ( logic\-\_\-error )
+\item 
+void \hyperlink{class_weighted_graph_ad06596ac31405f02f39e482860ebe3a8}{remove\-Edge} (char $\ast$v1, char $\ast$v2)  throw ( logic\-\_\-error )
+\item 
+void \hyperlink{class_weighted_graph_a26890ebf74d23821a6e4dbcf803b5002}{clear} ()
+\item 
+void \hyperlink{class_weighted_graph_aeaea1bd5b1e14b69f2155613bfd25d68}{compute\-Paths} ()
+\item 
+bool \hyperlink{class_weighted_graph_a1c03a0f68447cf88fed97c2076501702}{is\-Empty} () const 
+\item 
+bool \hyperlink{class_weighted_graph_a22e56836e3967031a657cfa9ea5b9843}{is\-Full} () const 
+\item 
+void \hyperlink{class_weighted_graph_ad7f20a989073ea5401d504d944182347}{show\-Structure} () const 
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const int \hyperlink{class_weighted_graph_af9b34017e5b494cd3aca2dbc8335fc3c}{M\-A\-X\-\_\-\-G\-R\-A\-P\-H\-\_\-\-S\-I\-Z\-E} = 10
+\item 
+static const int \hyperlink{class_weighted_graph_a5d4e3055fcccb2f50667bcd588dd8af7}{I\-N\-F\-I\-N\-I\-T\-E\-\_\-\-E\-D\-G\-E\-\_\-\-W\-T} = I\-N\-T\-\_\-\-M\-A\-X
+\item 
+static const int \hyperlink{class_weighted_graph_ab8b56b138f61133fe3833f96c318568e}{D\-E\-F\-\_\-\-M\-A\-X\-\_\-\-G\-R\-A\-P\-H\-\_\-\-S\-I\-Z\-E} = 10
+\item 
+static const int \hyperlink{class_weighted_graph_a19411776f4ee4e2a68bf2bc5e03aa10b}{V\-E\-R\-T\-E\-X\-\_\-\-L\-A\-B\-E\-L\-\_\-\-L\-E\-N\-G\-T\-H} = 11
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_weighted_graph_a9255d382e53db8d520ef1e2b63814c81}{\index{Weighted\-Graph@{Weighted\-Graph}!Weighted\-Graph@{Weighted\-Graph}}
+\index{Weighted\-Graph@{Weighted\-Graph}!WeightedGraph@{Weighted\-Graph}}
+\subsubsection[{Weighted\-Graph}]{\setlength{\rightskip}{0pt plus 5cm}Weighted\-Graph\-::\-Weighted\-Graph (
+\begin{DoxyParamCaption}
+\item[{int}]{max\-Number = {\ttfamily {\bf M\-A\-X\-\_\-\-G\-R\-A\-P\-H\-\_\-\-S\-I\-Z\-E}}}
+\end{DoxyParamCaption}
+)}}\label{class_weighted_graph_a9255d382e53db8d520ef1e2b63814c81}
+\begin{DoxyPrecond}{Precondition}
+New Graph Class 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+dynamically allocated array 
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parameters}
+{\em max\-Number} & the number of verteces\\
+\hline
+\end{DoxyParams}
+Algorithm\-:
+\begin{DoxyItemize}
+\item set size to zero
+\item set max\-Size
+\item allocate arrays
+\end{DoxyItemize}
+
+Exceptional/\-Error Conditions\-:
+\begin{DoxyItemize}
+\item none 
+\end{DoxyItemize}\hypertarget{class_weighted_graph_a294fd717db213e761dc0eb65bbfcb7ab}{\index{Weighted\-Graph@{Weighted\-Graph}!Weighted\-Graph@{Weighted\-Graph}}
+\index{Weighted\-Graph@{Weighted\-Graph}!WeightedGraph@{Weighted\-Graph}}
+\subsubsection[{Weighted\-Graph}]{\setlength{\rightskip}{0pt plus 5cm}Weighted\-Graph\-::\-Weighted\-Graph (
+\begin{DoxyParamCaption}
+\item[{const {\bf Weighted\-Graph} \&}]{other}
+\end{DoxyParamCaption}
+)}}\label{class_weighted_graph_a294fd717db213e761dc0eb65bbfcb7ab}
+\begin{DoxyPrecond}{Precondition}
+new graph class
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+a deep copy of source graph
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parameters}
+{\em other} & Source graph to be deep copied\\
+\hline
+\end{DoxyParams}
+Algorithm\-:
+\begin{DoxyItemize}
+\item Use overloaded assignment operator to copy the data from the source to this class 
+\end{DoxyItemize}\hypertarget{class_weighted_graph_ad7b4a5c8206772f9f4fb5906c0d64923}{\index{Weighted\-Graph@{Weighted\-Graph}!$\sim$\-Weighted\-Graph@{$\sim$\-Weighted\-Graph}}
+\index{$\sim$\-Weighted\-Graph@{$\sim$\-Weighted\-Graph}!WeightedGraph@{Weighted\-Graph}}
+\subsubsection[{$\sim$\-Weighted\-Graph}]{\setlength{\rightskip}{0pt plus 5cm}Weighted\-Graph\-::$\sim$\-Weighted\-Graph (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_weighted_graph_ad7b4a5c8206772f9f4fb5906c0d64923}
+\begin{DoxyPrecond}{Precondition}
+a Graph
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+deallocated Heap
+\end{DoxyPostcond}
+Algorithm\-:
+\begin{DoxyItemize}
+\item delete the arrays 
+\end{DoxyItemize}\hypertarget{class_weighted_graph_acf8f5b4f212bc8daf4b12f0b88899180}{\index{Weighted\-Graph@{Weighted\-Graph}!Weighted\-Graph@{Weighted\-Graph}}
+\index{Weighted\-Graph@{Weighted\-Graph}!WeightedGraph@{Weighted\-Graph}}
+\subsubsection[{Weighted\-Graph}]{\setlength{\rightskip}{0pt plus 5cm}Weighted\-Graph\-::\-Weighted\-Graph (
+\begin{DoxyParamCaption}
+\item[{int}]{max\-Number = {\ttfamily {\bf def\-Max\-Graph\-Size}}}
+\end{DoxyParamCaption}
+)}}\label{class_weighted_graph_acf8f5b4f212bc8daf4b12f0b88899180}
+\hypertarget{class_weighted_graph_a294fd717db213e761dc0eb65bbfcb7ab}{\index{Weighted\-Graph@{Weighted\-Graph}!Weighted\-Graph@{Weighted\-Graph}}
+\index{Weighted\-Graph@{Weighted\-Graph}!WeightedGraph@{Weighted\-Graph}}
+\subsubsection[{Weighted\-Graph}]{\setlength{\rightskip}{0pt plus 5cm}Weighted\-Graph\-::\-Weighted\-Graph (
+\begin{DoxyParamCaption}
+\item[{const {\bf Weighted\-Graph} \&}]{other}
+\end{DoxyParamCaption}
+)}}\label{class_weighted_graph_a294fd717db213e761dc0eb65bbfcb7ab}
+\hypertarget{class_weighted_graph_ad7b4a5c8206772f9f4fb5906c0d64923}{\index{Weighted\-Graph@{Weighted\-Graph}!$\sim$\-Weighted\-Graph@{$\sim$\-Weighted\-Graph}}
+\index{$\sim$\-Weighted\-Graph@{$\sim$\-Weighted\-Graph}!WeightedGraph@{Weighted\-Graph}}
+\subsubsection[{$\sim$\-Weighted\-Graph}]{\setlength{\rightskip}{0pt plus 5cm}Weighted\-Graph\-::$\sim$\-Weighted\-Graph (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_weighted_graph_ad7b4a5c8206772f9f4fb5906c0d64923}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_weighted_graph_a03884e32b9e093b10e3a44add7eaa928}{\index{Weighted\-Graph@{Weighted\-Graph}!are\-All\-Even@{are\-All\-Even}}
+\index{are\-All\-Even@{are\-All\-Even}!WeightedGraph@{Weighted\-Graph}}
+\subsubsection[{are\-All\-Even}]{\setlength{\rightskip}{0pt plus 5cm}bool Weighted\-Graph\-::are\-All\-Even (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_weighted_graph_a03884e32b9e093b10e3a44add7eaa928}
+\begin{DoxyPrecond}{Precondition}
+a graph
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+edge removed from the edge matrix
+\end{DoxyPostcond}
+Algorithm\-:
+\begin{DoxyItemize}
+\item count the number of edges per vertex
+\item if the number of edges isnt even, return false
+\item else return true 
+\end{DoxyItemize}\hypertarget{class_weighted_graph_a26890ebf74d23821a6e4dbcf803b5002}{\index{Weighted\-Graph@{Weighted\-Graph}!clear@{clear}}
+\index{clear@{clear}!WeightedGraph@{Weighted\-Graph}}
+\subsubsection[{clear}]{\setlength{\rightskip}{0pt plus 5cm}void Weighted\-Graph\-::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_weighted_graph_a26890ebf74d23821a6e4dbcf803b5002}
+\hypertarget{class_weighted_graph_a26890ebf74d23821a6e4dbcf803b5002}{\index{Weighted\-Graph@{Weighted\-Graph}!clear@{clear}}
+\index{clear@{clear}!WeightedGraph@{Weighted\-Graph}}
+\subsubsection[{clear}]{\setlength{\rightskip}{0pt plus 5cm}void Weighted\-Graph\-::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_weighted_graph_a26890ebf74d23821a6e4dbcf803b5002}
+\begin{DoxyPrecond}{Precondition}
+a graph
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+an empty graph
+\end{DoxyPostcond}
+Algorithm\-:
+\begin{DoxyItemize}
+\item set the size of the heap to 0; 
+\end{DoxyItemize}\hypertarget{class_weighted_graph_aeaea1bd5b1e14b69f2155613bfd25d68}{\index{Weighted\-Graph@{Weighted\-Graph}!compute\-Paths@{compute\-Paths}}
+\index{compute\-Paths@{compute\-Paths}!WeightedGraph@{Weighted\-Graph}}
+\subsubsection[{compute\-Paths}]{\setlength{\rightskip}{0pt plus 5cm}void Weighted\-Graph\-::compute\-Paths (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_weighted_graph_aeaea1bd5b1e14b69f2155613bfd25d68}
+\hypertarget{class_weighted_graph_a80b2b095e7a05df4841383d2067e4345}{\index{Weighted\-Graph@{Weighted\-Graph}!edge\-Weight@{edge\-Weight}}
+\index{edge\-Weight@{edge\-Weight}!WeightedGraph@{Weighted\-Graph}}
+\subsubsection[{edge\-Weight}]{\setlength{\rightskip}{0pt plus 5cm}int Weighted\-Graph\-::edge\-Weight (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{v1, }
+\item[{char $\ast$}]{v2, }
+\item[{int \&}]{wt}
+\end{DoxyParamCaption}
+) const throw  logic\-\_\-error) }}\label{class_weighted_graph_a80b2b095e7a05df4841383d2067e4345}
+\hypertarget{class_weighted_graph_a0ff5197e169472040ab88b81049340d9}{\index{Weighted\-Graph@{Weighted\-Graph}!get\-Edge\-Weight@{get\-Edge\-Weight}}
+\index{get\-Edge\-Weight@{get\-Edge\-Weight}!WeightedGraph@{Weighted\-Graph}}
+\subsubsection[{get\-Edge\-Weight}]{\setlength{\rightskip}{0pt plus 5cm}bool Weighted\-Graph\-::get\-Edge\-Weight (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{v1, }
+\item[{char $\ast$}]{v2, }
+\item[{int \&}]{wt}
+\end{DoxyParamCaption}
+) const throw  logic\-\_\-error) }}\label{class_weighted_graph_a0ff5197e169472040ab88b81049340d9}
+\hypertarget{class_weighted_graph_ab136044e7378313087be69eb43e7f042}{\index{Weighted\-Graph@{Weighted\-Graph}!get\-Edge\-Weight@{get\-Edge\-Weight}}
+\index{get\-Edge\-Weight@{get\-Edge\-Weight}!WeightedGraph@{Weighted\-Graph}}
+\subsubsection[{get\-Edge\-Weight}]{\setlength{\rightskip}{0pt plus 5cm}bool Weighted\-Graph\-::get\-Edge\-Weight (
+\begin{DoxyParamCaption}
+\item[{const string \&}]{v1, }
+\item[{const string \&}]{v2, }
+\item[{int \&}]{wt}
+\end{DoxyParamCaption}
+) const throw  logic\-\_\-error) }}\label{class_weighted_graph_ab136044e7378313087be69eb43e7f042}
+\begin{DoxyPrecond}{Precondition}
+a graph
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+weight data in wt
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parameters}
+{\em v1} & string to be searched for \\
+\hline
+{\em v2} & string to be searched for \\
+\hline
+{\em wt} & weight data to be returned\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return if successful
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em logic\-\_\-error} & Throw if vertex's are not found\\
+\hline
+\end{DoxyExceptions}
+Algorithm\-:
+\begin{DoxyItemize}
+\item searches for the index locations of the vertexs
+\item if the index locations is found set wt
+\item else return false 
+\end{DoxyItemize}\hypertarget{class_weighted_graph_a60be8bab10a9142846093cb768855efd}{\index{Weighted\-Graph@{Weighted\-Graph}!has\-Proper\-Coloring@{has\-Proper\-Coloring}}
+\index{has\-Proper\-Coloring@{has\-Proper\-Coloring}!WeightedGraph@{Weighted\-Graph}}
+\subsubsection[{has\-Proper\-Coloring}]{\setlength{\rightskip}{0pt plus 5cm}bool Weighted\-Graph\-::has\-Proper\-Coloring (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_weighted_graph_a60be8bab10a9142846093cb768855efd}
+\begin{DoxyPrecond}{Precondition}
+a graph
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+edge removed from the edge matrix
+\end{DoxyPostcond}
+Algorithm\-:
+\begin{DoxyItemize}
+\item search if any vertex has the same color as another 
+\end{DoxyItemize}\hypertarget{class_weighted_graph_ad5e4bb96c2b3b5ace4be251bb3b47621}{\index{Weighted\-Graph@{Weighted\-Graph}!insert\-Edge@{insert\-Edge}}
+\index{insert\-Edge@{insert\-Edge}!WeightedGraph@{Weighted\-Graph}}
+\subsubsection[{insert\-Edge}]{\setlength{\rightskip}{0pt plus 5cm}void Weighted\-Graph\-::insert\-Edge (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{v1, }
+\item[{char $\ast$}]{v2, }
+\item[{int}]{wt}
+\end{DoxyParamCaption}
+) throw  logic\-\_\-error) }}\label{class_weighted_graph_ad5e4bb96c2b3b5ace4be251bb3b47621}
+\hypertarget{class_weighted_graph_a6f59ad223d921324c3ec629d0d6e4eea}{\index{Weighted\-Graph@{Weighted\-Graph}!insert\-Edge@{insert\-Edge}}
+\index{insert\-Edge@{insert\-Edge}!WeightedGraph@{Weighted\-Graph}}
+\subsubsection[{insert\-Edge}]{\setlength{\rightskip}{0pt plus 5cm}void Weighted\-Graph\-::insert\-Edge (
+\begin{DoxyParamCaption}
+\item[{const string \&}]{v1, }
+\item[{const string \&}]{v2, }
+\item[{int}]{wt}
+\end{DoxyParamCaption}
+) throw  logic\-\_\-error) }}\label{class_weighted_graph_a6f59ad223d921324c3ec629d0d6e4eea}
+\begin{DoxyPrecond}{Precondition}
+a graph
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Edge inserted into the edge matrix
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parameters}
+{\em v1} & First vertex to be found \\
+\hline
+{\em v2} & Second vertex to be found\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em logic\-\_\-error} & Throws an error if vertex's arent found\\
+\hline
+\end{DoxyExceptions}
+Algorithm\-:
+\begin{DoxyItemize}
+\item searches for the index locations of the vertex's
+\item if the index locations are not found throw logic error
+\item else set the edge 
+\end{DoxyItemize}\hypertarget{class_weighted_graph_a164845f6fecf25a25f5f14f69d42d975}{\index{Weighted\-Graph@{Weighted\-Graph}!insert\-Vertex@{insert\-Vertex}}
+\index{insert\-Vertex@{insert\-Vertex}!WeightedGraph@{Weighted\-Graph}}
+\subsubsection[{insert\-Vertex}]{\setlength{\rightskip}{0pt plus 5cm}void Weighted\-Graph\-::insert\-Vertex (
+\begin{DoxyParamCaption}
+\item[{{\bf Vertex}}]{new\-Vertex}
+\end{DoxyParamCaption}
+) throw  logic\-\_\-error) }}\label{class_weighted_graph_a164845f6fecf25a25f5f14f69d42d975}
+\hypertarget{class_weighted_graph_aec4ef3455e3cc0d73a42e042adb7ac40}{\index{Weighted\-Graph@{Weighted\-Graph}!insert\-Vertex@{insert\-Vertex}}
+\index{insert\-Vertex@{insert\-Vertex}!WeightedGraph@{Weighted\-Graph}}
+\subsubsection[{insert\-Vertex}]{\setlength{\rightskip}{0pt plus 5cm}void Weighted\-Graph\-::insert\-Vertex (
+\begin{DoxyParamCaption}
+\item[{const {\bf Vertex} \&}]{new\-Vertex}
+\end{DoxyParamCaption}
+) throw  logic\-\_\-error) }}\label{class_weighted_graph_aec4ef3455e3cc0d73a42e042adb7ac40}
+\begin{DoxyPrecond}{Precondition}
+a Graph
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+a new vertex inserted into the graph
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parameters}
+{\em new\-Vertex} & Data to be inserted into the Heap\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em logic\-\_\-error} & Throws error if theg graph is full\\
+\hline
+\end{DoxyExceptions}
+Algorithm\-:
+\begin{DoxyItemize}
+\item see if the vertex is in the arry if so update and return
+\item check if the graph is full if so throw
+\item else insert the vertex and increase size 
+\end{DoxyItemize}\hypertarget{class_weighted_graph_a1c03a0f68447cf88fed97c2076501702}{\index{Weighted\-Graph@{Weighted\-Graph}!is\-Empty@{is\-Empty}}
+\index{is\-Empty@{is\-Empty}!WeightedGraph@{Weighted\-Graph}}
+\subsubsection[{is\-Empty}]{\setlength{\rightskip}{0pt plus 5cm}bool Weighted\-Graph\-::is\-Empty (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_weighted_graph_a1c03a0f68447cf88fed97c2076501702}
+\hypertarget{class_weighted_graph_a1c03a0f68447cf88fed97c2076501702}{\index{Weighted\-Graph@{Weighted\-Graph}!is\-Empty@{is\-Empty}}
+\index{is\-Empty@{is\-Empty}!WeightedGraph@{Weighted\-Graph}}
+\subsubsection[{is\-Empty}]{\setlength{\rightskip}{0pt plus 5cm}bool Weighted\-Graph\-::is\-Empty (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_weighted_graph_a1c03a0f68447cf88fed97c2076501702}
+\begin{DoxyPrecond}{Precondition}
+a Graph
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+returns if the Graph is empty
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Returns}
+returns if the Graph is empty
+\end{DoxyReturn}
+Algorithm\-:
+\begin{DoxyItemize}
+\item return if the size is equal to 0 
+\end{DoxyItemize}\hypertarget{class_weighted_graph_a22e56836e3967031a657cfa9ea5b9843}{\index{Weighted\-Graph@{Weighted\-Graph}!is\-Full@{is\-Full}}
+\index{is\-Full@{is\-Full}!WeightedGraph@{Weighted\-Graph}}
+\subsubsection[{is\-Full}]{\setlength{\rightskip}{0pt plus 5cm}bool Weighted\-Graph\-::is\-Full (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_weighted_graph_a22e56836e3967031a657cfa9ea5b9843}
+\hypertarget{class_weighted_graph_a22e56836e3967031a657cfa9ea5b9843}{\index{Weighted\-Graph@{Weighted\-Graph}!is\-Full@{is\-Full}}
+\index{is\-Full@{is\-Full}!WeightedGraph@{Weighted\-Graph}}
+\subsubsection[{is\-Full}]{\setlength{\rightskip}{0pt plus 5cm}bool Weighted\-Graph\-::is\-Full (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_weighted_graph_a22e56836e3967031a657cfa9ea5b9843}
+\begin{DoxyPrecond}{Precondition}
+a graph
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+returns if the graph is full
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Returns}
+returns if the graph is full
+\end{DoxyReturn}
+Algorithm\-:
+\begin{DoxyItemize}
+\item return if the size is equal to the max size 
+\end{DoxyItemize}\hypertarget{class_weighted_graph_a32c3057c0f746f427068be4a9b408845}{\index{Weighted\-Graph@{Weighted\-Graph}!operator=@{operator=}}
+\index{operator=@{operator=}!WeightedGraph@{Weighted\-Graph}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Weighted\-Graph}\& Weighted\-Graph\-::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Weighted\-Graph} \&}]{other}
+\end{DoxyParamCaption}
+)}}\label{class_weighted_graph_a32c3057c0f746f427068be4a9b408845}
+\hypertarget{class_weighted_graph_aa5982a507e944af28e4749cdc06543c6}{\index{Weighted\-Graph@{Weighted\-Graph}!operator=@{operator=}}
+\index{operator=@{operator=}!WeightedGraph@{Weighted\-Graph}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Weighted\-Graph} \& Weighted\-Graph\-::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Weighted\-Graph} \&}]{other}
+\end{DoxyParamCaption}
+)}}\label{class_weighted_graph_aa5982a507e944af28e4749cdc06543c6}
+\begin{DoxyPrecond}{Precondition}
+a Graph class
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+a deep copy of source Graph
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parameters}
+{\em source} & Source graph to be deep copied\\
+\hline
+\end{DoxyParams}
+Algorithm\-:
+\begin{DoxyItemize}
+\item if the heap is not empty delete teh matrices
+\item and it is itself return itself
+\item allocate new arrays
+\item copy the data
+\item return this 
+\end{DoxyItemize}\hypertarget{class_weighted_graph_ad06596ac31405f02f39e482860ebe3a8}{\index{Weighted\-Graph@{Weighted\-Graph}!remove\-Edge@{remove\-Edge}}
+\index{remove\-Edge@{remove\-Edge}!WeightedGraph@{Weighted\-Graph}}
+\subsubsection[{remove\-Edge}]{\setlength{\rightskip}{0pt plus 5cm}void Weighted\-Graph\-::remove\-Edge (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{v1, }
+\item[{char $\ast$}]{v2}
+\end{DoxyParamCaption}
+) throw  logic\-\_\-error) }}\label{class_weighted_graph_ad06596ac31405f02f39e482860ebe3a8}
+\hypertarget{class_weighted_graph_a1db455249fa7fedf70aa5683487a17df}{\index{Weighted\-Graph@{Weighted\-Graph}!remove\-Edge@{remove\-Edge}}
+\index{remove\-Edge@{remove\-Edge}!WeightedGraph@{Weighted\-Graph}}
+\subsubsection[{remove\-Edge}]{\setlength{\rightskip}{0pt plus 5cm}void Weighted\-Graph\-::remove\-Edge (
+\begin{DoxyParamCaption}
+\item[{const string \&}]{v1, }
+\item[{const string \&}]{v2}
+\end{DoxyParamCaption}
+) throw  logic\-\_\-error) }}\label{class_weighted_graph_a1db455249fa7fedf70aa5683487a17df}
+\begin{DoxyPrecond}{Precondition}
+a graph
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+edge removed from the edge matrix
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parameters}
+{\em v1} & vertex to be searched for \\
+\hline
+{\em v2} & vertex to be searched for\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em logic\-\_\-error} & Throw if vertexs are not found\\
+\hline
+\end{DoxyExceptions}
+Algorithm\-:
+\begin{DoxyItemize}
+\item searches for the index locations of the vertex
+\item set edge locations to infinite edge wt
+\item throw logic error if vertex's arent found 
+\end{DoxyItemize}\hypertarget{class_weighted_graph_a0eb59d893befdedcda67add1466b9fdd}{\index{Weighted\-Graph@{Weighted\-Graph}!remove\-Vertex@{remove\-Vertex}}
+\index{remove\-Vertex@{remove\-Vertex}!WeightedGraph@{Weighted\-Graph}}
+\subsubsection[{remove\-Vertex}]{\setlength{\rightskip}{0pt plus 5cm}void Weighted\-Graph\-::remove\-Vertex (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{v}
+\end{DoxyParamCaption}
+) throw  logic\-\_\-error) }}\label{class_weighted_graph_a0eb59d893befdedcda67add1466b9fdd}
+\hypertarget{class_weighted_graph_abaaa572a9b1a60ec3cd99d8db9d9590e}{\index{Weighted\-Graph@{Weighted\-Graph}!remove\-Vertex@{remove\-Vertex}}
+\index{remove\-Vertex@{remove\-Vertex}!WeightedGraph@{Weighted\-Graph}}
+\subsubsection[{remove\-Vertex}]{\setlength{\rightskip}{0pt plus 5cm}void Weighted\-Graph\-::remove\-Vertex (
+\begin{DoxyParamCaption}
+\item[{const string \&}]{v}
+\end{DoxyParamCaption}
+) throw  logic\-\_\-error) }}\label{class_weighted_graph_abaaa572a9b1a60ec3cd99d8db9d9590e}
+\begin{DoxyPrecond}{Precondition}
+a graph
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+vertex removed
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parameters}
+{\em v} & vertex to be removed\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em logic\-\_\-error} & Throw if vertex is not found\\
+\hline
+\end{DoxyExceptions}
+Algorithm\-:
+\begin{DoxyItemize}
+\item searches for the index locations of the vertex
+\item shift the adj matrix rows left and columns up
+\item shift vertexs left 
+\end{DoxyItemize}\hypertarget{class_weighted_graph_add447f0f2354c8c776045bf3bec865d8}{\index{Weighted\-Graph@{Weighted\-Graph}!retrieve\-Vertex@{retrieve\-Vertex}}
+\index{retrieve\-Vertex@{retrieve\-Vertex}!WeightedGraph@{Weighted\-Graph}}
+\subsubsection[{retrieve\-Vertex}]{\setlength{\rightskip}{0pt plus 5cm}bool Weighted\-Graph\-::retrieve\-Vertex (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{v, }
+\item[{{\bf Vertex} \&}]{v\-Data}
+\end{DoxyParamCaption}
+) const}}\label{class_weighted_graph_add447f0f2354c8c776045bf3bec865d8}
+\hypertarget{class_weighted_graph_a3afabc2236c99dac950f5161f715f114}{\index{Weighted\-Graph@{Weighted\-Graph}!retrieve\-Vertex@{retrieve\-Vertex}}
+\index{retrieve\-Vertex@{retrieve\-Vertex}!WeightedGraph@{Weighted\-Graph}}
+\subsubsection[{retrieve\-Vertex}]{\setlength{\rightskip}{0pt plus 5cm}bool Weighted\-Graph\-::retrieve\-Vertex (
+\begin{DoxyParamCaption}
+\item[{const string \&}]{v, }
+\item[{{\bf Vertex} \&}]{v\-Data}
+\end{DoxyParamCaption}
+) const}}\label{class_weighted_graph_a3afabc2236c99dac950f5161f715f114}
+\begin{DoxyPrecond}{Precondition}
+a graph
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+vertex data in v\-Data
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parameters}
+{\em v} & string to be searched for \\
+\hline
+{\em v\-Data} & vertex data to be returned\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return if successful
+\end{DoxyReturn}
+Algorithm\-:
+\begin{DoxyItemize}
+\item searches for the index location of the vertex
+\item if the index locations is found set v\-Data
+\item else return false 
+\end{DoxyItemize}\hypertarget{class_weighted_graph_a91740718926ca2862726d297e7b28b7f}{\index{Weighted\-Graph@{Weighted\-Graph}!show\-Shortest\-Paths@{show\-Shortest\-Paths}}
+\index{show\-Shortest\-Paths@{show\-Shortest\-Paths}!WeightedGraph@{Weighted\-Graph}}
+\subsubsection[{show\-Shortest\-Paths}]{\setlength{\rightskip}{0pt plus 5cm}void Weighted\-Graph\-::show\-Shortest\-Paths (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_weighted_graph_a91740718926ca2862726d297e7b28b7f}
+\begin{DoxyPrecond}{Precondition}
+a graph
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+paths changed to shortest paths
+\end{DoxyPostcond}
+Algorithm\-:
+\begin{DoxyItemize}
+\item Initialize path array
+\item if there is a path between j and m
+\item and there is a path between m and k
+\item andt the sum of j,m and m,k is less than j,k
+\item replace j,k with j,m + m,k 
+\end{DoxyItemize}\hypertarget{class_weighted_graph_ad7f20a989073ea5401d504d944182347}{\index{Weighted\-Graph@{Weighted\-Graph}!show\-Structure@{show\-Structure}}
+\index{show\-Structure@{show\-Structure}!WeightedGraph@{Weighted\-Graph}}
+\subsubsection[{show\-Structure}]{\setlength{\rightskip}{0pt plus 5cm}void Weighted\-Graph\-::show\-Structure (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_weighted_graph_ad7f20a989073ea5401d504d944182347}
+\hypertarget{class_weighted_graph_ad7f20a989073ea5401d504d944182347}{\index{Weighted\-Graph@{Weighted\-Graph}!show\-Structure@{show\-Structure}}
+\index{show\-Structure@{show\-Structure}!WeightedGraph@{Weighted\-Graph}}
+\subsubsection[{show\-Structure}]{\setlength{\rightskip}{0pt plus 5cm}void Weighted\-Graph\-::show\-Structure (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_weighted_graph_ad7f20a989073ea5401d504d944182347}
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_weighted_graph_ab8b56b138f61133fe3833f96c318568e}{\index{Weighted\-Graph@{Weighted\-Graph}!D\-E\-F\-\_\-\-M\-A\-X\-\_\-\-G\-R\-A\-P\-H\-\_\-\-S\-I\-Z\-E@{D\-E\-F\-\_\-\-M\-A\-X\-\_\-\-G\-R\-A\-P\-H\-\_\-\-S\-I\-Z\-E}}
+\index{D\-E\-F\-\_\-\-M\-A\-X\-\_\-\-G\-R\-A\-P\-H\-\_\-\-S\-I\-Z\-E@{D\-E\-F\-\_\-\-M\-A\-X\-\_\-\-G\-R\-A\-P\-H\-\_\-\-S\-I\-Z\-E}!WeightedGraph@{Weighted\-Graph}}
+\subsubsection[{D\-E\-F\-\_\-\-M\-A\-X\-\_\-\-G\-R\-A\-P\-H\-\_\-\-S\-I\-Z\-E}]{\setlength{\rightskip}{0pt plus 5cm}const int Weighted\-Graph\-::\-D\-E\-F\-\_\-\-M\-A\-X\-\_\-\-G\-R\-A\-P\-H\-\_\-\-S\-I\-Z\-E = 10\hspace{0.3cm}{\ttfamily [static]}}}\label{class_weighted_graph_ab8b56b138f61133fe3833f96c318568e}
+\hypertarget{class_weighted_graph_a5d4e3055fcccb2f50667bcd588dd8af7}{\index{Weighted\-Graph@{Weighted\-Graph}!I\-N\-F\-I\-N\-I\-T\-E\-\_\-\-E\-D\-G\-E\-\_\-\-W\-T@{I\-N\-F\-I\-N\-I\-T\-E\-\_\-\-E\-D\-G\-E\-\_\-\-W\-T}}
+\index{I\-N\-F\-I\-N\-I\-T\-E\-\_\-\-E\-D\-G\-E\-\_\-\-W\-T@{I\-N\-F\-I\-N\-I\-T\-E\-\_\-\-E\-D\-G\-E\-\_\-\-W\-T}!WeightedGraph@{Weighted\-Graph}}
+\subsubsection[{I\-N\-F\-I\-N\-I\-T\-E\-\_\-\-E\-D\-G\-E\-\_\-\-W\-T}]{\setlength{\rightskip}{0pt plus 5cm}static const int Weighted\-Graph\-::\-I\-N\-F\-I\-N\-I\-T\-E\-\_\-\-E\-D\-G\-E\-\_\-\-W\-T = I\-N\-T\-\_\-\-M\-A\-X\hspace{0.3cm}{\ttfamily [static]}}}\label{class_weighted_graph_a5d4e3055fcccb2f50667bcd588dd8af7}
+\hypertarget{class_weighted_graph_af9b34017e5b494cd3aca2dbc8335fc3c}{\index{Weighted\-Graph@{Weighted\-Graph}!M\-A\-X\-\_\-\-G\-R\-A\-P\-H\-\_\-\-S\-I\-Z\-E@{M\-A\-X\-\_\-\-G\-R\-A\-P\-H\-\_\-\-S\-I\-Z\-E}}
+\index{M\-A\-X\-\_\-\-G\-R\-A\-P\-H\-\_\-\-S\-I\-Z\-E@{M\-A\-X\-\_\-\-G\-R\-A\-P\-H\-\_\-\-S\-I\-Z\-E}!WeightedGraph@{Weighted\-Graph}}
+\subsubsection[{M\-A\-X\-\_\-\-G\-R\-A\-P\-H\-\_\-\-S\-I\-Z\-E}]{\setlength{\rightskip}{0pt plus 5cm}const int Weighted\-Graph\-::\-M\-A\-X\-\_\-\-G\-R\-A\-P\-H\-\_\-\-S\-I\-Z\-E = 10\hspace{0.3cm}{\ttfamily [static]}}}\label{class_weighted_graph_af9b34017e5b494cd3aca2dbc8335fc3c}
+\hypertarget{class_weighted_graph_a19411776f4ee4e2a68bf2bc5e03aa10b}{\index{Weighted\-Graph@{Weighted\-Graph}!V\-E\-R\-T\-E\-X\-\_\-\-L\-A\-B\-E\-L\-\_\-\-L\-E\-N\-G\-T\-H@{V\-E\-R\-T\-E\-X\-\_\-\-L\-A\-B\-E\-L\-\_\-\-L\-E\-N\-G\-T\-H}}
+\index{V\-E\-R\-T\-E\-X\-\_\-\-L\-A\-B\-E\-L\-\_\-\-L\-E\-N\-G\-T\-H@{V\-E\-R\-T\-E\-X\-\_\-\-L\-A\-B\-E\-L\-\_\-\-L\-E\-N\-G\-T\-H}!WeightedGraph@{Weighted\-Graph}}
+\subsubsection[{V\-E\-R\-T\-E\-X\-\_\-\-L\-A\-B\-E\-L\-\_\-\-L\-E\-N\-G\-T\-H}]{\setlength{\rightskip}{0pt plus 5cm}const int Weighted\-Graph\-::\-V\-E\-R\-T\-E\-X\-\_\-\-L\-A\-B\-E\-L\-\_\-\-L\-E\-N\-G\-T\-H = 11\hspace{0.3cm}{\ttfamily [static]}}}\label{class_weighted_graph_a19411776f4ee4e2a68bf2bc5e03aa10b}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_weighted_graph_8h}{Weighted\-Graph.\-h}\item 
+\hyperlink{_weighted_graph2_8h}{Weighted\-Graph2.\-h}\item 
+\hyperlink{show12_8cpp}{show12.\-cpp}\item 
+\hyperlink{_weighted_graph_8cpp}{Weighted\-Graph.\-cpp}\end{DoxyCompactItemize}

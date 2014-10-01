@@ -1,0 +1,255 @@
+\hypertarget{class_hash_table}{\section{Hash\-Table$<$ Data\-Type, Key\-Type $>$ Class Template Reference}
+\label{class_hash_table}\index{Hash\-Table$<$ Data\-Type, Key\-Type $>$@{Hash\-Table$<$ Data\-Type, Key\-Type $>$}}
+}
+
+
+{\ttfamily \#include $<$Hash\-Table.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_hash_table_a103b09f30dbac0fe92fc2f1192feb0c1}{Hash\-Table} (int init\-Table\-Size)
+\item 
+\hyperlink{class_hash_table_a5da00f8a0dc9dc745675a96eac228049}{Hash\-Table} (const \hyperlink{class_hash_table}{Hash\-Table} \&other)
+\item 
+\hyperlink{class_hash_table}{Hash\-Table} \& \hyperlink{class_hash_table_add76a73a92b81a2d54c20078d4a76546}{operator=} (const \hyperlink{class_hash_table}{Hash\-Table} \&other)
+\item 
+\hyperlink{class_hash_table_ae25eb9c66b9bce8c9c04f18e22688a15}{$\sim$\-Hash\-Table} ()
+\item 
+void \hyperlink{class_hash_table_adc8f2be061729bdc5ecb171b54304e17}{insert} (const Data\-Type \&new\-Data\-Item)
+\item 
+bool \hyperlink{class_hash_table_a46d3f8ad70fd80dc7aa64f50676ef7a5}{remove} (const Key\-Type \&delete\-Key)
+\item 
+bool \hyperlink{class_hash_table_ad4ee3ff641daa330260a48de29492e66}{retrieve} (const Key\-Type \&search\-Key, Data\-Type \&return\-Item) const 
+\item 
+void \hyperlink{class_hash_table_a57f581334e35d45a8822c03edc0fcca6}{clear} ()
+\item 
+bool \hyperlink{class_hash_table_a101e211a7fca37cd90722e15df2fc571}{is\-Empty} () const 
+\item 
+void \hyperlink{class_hash_table_a8b875e57f71a5bbba394e42361fb9fb4}{show\-Structure} () const 
+\item 
+double \hyperlink{class_hash_table_a4db2d920fd7c632f5b4b1bacd503bbf1}{standard\-Deviation} () const 
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_hash_table_a103b09f30dbac0fe92fc2f1192feb0c1}{\index{Hash\-Table@{Hash\-Table}!Hash\-Table@{Hash\-Table}}
+\index{Hash\-Table@{Hash\-Table}!HashTable@{Hash\-Table}}
+\subsubsection[{Hash\-Table}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data\-Type , class Key\-Type $>$ {\bf Hash\-Table}$<$ Data\-Type, Key\-Type $>$\-::{\bf Hash\-Table} (
+\begin{DoxyParamCaption}
+\item[{int}]{init\-Table\-Size}
+\end{DoxyParamCaption}
+)}}\label{class_hash_table_a103b09f30dbac0fe92fc2f1192feb0c1}
+\begin{DoxyPrecond}{Precondition}
+New \hyperlink{class_hash_table}{Hash\-Table} Class 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+dynamically allocated array of size init\-Table\-Size 
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parameters}
+{\em init\-Table\-Size} & the size of the array to be formed\\
+\hline
+\end{DoxyParams}
+Algorithm\-:
+\begin{DoxyItemize}
+\item assign table size to the init tablesize
+\item dynamically declare array
+\end{DoxyItemize}
+
+Exceptional/\-Error Conditions\-:
+\begin{DoxyItemize}
+\item none 
+\end{DoxyItemize}\hypertarget{class_hash_table_a5da00f8a0dc9dc745675a96eac228049}{\index{Hash\-Table@{Hash\-Table}!Hash\-Table@{Hash\-Table}}
+\index{Hash\-Table@{Hash\-Table}!HashTable@{Hash\-Table}}
+\subsubsection[{Hash\-Table}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data\-Type , class Key\-Type $>$ {\bf Hash\-Table}$<$ Data\-Type, Key\-Type $>$\-::{\bf Hash\-Table} (
+\begin{DoxyParamCaption}
+\item[{const {\bf Hash\-Table}$<$ Data\-Type, Key\-Type $>$ \&}]{other}
+\end{DoxyParamCaption}
+)}}\label{class_hash_table_a5da00f8a0dc9dc745675a96eac228049}
+\begin{DoxyPrecond}{Precondition}
+new \hyperlink{class_hash_table}{Hash\-Table} class
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+a deep copy of source \hyperlink{class_hash_table}{Hash\-Table}
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parameters}
+{\em other} & Source \hyperlink{class_hash_table}{Hash\-Table} to be deep copied\\
+\hline
+\end{DoxyParams}
+Algorithm\-:
+\begin{DoxyItemize}
+\item Use overloaded assignment operator to copy the data from the source to this class 
+\end{DoxyItemize}\hypertarget{class_hash_table_ae25eb9c66b9bce8c9c04f18e22688a15}{\index{Hash\-Table@{Hash\-Table}!$\sim$\-Hash\-Table@{$\sim$\-Hash\-Table}}
+\index{$\sim$\-Hash\-Table@{$\sim$\-Hash\-Table}!HashTable@{Hash\-Table}}
+\subsubsection[{$\sim$\-Hash\-Table}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data\-Type , class Key\-Type $>$ {\bf Hash\-Table}$<$ Data\-Type, Key\-Type $>$\-::$\sim${\bf Hash\-Table} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_hash_table_ae25eb9c66b9bce8c9c04f18e22688a15}
+\begin{DoxyPrecond}{Precondition}
+a \hyperlink{class_hash_table}{Hash\-Table}
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+deallocated \hyperlink{class_hash_table}{Hash\-Table}
+\end{DoxyPostcond}
+Algorithm\-:
+\begin{DoxyItemize}
+\item Use clear member function to deallocate the \hyperlink{class_hash_table}{Hash\-Table} 
+\end{DoxyItemize}
+
+\subsection{Member Function Documentation}
+\hypertarget{class_hash_table_a57f581334e35d45a8822c03edc0fcca6}{\index{Hash\-Table@{Hash\-Table}!clear@{clear}}
+\index{clear@{clear}!HashTable@{Hash\-Table}}
+\subsubsection[{clear}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data\-Type , class Key\-Type $>$ void {\bf Hash\-Table}$<$ Data\-Type, Key\-Type $>$\-::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_hash_table_a57f581334e35d45a8822c03edc0fcca6}
+\begin{DoxyPrecond}{Precondition}
+a \hyperlink{class_hash_table}{Hash\-Table}
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+a deallocated \hyperlink{class_hash_table}{Hash\-Table}
+\end{DoxyPostcond}
+Algorithm\-:
+\begin{DoxyItemize}
+\item For every location in the table, clear the B\-S\-T 
+\end{DoxyItemize}\hypertarget{class_hash_table_adc8f2be061729bdc5ecb171b54304e17}{\index{Hash\-Table@{Hash\-Table}!insert@{insert}}
+\index{insert@{insert}!HashTable@{Hash\-Table}}
+\subsubsection[{insert}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data\-Type , class Key\-Type $>$ void {\bf Hash\-Table}$<$ Data\-Type, Key\-Type $>$\-::insert (
+\begin{DoxyParamCaption}
+\item[{const Data\-Type \&}]{new\-Data\-Item}
+\end{DoxyParamCaption}
+)}}\label{class_hash_table_adc8f2be061729bdc5ecb171b54304e17}
+\begin{DoxyPrecond}{Precondition}
+a \hyperlink{class_hash_table}{Hash\-Table}
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+a new node inserted into the \hyperlink{class_b_s_tree}{B\-S\-Tree} at the appropriate array location of the \hyperlink{class_hash_table}{Hash\-Table}
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parameters}
+{\em new\-Data\-Item} & \hyperlink{struct_data}{Data} to be inserted into the \hyperlink{class_hash_table}{Hash\-Table}\\
+\hline
+\end{DoxyParams}
+Algorithm\-:
+\begin{DoxyItemize}
+\item Hash the data item's key and use the return value as a location
+\item Insert into B\-S\-T the new data at that location 
+\end{DoxyItemize}\hypertarget{class_hash_table_a101e211a7fca37cd90722e15df2fc571}{\index{Hash\-Table@{Hash\-Table}!is\-Empty@{is\-Empty}}
+\index{is\-Empty@{is\-Empty}!HashTable@{Hash\-Table}}
+\subsubsection[{is\-Empty}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data\-Type , class Key\-Type $>$ bool {\bf Hash\-Table}$<$ Data\-Type, Key\-Type $>$\-::is\-Empty (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_hash_table_a101e211a7fca37cd90722e15df2fc571}
+\begin{DoxyPrecond}{Precondition}
+a \hyperlink{class_hash_table}{Hash\-Table}
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+returns if the \hyperlink{class_hash_table}{Hash\-Table} is empty
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Returns}
+Returns true if every point in the array contains an empty tree
+\end{DoxyReturn}
+Algorithm\-:
+\begin{DoxyItemize}
+\item return false if any location of the data table is not empty
+\item otherwise, return true 
+\end{DoxyItemize}\hypertarget{class_hash_table_add76a73a92b81a2d54c20078d4a76546}{\index{Hash\-Table@{Hash\-Table}!operator=@{operator=}}
+\index{operator=@{operator=}!HashTable@{Hash\-Table}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data\-Type , class Key\-Type $>$ {\bf Hash\-Table}$<$ Data\-Type, Key\-Type $>$ \& {\bf Hash\-Table}$<$ Data\-Type, Key\-Type $>$\-::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Hash\-Table}$<$ Data\-Type, Key\-Type $>$ \&}]{other}
+\end{DoxyParamCaption}
+)}}\label{class_hash_table_add76a73a92b81a2d54c20078d4a76546}
+\begin{DoxyPrecond}{Precondition}
+a B\-S\-Tree\-Class
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+a deep copy of source \hyperlink{class_hash_table}{Hash\-Table}
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parameters}
+{\em source} & Source \hyperlink{class_b_s_tree}{B\-S\-Tree} to be deep copied\\
+\hline
+\end{DoxyParams}
+Algorithm\-:
+\begin{DoxyItemize}
+\item Use copy\-Table to make a copy of the \hyperlink{class_hash_table}{Hash\-Table} 
+\end{DoxyItemize}\hypertarget{class_hash_table_a46d3f8ad70fd80dc7aa64f50676ef7a5}{\index{Hash\-Table@{Hash\-Table}!remove@{remove}}
+\index{remove@{remove}!HashTable@{Hash\-Table}}
+\subsubsection[{remove}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data\-Type , class Key\-Type $>$ bool {\bf Hash\-Table}$<$ Data\-Type, Key\-Type $>$\-::remove (
+\begin{DoxyParamCaption}
+\item[{const Key\-Type \&}]{delete\-Key}
+\end{DoxyParamCaption}
+)}}\label{class_hash_table_a46d3f8ad70fd80dc7aa64f50676ef7a5}
+\begin{DoxyPrecond}{Precondition}
+a B\-S\-Tree\-Class
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+a B\-S\-T removed from the \hyperlink{class_hash_table}{Hash\-Table} if
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Returns}
+Returns true if deleted, false if not
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em delete\-Key} & The key value to be searched for in the \hyperlink{class_hash_table}{Hash\-Table}\\
+\hline
+\end{DoxyParams}
+Algorithm\-:
+\begin{DoxyItemize}
+\item Use B\-S\-T remove to remove the key at the Hashed value of the delete Key 
+\end{DoxyItemize}\hypertarget{class_hash_table_ad4ee3ff641daa330260a48de29492e66}{\index{Hash\-Table@{Hash\-Table}!retrieve@{retrieve}}
+\index{retrieve@{retrieve}!HashTable@{Hash\-Table}}
+\subsubsection[{retrieve}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data\-Type , class Key\-Type $>$ bool {\bf Hash\-Table}$<$ Data\-Type, Key\-Type $>$\-::retrieve (
+\begin{DoxyParamCaption}
+\item[{const Key\-Type \&}]{search\-Key, }
+\item[{Data\-Type \&}]{return\-Item}
+\end{DoxyParamCaption}
+) const}}\label{class_hash_table_ad4ee3ff641daa330260a48de29492e66}
+\begin{DoxyPrecond}{Precondition}
+a \hyperlink{class_hash_table}{Hash\-Table}
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+a copy of the data\-Item found
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Returns}
+Returns true if found, false if not
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em search\-Key} & The key value to be searched for in the tree \\
+\hline
+{\em return\-Item} & The reference value to be changed if found\\
+\hline
+\end{DoxyParams}
+Algorithm\-:
+\begin{DoxyItemize}
+\item Hash the search\-Key
+\item Use B\-S\-T retrieve to get the data from the B\-S\-T at location
+\item Return success of B\-S\-T retrieve 
+\end{DoxyItemize}\hypertarget{class_hash_table_a8b875e57f71a5bbba394e42361fb9fb4}{\index{Hash\-Table@{Hash\-Table}!show\-Structure@{show\-Structure}}
+\index{show\-Structure@{show\-Structure}!HashTable@{Hash\-Table}}
+\subsubsection[{show\-Structure}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data\-Type , typename Key\-Type $>$ void {\bf Hash\-Table}$<$ Data\-Type, Key\-Type $>$\-::show\-Structure (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_hash_table_a8b875e57f71a5bbba394e42361fb9fb4}
+\hypertarget{class_hash_table_a4db2d920fd7c632f5b4b1bacd503bbf1}{\index{Hash\-Table@{Hash\-Table}!standard\-Deviation@{standard\-Deviation}}
+\index{standard\-Deviation@{standard\-Deviation}!HashTable@{Hash\-Table}}
+\subsubsection[{standard\-Deviation}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data\-Type , typename Key\-Type $>$ double {\bf Hash\-Table}$<$ Data\-Type, Key\-Type $>$\-::standard\-Deviation (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_hash_table_a4db2d920fd7c632f5b4b1bacd503bbf1}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_hash_table_8h}{Hash\-Table.\-h}\item 
+\hyperlink{_hash_table_8cpp}{Hash\-Table.\-cpp}\item 
+\hyperlink{show10_8cpp}{show10.\-cpp}\end{DoxyCompactItemize}

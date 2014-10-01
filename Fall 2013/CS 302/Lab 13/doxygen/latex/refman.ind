@@ -1,0 +1,173 @@
+\begin{theindex}
+
+  \item {binary\discretionary {-}{}{}Search}, \hyperpage{7}
+    \subitem {operator()}, \hyperpage{7}
+
+  \indexspace
+
+  \item {config.\discretionary {-}{}{}h}, \hyperpage{13}
+    \subitem {L\discretionary {-}{}{}A\discretionary {-}{}{}B13\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T1}, 
+		\hyperpage{13}
+    \subitem {L\discretionary {-}{}{}A\discretionary {-}{}{}B13\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T2}, 
+		\hyperpage{13}
+  \item {constructor.\discretionary {-}{}{}cpp}, \hyperpage{13}
+    \subitem {main}, \hyperpage{14}
+    \subitem {num\discretionary {-}{}{}Repetitions}, \hyperpage{14}
+    \subitem {run\discretionary {-}{}{}Test}, \hyperpage{14}
+    \subitem {test\discretionary {-}{}{}Compute}, \hyperpage{14}
+    \subitem {test\discretionary {-}{}{}Compute$<$ double $>$}, 
+		\hyperpage{14}
+    \subitem {test\discretionary {-}{}{}Compute$<$ int $>$}, 
+		\hyperpage{14}
+    \subitem {test\discretionary {-}{}{}Constructor}, \hyperpage{14}
+
+  \indexspace
+
+  \item {get\discretionary {-}{}{}Elapsed\discretionary {-}{}{}Time}
+    \subitem {Timer}, \hyperpage{10}
+
+  \indexspace
+
+  \item {inc.\discretionary {-}{}{}cpp}, \hyperpage{14}
+    \subitem {main}, \hyperpage{14}
+    \subitem {num\discretionary {-}{}{}Repetitions}, \hyperpage{14}
+
+  \indexspace
+
+  \item {L\discretionary {-}{}{}A\discretionary {-}{}{}B13\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T1}
+    \subitem {config.\discretionary {-}{}{}h}, \hyperpage{13}
+  \item {L\discretionary {-}{}{}A\discretionary {-}{}{}B13\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T2}
+    \subitem {config.\discretionary {-}{}{}h}, \hyperpage{13}
+  \item {linear\discretionary {-}{}{}Search}, \hyperpage{7}
+    \subitem {operator()}, \hyperpage{8}
+
+  \indexspace
+
+  \item {main}
+    \subitem {constructor.\discretionary {-}{}{}cpp}, \hyperpage{14}
+    \subitem {inc.\discretionary {-}{}{}cpp}, \hyperpage{14}
+    \subitem {search.\discretionary {-}{}{}cpp}, \hyperpage{15}
+    \subitem {sort.\discretionary {-}{}{}cpp}, \hyperpage{16}
+    \subitem {test.\discretionary {-}{}{}cpp}, \hyperpage{16}
+    \subitem {test13.\discretionary {-}{}{}cpp}, \hyperpage{16}
+    \subitem {testtimer.\discretionary {-}{}{}c++}, \hyperpage{17}
+    \subitem {testtimer.\discretionary {-}{}{}cc}, \hyperpage{17}
+    \subitem {testtimer.\discretionary {-}{}{}cpp}, \hyperpage{17}
+    \subitem {text.\discretionary {-}{}{}cc}, \hyperpage{18}
+
+  \indexspace
+
+  \item {num\discretionary {-}{}{}Repetitions}
+    \subitem {constructor.\discretionary {-}{}{}cpp}, \hyperpage{14}
+    \subitem {inc.\discretionary {-}{}{}cpp}, \hyperpage{14}
+  \item {num\discretionary {-}{}{}Searches}
+    \subitem {search.\discretionary {-}{}{}cpp}, \hyperpage{15}
+  \item {num\discretionary {-}{}{}Sorts}
+    \subitem {sort.\discretionary {-}{}{}cpp}, \hyperpage{16}
+
+  \indexspace
+
+  \item {operator()}
+    \subitem {binary\discretionary {-}{}{}Search}, \hyperpage{7}
+    \subitem {linear\discretionary {-}{}{}Search}, \hyperpage{8}
+    \subitem {S\discretionary {-}{}{}T\discretionary {-}{}{}L\discretionary {-}{}{}Search}, 
+		\hyperpage{8}
+  \item {operator++}
+    \subitem {Test\discretionary {-}{}{}Vector}, \hyperpage{9}
+
+  \indexspace
+
+  \item {print\discretionary {-}{}{}\_\discretionary {-}{}{}help}
+    \subitem {test13.\discretionary {-}{}{}cpp}, \hyperpage{16}
+
+  \indexspace
+
+  \item {quick\discretionary {-}{}{}Sort}
+    \subitem {sort.\discretionary {-}{}{}cpp}, \hyperpage{16}
+
+  \indexspace
+
+  \item {run\discretionary {-}{}{}Test}
+    \subitem {constructor.\discretionary {-}{}{}cpp}, \hyperpage{14}
+
+  \indexspace
+
+  \item {S\discretionary {-}{}{}T\discretionary {-}{}{}L\discretionary {-}{}{}Search}, 
+		\hyperpage{8}
+    \subitem {operator()}, \hyperpage{8}
+  \item {Search}, \hyperpage{8}
+  \item {search.\discretionary {-}{}{}cpp}, \hyperpage{15}
+    \subitem {main}, \hyperpage{15}
+    \subitem {num\discretionary {-}{}{}Searches}, \hyperpage{15}
+  \item {selection\discretionary {-}{}{}Sort}
+    \subitem {sort.\discretionary {-}{}{}cpp}, \hyperpage{16}
+  \item {sort.\discretionary {-}{}{}cpp}, \hyperpage{15}
+    \subitem {main}, \hyperpage{16}
+    \subitem {num\discretionary {-}{}{}Sorts}, \hyperpage{16}
+    \subitem {quick\discretionary {-}{}{}Sort}, \hyperpage{16}
+    \subitem {selection\discretionary {-}{}{}Sort}, \hyperpage{16}
+    \subitem {time\discretionary {-}{}{}Sort}, \hyperpage{16}
+  \item {start}
+    \subitem {Timer}, \hyperpage{10}
+  \item {stop}
+    \subitem {Timer}, \hyperpage{11}
+
+  \indexspace
+
+  \item {T\discretionary {-}{}{}I\discretionary {-}{}{}M\discretionary {-}{}{}E\discretionary {-}{}{}R\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}C\discretionary {-}{}{}P\discretionary {-}{}{}P}
+    \subitem {Timer.\discretionary {-}{}{}cpp}, \hyperpage{19}
+    \subitem {Timer.\discretionary {-}{}{}cs}, \hyperpage{19}
+  \item {test.\discretionary {-}{}{}cpp}, \hyperpage{16}
+    \subitem {main}, \hyperpage{16}
+  \item {test13.\discretionary {-}{}{}cpp}, \hyperpage{16}
+    \subitem {main}, \hyperpage{16}
+    \subitem {print\discretionary {-}{}{}\_\discretionary {-}{}{}help}, 
+		\hyperpage{16}
+    \subitem {wait}, \hyperpage{16}
+  \item {test\discretionary {-}{}{}Compute}
+    \subitem {constructor.\discretionary {-}{}{}cpp}, \hyperpage{14}
+  \item {test\discretionary {-}{}{}Compute$<$ double $>$}
+    \subitem {constructor.\discretionary {-}{}{}cpp}, \hyperpage{14}
+  \item {test\discretionary {-}{}{}Compute$<$ int $>$}
+    \subitem {constructor.\discretionary {-}{}{}cpp}, \hyperpage{14}
+  \item {test\discretionary {-}{}{}Constructor}
+    \subitem {constructor.\discretionary {-}{}{}cpp}, \hyperpage{14}
+  \item {Test\discretionary {-}{}{}Vector}, \hyperpage{9}
+    \subitem {operator++}, \hyperpage{9}
+    \subitem {Test\discretionary {-}{}{}Vector}, \hyperpage{9}
+    \subitem {Test\discretionary {-}{}{}Vector}, \hyperpage{9}
+  \item {testtimer.\discretionary {-}{}{}c++}, \hyperpage{17}
+    \subitem {main}, \hyperpage{17}
+  \item {testtimer.\discretionary {-}{}{}cc}, \hyperpage{17}
+    \subitem {main}, \hyperpage{17}
+  \item {testtimer.\discretionary {-}{}{}cpp}, \hyperpage{17}
+    \subitem {main}, \hyperpage{17}
+  \item {testvector.\discretionary {-}{}{}cpp}, \hyperpage{18}
+  \item {testvector.\discretionary {-}{}{}h}, \hyperpage{18}
+  \item {text.\discretionary {-}{}{}cc}, \hyperpage{18}
+    \subitem {main}, \hyperpage{18}
+  \item {time\discretionary {-}{}{}Sort}
+    \subitem {sort.\discretionary {-}{}{}cpp}, \hyperpage{16}
+  \item {Timer}, \hyperpage{9}
+    \subitem {get\discretionary {-}{}{}Elapsed\discretionary {-}{}{}Time}, 
+		\hyperpage{10}
+    \subitem {start}, \hyperpage{10}
+    \subitem {stop}, \hyperpage{11}
+    \subitem {Timer}, \hyperpage{9}
+  \item {Timer.\discretionary {-}{}{}cpp}, \hyperpage{18}
+    \subitem {T\discretionary {-}{}{}I\discretionary {-}{}{}M\discretionary {-}{}{}E\discretionary {-}{}{}R\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}C\discretionary {-}{}{}P\discretionary {-}{}{}P}, 
+		\hyperpage{19}
+    \subitem {toddiff}, \hyperpage{19}
+  \item {Timer.\discretionary {-}{}{}cs}, \hyperpage{19}
+    \subitem {T\discretionary {-}{}{}I\discretionary {-}{}{}M\discretionary {-}{}{}E\discretionary {-}{}{}R\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}C\discretionary {-}{}{}P\discretionary {-}{}{}P}, 
+		\hyperpage{19}
+  \item {Timer.\discretionary {-}{}{}h}, \hyperpage{19}
+  \item {toddiff}
+    \subitem {Timer.\discretionary {-}{}{}cpp}, \hyperpage{19}
+
+  \indexspace
+
+  \item {wait}
+    \subitem {test13.\discretionary {-}{}{}cpp}, \hyperpage{16}
+
+\end{theindex}
