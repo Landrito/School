@@ -2,8 +2,12 @@
 #include <stdlib.h>
 #include <vector>
 
+/****************************************************************************/
+//Stop and wait is the essentially the same code as both GBN and Selected 
+//Repeat except it always has a window size of 1
+/****************************************************************************/
+const int WINDOW_SIZE = 1; 
 const int NUM_PACKETS = 100;
-const int WINDOW_SIZE = 1;
 const int SEED = 1;
 const float ERROR_RATE = 0.0;
 

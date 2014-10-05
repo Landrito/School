@@ -3,7 +3,7 @@
 #include <vector>
 
 const int NUM_PACKETS = 100;
-const int WINDOW_SIZE = 1;
+const int WINDOW_SIZE = 12;
 const int SEED = 1;
 const float ERROR_RATE = 0.0;
 
@@ -54,7 +54,7 @@ int main()
 		t++;
 	}
 
-	printf("Total Time: %i \n", t);
+	printf("Total Time: %d \n", t);
 	printf("Throughput: %f \n", 100.0*NUM_PACKETS / t);
 	return 0;
 
@@ -106,19 +106,10 @@ void Window::checkRecieved()
 				}
 				else
 				{
-					if( it->sequence != windowStart )
-					{
-						printf("Received packet %i out of order resending\n", it->sequence);
-						temp.push_back(it->sequence);
-					}
-					else
-					{
-						printf("Received packet %i\n", it->sequence);
-						sent[it->sequence] = true;
-						packetsInTransit--;
-						windowStart++;
-					}
-					
+					printf("Received packet %i\n", it->sequence);
+					sent[it->sequence] = true;
+					packetsInTransit--;
+					windowStart++;
 				}
 				
 				it = packets.erase(it) - 1;
