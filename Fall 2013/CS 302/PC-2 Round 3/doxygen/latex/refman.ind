@@ -1,0 +1,55 @@
+\begin{theindex}
+
+  \item {board}, \hyperpage{3}
+    \subitem {board}, \hyperpage{3}
+    \subitem {can\discretionary {-}{}{}Move\discretionary {-}{}{}Here}, 
+		\hyperpage{4}
+    \subitem {get\discretionary {-}{}{}Data}, \hyperpage{4}
+    \subitem {get\discretionary {-}{}{}Num\discretionary {-}{}{}Cars}, 
+		\hyperpage{5}
+    \subitem {is\discretionary {-}{}{}Solved}, \hyperpage{5}
+    \subitem {move\discretionary {-}{}{}Backward}, \hyperpage{5}
+    \subitem {move\discretionary {-}{}{}Forward}, \hyperpage{6}
+    \subitem {operator$<$}, \hyperpage{7}
+    \subitem {operator=}, \hyperpage{7}
+    \subitem {operator==}, \hyperpage{8}
+
+  \indexspace
+
+  \item {can\discretionary {-}{}{}Move\discretionary {-}{}{}Here}
+    \subitem {board}, \hyperpage{4}
+  \item {car}, \hyperpage{8}
+    \subitem {operator$<$}, \hyperpage{9}
+    \subitem {operator==}, \hyperpage{9}
+
+  \indexspace
+
+  \item {get\discretionary {-}{}{}Data}
+    \subitem {board}, \hyperpage{4}
+  \item {get\discretionary {-}{}{}Num\discretionary {-}{}{}Cars}
+    \subitem {board}, \hyperpage{5}
+
+  \indexspace
+
+  \item {is\discretionary {-}{}{}Solved}
+    \subitem {board}, \hyperpage{5}
+
+  \indexspace
+
+  \item {move\discretionary {-}{}{}Backward}
+    \subitem {board}, \hyperpage{5}
+  \item {move\discretionary {-}{}{}Forward}
+    \subitem {board}, \hyperpage{6}
+
+  \indexspace
+
+  \item {operator$<$}
+    \subitem {board}, \hyperpage{7}
+    \subitem {car}, \hyperpage{9}
+  \item {operator=}
+    \subitem {board}, \hyperpage{7}
+  \item {operator==}
+    \subitem {board}, \hyperpage{8}
+    \subitem {car}, \hyperpage{9}
+
+\end{theindex}

@@ -1,0 +1,257 @@
+\begin{theindex}
+
+  \item {$\sim $\discretionary {-}{}{}B\discretionary {-}{}{}S\discretionary {-}{}{}Tree}
+    \subitem {B\discretionary {-}{}{}S\discretionary {-}{}{}Tree}, 
+		\hyperpage{7}
+
+  \indexspace
+
+  \item {Account\discretionary {-}{}{}Record}, \hyperpage{5}
+    \subitem {acct\discretionary {-}{}{}I\discretionary {-}{}{}D}, 
+		\hyperpage{5}
+    \subitem {balance}, \hyperpage{5}
+    \subitem {first\discretionary {-}{}{}Name}, \hyperpage{5}
+    \subitem {last\discretionary {-}{}{}Name}, \hyperpage{5}
+  \item {acct\discretionary {-}{}{}I\discretionary {-}{}{}D}
+    \subitem {Account\discretionary {-}{}{}Record}, \hyperpage{5}
+    \subitem {Index\discretionary {-}{}{}Entry}, \hyperpage{16}
+
+  \indexspace
+
+  \item {B\discretionary {-}{}{}S\discretionary {-}{}{}Tree}
+    \subitem {$\sim $\discretionary {-}{}{}B\discretionary {-}{}{}S\discretionary {-}{}{}Tree}, 
+		\hyperpage{7}
+    \subitem {B\discretionary {-}{}{}S\discretionary {-}{}{}Tree}, 
+		\hyperpage{6}
+    \subitem {B\discretionary {-}{}{}S\discretionary {-}{}{}Tree}, 
+		\hyperpage{6}
+    \subitem {clear}, \hyperpage{7}
+    \subitem {get\discretionary {-}{}{}Count}, \hyperpage{7}
+    \subitem {get\discretionary {-}{}{}Height}, \hyperpage{8}
+    \subitem {insert}, \hyperpage{8}
+    \subitem {is\discretionary {-}{}{}Empty}, \hyperpage{8}
+    \subitem {operator=}, \hyperpage{9}
+    \subitem {rec\discretionary {-}{}{}Clear}, \hyperpage{9}
+    \subitem {rec\discretionary {-}{}{}Copy}, \hyperpage{9}
+    \subitem {rec\discretionary {-}{}{}Get\discretionary {-}{}{}Count}, 
+		\hyperpage{10}
+    \subitem {rec\discretionary {-}{}{}Get\discretionary {-}{}{}Height}, 
+		\hyperpage{10}
+    \subitem {rec\discretionary {-}{}{}Insert}, \hyperpage{10}
+    \subitem {rec\discretionary {-}{}{}Remove}, \hyperpage{11}
+    \subitem {rec\discretionary {-}{}{}Retrieve}, \hyperpage{11}
+    \subitem {rec\discretionary {-}{}{}Write\discretionary {-}{}{}Keys}, 
+		\hyperpage{12}
+    \subitem {rec\discretionary {-}{}{}Write\discretionary {-}{}{}Less\discretionary {-}{}{}Than}, 
+		\hyperpage{12}
+    \subitem {remove}, \hyperpage{13}
+    \subitem {retrieve}, \hyperpage{13}
+    \subitem {root}, \hyperpage{14}
+    \subitem {show\discretionary {-}{}{}Helper}, \hyperpage{13}
+    \subitem {show\discretionary {-}{}{}Structure}, \hyperpage{14}
+    \subitem {write\discretionary {-}{}{}Keys}, \hyperpage{14}
+    \subitem {write\discretionary {-}{}{}Less\discretionary {-}{}{}Than}, 
+		\hyperpage{14}
+  \item {B\discretionary {-}{}{}S\discretionary {-}{}{}Tree$<$ Data\discretionary {-}{}{}Type, Key\discretionary {-}{}{}Type $>$}, 
+		\hyperpage{5}
+  \item {B\discretionary {-}{}{}S\discretionary {-}{}{}Tree$<$ Data\discretionary {-}{}{}Type, Key\discretionary {-}{}{}Type $>$\discretionary {-}{}{}::\discretionary {-}{}{}B\discretionary {-}{}{}S\discretionary {-}{}{}Tree\discretionary {-}{}{}Node}, 
+		\hyperpage{14}
+  \item {B\discretionary {-}{}{}S\discretionary {-}{}{}Tree.\discretionary {-}{}{}cpp}, 
+		\hyperpage{17}
+  \item {B\discretionary {-}{}{}S\discretionary {-}{}{}Tree.\discretionary {-}{}{}h}, 
+		\hyperpage{17}
+  \item {B\discretionary {-}{}{}S\discretionary {-}{}{}Tree\discretionary {-}{}{}::\discretionary {-}{}{}B\discretionary {-}{}{}S\discretionary {-}{}{}Tree\discretionary {-}{}{}Node}
+    \subitem {B\discretionary {-}{}{}S\discretionary {-}{}{}Tree\discretionary {-}{}{}Node}, 
+		\hyperpage{15}
+    \subitem {data\discretionary {-}{}{}Item}, \hyperpage{15}
+    \subitem {left}, \hyperpage{15}
+    \subitem {right}, \hyperpage{15}
+  \item {B\discretionary {-}{}{}S\discretionary {-}{}{}Tree\discretionary {-}{}{}Node}
+    \subitem {B\discretionary {-}{}{}S\discretionary {-}{}{}Tree\discretionary {-}{}{}::\discretionary {-}{}{}B\discretionary {-}{}{}S\discretionary {-}{}{}Tree\discretionary {-}{}{}Node}, 
+		\hyperpage{15}
+  \item {balance}
+    \subitem {Account\discretionary {-}{}{}Record}, \hyperpage{5}
+  \item {bytes\discretionary {-}{}{}Per\discretionary {-}{}{}Record}
+    \subitem {database.\discretionary {-}{}{}cpp}, \hyperpage{18}
+    \subitem {database.\discretionary {-}{}{}cs}, \hyperpage{19}
+
+  \indexspace
+
+  \item {clear}
+    \subitem {B\discretionary {-}{}{}S\discretionary {-}{}{}Tree}, 
+		\hyperpage{7}
+  \item {config.\discretionary {-}{}{}h}, \hyperpage{17}
+    \subitem {L\discretionary {-}{}{}A\discretionary {-}{}{}B9\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T1}, 
+		\hyperpage{17}
+    \subitem {L\discretionary {-}{}{}A\discretionary {-}{}{}B9\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T2}, 
+		\hyperpage{17}
+    \subitem {L\discretionary {-}{}{}A\discretionary {-}{}{}B9\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T3}, 
+		\hyperpage{18}
+
+  \indexspace
+
+  \item {data\discretionary {-}{}{}Item}
+    \subitem {B\discretionary {-}{}{}S\discretionary {-}{}{}Tree\discretionary {-}{}{}::\discretionary {-}{}{}B\discretionary {-}{}{}S\discretionary {-}{}{}Tree\discretionary {-}{}{}Node}, 
+		\hyperpage{15}
+  \item {database.\discretionary {-}{}{}cpp}, \hyperpage{18}
+    \subitem {bytes\discretionary {-}{}{}Per\discretionary {-}{}{}Record}, 
+		\hyperpage{18}
+    \subitem {main}, \hyperpage{18}
+    \subitem {name\discretionary {-}{}{}Length}, \hyperpage{18}
+  \item {database.\discretionary {-}{}{}cs}, \hyperpage{18}
+    \subitem {bytes\discretionary {-}{}{}Per\discretionary {-}{}{}Record}, 
+		\hyperpage{19}
+    \subitem {main}, \hyperpage{19}
+    \subitem {name\discretionary {-}{}{}Length}, \hyperpage{19}
+
+  \indexspace
+
+  \item {first\discretionary {-}{}{}Name}
+    \subitem {Account\discretionary {-}{}{}Record}, \hyperpage{5}
+
+  \indexspace
+
+  \item {get\discretionary {-}{}{}Count}
+    \subitem {B\discretionary {-}{}{}S\discretionary {-}{}{}Tree}, 
+		\hyperpage{7}
+  \item {get\discretionary {-}{}{}Height}
+    \subitem {B\discretionary {-}{}{}S\discretionary {-}{}{}Tree}, 
+		\hyperpage{8}
+  \item {get\discretionary {-}{}{}Key}
+    \subitem {Index\discretionary {-}{}{}Entry}, \hyperpage{16}
+    \subitem {Test\discretionary {-}{}{}Data}, \hyperpage{16}
+
+  \indexspace
+
+  \item {Index\discretionary {-}{}{}Entry}, \hyperpage{15}
+    \subitem {acct\discretionary {-}{}{}I\discretionary {-}{}{}D}, 
+		\hyperpage{16}
+    \subitem {get\discretionary {-}{}{}Key}, \hyperpage{16}
+    \subitem {key}, \hyperpage{16}
+    \subitem {rec\discretionary {-}{}{}Num}, \hyperpage{16}
+  \item {insert}
+    \subitem {B\discretionary {-}{}{}S\discretionary {-}{}{}Tree}, 
+		\hyperpage{8}
+  \item {is\discretionary {-}{}{}Empty}
+    \subitem {B\discretionary {-}{}{}S\discretionary {-}{}{}Tree}, 
+		\hyperpage{8}
+
+  \indexspace
+
+  \item {key}
+    \subitem {Index\discretionary {-}{}{}Entry}, \hyperpage{16}
+
+  \indexspace
+
+  \item {L\discretionary {-}{}{}A\discretionary {-}{}{}B9\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T1}
+    \subitem {config.\discretionary {-}{}{}h}, \hyperpage{17}
+  \item {L\discretionary {-}{}{}A\discretionary {-}{}{}B9\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T2}
+    \subitem {config.\discretionary {-}{}{}h}, \hyperpage{17}
+  \item {L\discretionary {-}{}{}A\discretionary {-}{}{}B9\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T3}
+    \subitem {config.\discretionary {-}{}{}h}, \hyperpage{18}
+  \item {last\discretionary {-}{}{}Name}
+    \subitem {Account\discretionary {-}{}{}Record}, \hyperpage{5}
+  \item {left}
+    \subitem {B\discretionary {-}{}{}S\discretionary {-}{}{}Tree\discretionary {-}{}{}::\discretionary {-}{}{}B\discretionary {-}{}{}S\discretionary {-}{}{}Tree\discretionary {-}{}{}Node}, 
+		\hyperpage{15}
+
+  \indexspace
+
+  \item {main}
+    \subitem {database.\discretionary {-}{}{}cpp}, \hyperpage{18}
+    \subitem {database.\discretionary {-}{}{}cs}, \hyperpage{19}
+    \subitem {test9.\discretionary {-}{}{}cpp}, \hyperpage{19}
+
+  \indexspace
+
+  \item {name\discretionary {-}{}{}Length}
+    \subitem {database.\discretionary {-}{}{}cpp}, \hyperpage{18}
+    \subitem {database.\discretionary {-}{}{}cs}, \hyperpage{19}
+
+  \indexspace
+
+  \item {operator=}
+    \subitem {B\discretionary {-}{}{}S\discretionary {-}{}{}Tree}, 
+		\hyperpage{9}
+
+  \indexspace
+
+  \item {print\discretionary {-}{}{}\_\discretionary {-}{}{}help}
+    \subitem {test9.\discretionary {-}{}{}cpp}, \hyperpage{19}
+
+  \indexspace
+
+  \item {rec\discretionary {-}{}{}Clear}
+    \subitem {B\discretionary {-}{}{}S\discretionary {-}{}{}Tree}, 
+		\hyperpage{9}
+  \item {rec\discretionary {-}{}{}Copy}
+    \subitem {B\discretionary {-}{}{}S\discretionary {-}{}{}Tree}, 
+		\hyperpage{9}
+  \item {rec\discretionary {-}{}{}Get\discretionary {-}{}{}Count}
+    \subitem {B\discretionary {-}{}{}S\discretionary {-}{}{}Tree}, 
+		\hyperpage{10}
+  \item {rec\discretionary {-}{}{}Get\discretionary {-}{}{}Height}
+    \subitem {B\discretionary {-}{}{}S\discretionary {-}{}{}Tree}, 
+		\hyperpage{10}
+  \item {rec\discretionary {-}{}{}Insert}
+    \subitem {B\discretionary {-}{}{}S\discretionary {-}{}{}Tree}, 
+		\hyperpage{10}
+  \item {rec\discretionary {-}{}{}Num}
+    \subitem {Index\discretionary {-}{}{}Entry}, \hyperpage{16}
+  \item {rec\discretionary {-}{}{}Remove}
+    \subitem {B\discretionary {-}{}{}S\discretionary {-}{}{}Tree}, 
+		\hyperpage{11}
+  \item {rec\discretionary {-}{}{}Retrieve}
+    \subitem {B\discretionary {-}{}{}S\discretionary {-}{}{}Tree}, 
+		\hyperpage{11}
+  \item {rec\discretionary {-}{}{}Write\discretionary {-}{}{}Keys}
+    \subitem {B\discretionary {-}{}{}S\discretionary {-}{}{}Tree}, 
+		\hyperpage{12}
+  \item {rec\discretionary {-}{}{}Write\discretionary {-}{}{}Less\discretionary {-}{}{}Than}
+    \subitem {B\discretionary {-}{}{}S\discretionary {-}{}{}Tree}, 
+		\hyperpage{12}
+  \item {remove}
+    \subitem {B\discretionary {-}{}{}S\discretionary {-}{}{}Tree}, 
+		\hyperpage{13}
+  \item {retrieve}
+    \subitem {B\discretionary {-}{}{}S\discretionary {-}{}{}Tree}, 
+		\hyperpage{13}
+  \item {right}
+    \subitem {B\discretionary {-}{}{}S\discretionary {-}{}{}Tree\discretionary {-}{}{}::\discretionary {-}{}{}B\discretionary {-}{}{}S\discretionary {-}{}{}Tree\discretionary {-}{}{}Node}, 
+		\hyperpage{15}
+  \item {root}
+    \subitem {B\discretionary {-}{}{}S\discretionary {-}{}{}Tree}, 
+		\hyperpage{14}
+
+  \indexspace
+
+  \item {set\discretionary {-}{}{}Key}
+    \subitem {Test\discretionary {-}{}{}Data}, \hyperpage{16}
+  \item {show9.\discretionary {-}{}{}cpp}, \hyperpage{19}
+  \item {show\discretionary {-}{}{}Helper}
+    \subitem {B\discretionary {-}{}{}S\discretionary {-}{}{}Tree}, 
+		\hyperpage{13}
+  \item {show\discretionary {-}{}{}Structure}
+    \subitem {B\discretionary {-}{}{}S\discretionary {-}{}{}Tree}, 
+		\hyperpage{14}
+
+  \indexspace
+
+  \item {test9.\discretionary {-}{}{}cpp}, \hyperpage{19}
+    \subitem {main}, \hyperpage{19}
+    \subitem {print\discretionary {-}{}{}\_\discretionary {-}{}{}help}, 
+		\hyperpage{19}
+  \item {Test\discretionary {-}{}{}Data}, \hyperpage{16}
+    \subitem {get\discretionary {-}{}{}Key}, \hyperpage{16}
+    \subitem {set\discretionary {-}{}{}Key}, \hyperpage{16}
+
+  \indexspace
+
+  \item {write\discretionary {-}{}{}Keys}
+    \subitem {B\discretionary {-}{}{}S\discretionary {-}{}{}Tree}, 
+		\hyperpage{14}
+  \item {write\discretionary {-}{}{}Less\discretionary {-}{}{}Than}
+    \subitem {B\discretionary {-}{}{}S\discretionary {-}{}{}Tree}, 
+		\hyperpage{14}
+
+\end{theindex}

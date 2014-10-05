@@ -1,0 +1,92 @@
+\begin{theindex}
+
+  \item {$\sim $\discretionary {-}{}{}Expr\discretionary {-}{}{}Tree}
+    \subitem {Expr\discretionary {-}{}{}Tree}, \hyperpage{6}
+
+  \indexspace
+
+  \item {build}
+    \subitem {Expr\discretionary {-}{}{}Tree}, \hyperpage{6}
+
+  \indexspace
+
+  \item {clear}
+    \subitem {Expr\discretionary {-}{}{}Tree}, \hyperpage{6}
+  \item {commute}
+    \subitem {Expr\discretionary {-}{}{}Tree}, \hyperpage{6}
+  \item {config.\discretionary {-}{}{}h}, \hyperpage{9}
+    \subitem {L\discretionary {-}{}{}A\discretionary {-}{}{}B8\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T1}, 
+		\hyperpage{9}
+    \subitem {L\discretionary {-}{}{}A\discretionary {-}{}{}B8\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T2}, 
+		\hyperpage{9}
+    \subitem {L\discretionary {-}{}{}A\discretionary {-}{}{}B8\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T3}, 
+		\hyperpage{9}
+
+  \indexspace
+
+  \item {dummy}
+    \subitem {test8.\discretionary {-}{}{}cpp}, \hyperpage{10}
+
+  \indexspace
+
+  \item {evaluate}
+    \subitem {Expr\discretionary {-}{}{}Tree}, \hyperpage{7}
+  \item {Expr\discretionary {-}{}{}Tree}
+    \subitem {$\sim $\discretionary {-}{}{}Expr\discretionary {-}{}{}Tree}, 
+		\hyperpage{6}
+    \subitem {build}, \hyperpage{6}
+    \subitem {clear}, \hyperpage{6}
+    \subitem {commute}, \hyperpage{6}
+    \subitem {evaluate}, \hyperpage{7}
+    \subitem {Expr\discretionary {-}{}{}Tree}, \hyperpage{5}
+    \subitem {expression}, \hyperpage{7}
+    \subitem {Expr\discretionary {-}{}{}Tree}, \hyperpage{5}
+    \subitem {is\discretionary {-}{}{}Equivalent}, \hyperpage{7}
+    \subitem {operator=}, \hyperpage{8}
+    \subitem {show\discretionary {-}{}{}Structure}, \hyperpage{8}
+  \item {Expr\discretionary {-}{}{}Tree$<$ Data\discretionary {-}{}{}Type $>$}, 
+		\hyperpage{5}
+  \item {expression}
+    \subitem {Expr\discretionary {-}{}{}Tree}, \hyperpage{7}
+  \item {Expression\discretionary {-}{}{}Tree.\discretionary {-}{}{}cpp}, 
+		\hyperpage{9}
+  \item {Expression\discretionary {-}{}{}Tree.\discretionary {-}{}{}h}, 
+		\hyperpage{9}
+
+  \indexspace
+
+  \item {is\discretionary {-}{}{}Equivalent}
+    \subitem {Expr\discretionary {-}{}{}Tree}, \hyperpage{7}
+
+  \indexspace
+
+  \item {L\discretionary {-}{}{}A\discretionary {-}{}{}B8\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T1}
+    \subitem {config.\discretionary {-}{}{}h}, \hyperpage{9}
+  \item {L\discretionary {-}{}{}A\discretionary {-}{}{}B8\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T2}
+    \subitem {config.\discretionary {-}{}{}h}, \hyperpage{9}
+  \item {L\discretionary {-}{}{}A\discretionary {-}{}{}B8\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T3}
+    \subitem {config.\discretionary {-}{}{}h}, \hyperpage{9}
+
+  \indexspace
+
+  \item {main}
+    \subitem {test8.\discretionary {-}{}{}cpp}, \hyperpage{10}
+
+  \indexspace
+
+  \item {operator=}
+    \subitem {Expr\discretionary {-}{}{}Tree}, \hyperpage{8}
+
+  \indexspace
+
+  \item {show8.\discretionary {-}{}{}cpp}, \hyperpage{10}
+  \item {show\discretionary {-}{}{}Structure}
+    \subitem {Expr\discretionary {-}{}{}Tree}, \hyperpage{8}
+
+  \indexspace
+
+  \item {test8.\discretionary {-}{}{}cpp}, \hyperpage{10}
+    \subitem {dummy}, \hyperpage{10}
+    \subitem {main}, \hyperpage{10}
+
+\end{theindex}

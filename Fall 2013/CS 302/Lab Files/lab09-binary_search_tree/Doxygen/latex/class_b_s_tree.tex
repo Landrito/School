@@ -1,0 +1,601 @@
+\hypertarget{class_b_s_tree}{\section{B\-S\-Tree$<$ Data\-Type, Key\-Type $>$ Class Template Reference}
+\label{class_b_s_tree}\index{B\-S\-Tree$<$ Data\-Type, Key\-Type $>$@{B\-S\-Tree$<$ Data\-Type, Key\-Type $>$}}
+}
+
+
+{\ttfamily \#include $<$B\-S\-Tree.\-h$>$}
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_b_s_tree_1_1_b_s_tree_node}{B\-S\-Tree\-Node}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_b_s_tree_a4513fc6697f5e51bff8e7c448b446c9e}{B\-S\-Tree} ()
+\item 
+\hyperlink{class_b_s_tree_a6658391c178cb35858c9c465e1839fb0}{B\-S\-Tree} (const \hyperlink{class_b_s_tree}{B\-S\-Tree}$<$ Data\-Type, Key\-Type $>$ \&other)
+\item 
+\hyperlink{class_b_s_tree}{B\-S\-Tree} \& \hyperlink{class_b_s_tree_ac36b0b564aa3c411c239d730f506f448}{operator=} (const \hyperlink{class_b_s_tree}{B\-S\-Tree}$<$ Data\-Type, Key\-Type $>$ \&other)
+\item 
+\hyperlink{class_b_s_tree_a968c51c539f4ae41357c78b6a60fea4c}{$\sim$\-B\-S\-Tree} ()
+\item 
+void \hyperlink{class_b_s_tree_ab86b4cea496ee53076021126423d51fd}{insert} (const Data\-Type \&new\-Data\-Item)
+\item 
+bool \hyperlink{class_b_s_tree_a4359bfee390669b5adaf0380ef62b18d}{retrieve} (const Key\-Type \&search\-Key, Data\-Type \&search\-Data\-Item) const 
+\item 
+bool \hyperlink{class_b_s_tree_a755549f7b88d0178a96ca84afd5e04cf}{remove} (const Key\-Type \&delete\-Key)
+\item 
+void \hyperlink{class_b_s_tree_a7f08f48e6d1bbe3eb726856a947325e7}{write\-Keys} () const 
+\item 
+void \hyperlink{class_b_s_tree_a926822d08f3d0321603f9fafd2254b16}{clear} ()
+\item 
+bool \hyperlink{class_b_s_tree_a43768375369ca8fe641a86451997ad45}{is\-Empty} () const 
+\item 
+void \hyperlink{class_b_s_tree_ac28277cacbf8ab33326473a419abf097}{show\-Structure} () const 
+\item 
+int \hyperlink{class_b_s_tree_a3850adc6b8ae965ec11ec0e0567b6f7d}{get\-Height} () const 
+\item 
+int \hyperlink{class_b_s_tree_a880d98553153533d3c29504e8a272c7d}{get\-Count} () const 
+\item 
+void \hyperlink{class_b_s_tree_a92079e5301185f41eebe1c32c2357258}{write\-Less\-Than} (const Key\-Type \&search\-Key) const 
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_b_s_tree_a6f3c9d9e0e06e3bcd52834c48d573f12}{rec\-Insert} (const Data\-Type \&new\-Data\-Item, \hyperlink{class_b_s_tree_1_1_b_s_tree_node}{B\-S\-Tree\-Node} $\ast$\&node)
+\item 
+bool \hyperlink{class_b_s_tree_a52621024ec6523e8dffa77580aa5e2b0}{rec\-Retrieve} (const Key\-Type \&search\-Key, Data\-Type \&search\-Data\-Item, \hyperlink{class_b_s_tree_1_1_b_s_tree_node}{B\-S\-Tree\-Node} $\ast$node) const 
+\item 
+bool \hyperlink{class_b_s_tree_a86076589422d70f9b2ac69d3217d5ef8}{rec\-Remove} (const Key\-Type \&delete\-Key, \hyperlink{class_b_s_tree_1_1_b_s_tree_node}{B\-S\-Tree\-Node} $\ast$\&node)
+\item 
+void \hyperlink{class_b_s_tree_af9aa9675f0e2d264371ce8826c4e2128}{rec\-Write\-Keys} (\hyperlink{class_b_s_tree_1_1_b_s_tree_node}{B\-S\-Tree\-Node} $\ast$node) const 
+\item 
+void \hyperlink{class_b_s_tree_ad8cb8bd9aadee7296e35499f01268c8b}{rec\-Clear} (\hyperlink{class_b_s_tree_1_1_b_s_tree_node}{B\-S\-Tree\-Node} $\ast$\&node)
+\item 
+void \hyperlink{class_b_s_tree_ad16a44f4bf6249dac7ef04e9b4108d50}{rec\-Get\-Height} (\hyperlink{class_b_s_tree_1_1_b_s_tree_node}{B\-S\-Tree\-Node} $\ast$node, int current\-Level, int \&max\-Level) const 
+\item 
+int \hyperlink{class_b_s_tree_a66ecc4a7bf33cbc8b509720f2fbe3d36}{rec\-Get\-Count} (\hyperlink{class_b_s_tree_1_1_b_s_tree_node}{B\-S\-Tree\-Node} $\ast$node) const 
+\item 
+void \hyperlink{class_b_s_tree_ae619346eb3e5af655cb4d4472e24881d}{rec\-Copy} (\hyperlink{class_b_s_tree_1_1_b_s_tree_node}{B\-S\-Tree\-Node} $\ast$\&node, \hyperlink{class_b_s_tree_1_1_b_s_tree_node}{B\-S\-Tree\-Node} $\ast$other\-Node)
+\item 
+void \hyperlink{class_b_s_tree_a525852c9c852811e9df4a758835dd615}{rec\-Write\-Less\-Than} (const Key\-Type \&search\-Key, \hyperlink{class_b_s_tree_1_1_b_s_tree_node}{B\-S\-Tree\-Node} $\ast$node) const 
+\item 
+void \hyperlink{class_b_s_tree_a44b3002e3476eb410468a4b9aaaa73ef}{show\-Helper} (\hyperlink{class_b_s_tree_1_1_b_s_tree_node}{B\-S\-Tree\-Node} $\ast$p, int level) const 
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_b_s_tree_1_1_b_s_tree_node}{B\-S\-Tree\-Node} $\ast$ \hyperlink{class_b_s_tree_a83534afce9094181ac031f9f596a8625}{root}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_b_s_tree_a4513fc6697f5e51bff8e7c448b446c9e}{\index{B\-S\-Tree@{B\-S\-Tree}!B\-S\-Tree@{B\-S\-Tree}}
+\index{B\-S\-Tree@{B\-S\-Tree}!BSTree@{B\-S\-Tree}}
+\subsubsection[{B\-S\-Tree}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data\-Type , class Key\-Type $>$ {\bf B\-S\-Tree}$<$ Data\-Type, Key\-Type $>$\-::{\bf B\-S\-Tree} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_b_s_tree_a4513fc6697f5e51bff8e7c448b446c9e}
+\begin{DoxyPrecond}{Precondition}
+New \hyperlink{class_b_s_tree}{B\-S\-Tree} Class 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+root pointing to null
+\end{DoxyPostcond}
+Algorithm\-:
+\begin{DoxyItemize}
+\item point root to null
+\end{DoxyItemize}
+
+Exceptional/\-Error Conditions\-:
+\begin{DoxyItemize}
+\item none 
+\end{DoxyItemize}\hypertarget{class_b_s_tree_a6658391c178cb35858c9c465e1839fb0}{\index{B\-S\-Tree@{B\-S\-Tree}!B\-S\-Tree@{B\-S\-Tree}}
+\index{B\-S\-Tree@{B\-S\-Tree}!BSTree@{B\-S\-Tree}}
+\subsubsection[{B\-S\-Tree}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data\-Type , class Key\-Type $>$ {\bf B\-S\-Tree}$<$ Data\-Type, Key\-Type $>$\-::{\bf B\-S\-Tree} (
+\begin{DoxyParamCaption}
+\item[{const {\bf B\-S\-Tree}$<$ Data\-Type, Key\-Type $>$ \&}]{other}
+\end{DoxyParamCaption}
+)}}\label{class_b_s_tree_a6658391c178cb35858c9c465e1839fb0}
+\begin{DoxyPrecond}{Precondition}
+new \hyperlink{class_b_s_tree}{B\-S\-Tree} class
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+a deep copy of source \hyperlink{class_b_s_tree}{B\-S\-Tree}
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parameters}
+{\em source} & Source \hyperlink{class_b_s_tree}{B\-S\-Tree} to be deep copied\\
+\hline
+\end{DoxyParams}
+Algorithm\-:
+\begin{DoxyItemize}
+\item Use overloaded assignment operator to copy the data from the source to this class 
+\end{DoxyItemize}\hypertarget{class_b_s_tree_a968c51c539f4ae41357c78b6a60fea4c}{\index{B\-S\-Tree@{B\-S\-Tree}!$\sim$\-B\-S\-Tree@{$\sim$\-B\-S\-Tree}}
+\index{$\sim$\-B\-S\-Tree@{$\sim$\-B\-S\-Tree}!BSTree@{B\-S\-Tree}}
+\subsubsection[{$\sim$\-B\-S\-Tree}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data\-Type , class Key\-Type $>$ {\bf B\-S\-Tree}$<$ Data\-Type, Key\-Type $>$\-::$\sim${\bf B\-S\-Tree} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_b_s_tree_a968c51c539f4ae41357c78b6a60fea4c}
+\begin{DoxyPrecond}{Precondition}
+a B\-S\-Tree\-Class
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+deallocated B\-S\-Tree\-Class
+\end{DoxyPostcond}
+Algorithm\-:
+\begin{DoxyItemize}
+\item Use clear member function to deallocate the tree 
+\end{DoxyItemize}
+
+\subsection{Member Function Documentation}
+\hypertarget{class_b_s_tree_a926822d08f3d0321603f9fafd2254b16}{\index{B\-S\-Tree@{B\-S\-Tree}!clear@{clear}}
+\index{clear@{clear}!BSTree@{B\-S\-Tree}}
+\subsubsection[{clear}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data\-Type , class Key\-Type $>$ void {\bf B\-S\-Tree}$<$ Data\-Type, Key\-Type $>$\-::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_b_s_tree_a926822d08f3d0321603f9fafd2254b16}
+\begin{DoxyPrecond}{Precondition}
+a B\-S\-Tree\-Class
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+a deallocated tree
+\end{DoxyPostcond}
+Algorithm\-:
+\begin{DoxyItemize}
+\item Use rec\-Clear member function to make the expression tree 
+\end{DoxyItemize}\hypertarget{class_b_s_tree_a880d98553153533d3c29504e8a272c7d}{\index{B\-S\-Tree@{B\-S\-Tree}!get\-Count@{get\-Count}}
+\index{get\-Count@{get\-Count}!BSTree@{B\-S\-Tree}}
+\subsubsection[{get\-Count}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data\-Type , class Key\-Type $>$ int {\bf B\-S\-Tree}$<$ Data\-Type, Key\-Type $>$\-::get\-Count (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_b_s_tree_a880d98553153533d3c29504e8a272c7d}
+\begin{DoxyPrecond}{Precondition}
+a B\-S\-Tree\-Class
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+returns the number of nodes in the tree
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Returns}
+returns the height of the tree
+\end{DoxyReturn}
+Algorithm\-:
+\begin{DoxyItemize}
+\item use rec\-Get\-Count member function 
+\end{DoxyItemize}\hypertarget{class_b_s_tree_a3850adc6b8ae965ec11ec0e0567b6f7d}{\index{B\-S\-Tree@{B\-S\-Tree}!get\-Height@{get\-Height}}
+\index{get\-Height@{get\-Height}!BSTree@{B\-S\-Tree}}
+\subsubsection[{get\-Height}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data\-Type , class Key\-Type $>$ int {\bf B\-S\-Tree}$<$ Data\-Type, Key\-Type $>$\-::get\-Height (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_b_s_tree_a3850adc6b8ae965ec11ec0e0567b6f7d}
+\begin{DoxyPrecond}{Precondition}
+a B\-S\-Tree\-Class
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+returns the height of the tree
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Returns}
+returns the height of the tree
+\end{DoxyReturn}
+Algorithm\-:
+\begin{DoxyItemize}
+\item use rec\-Get\-Height member function 
+\end{DoxyItemize}\hypertarget{class_b_s_tree_ab86b4cea496ee53076021126423d51fd}{\index{B\-S\-Tree@{B\-S\-Tree}!insert@{insert}}
+\index{insert@{insert}!BSTree@{B\-S\-Tree}}
+\subsubsection[{insert}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data\-Type , class Key\-Type $>$ void {\bf B\-S\-Tree}$<$ Data\-Type, Key\-Type $>$\-::insert (
+\begin{DoxyParamCaption}
+\item[{const Data\-Type \&}]{new\-Data\-Item}
+\end{DoxyParamCaption}
+)}}\label{class_b_s_tree_ab86b4cea496ee53076021126423d51fd}
+\begin{DoxyPrecond}{Precondition}
+a B\-S\-Tree\-Class
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+a new node inserted into the \hyperlink{class_b_s_tree}{B\-S\-Tree}
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parameters}
+{\em new\-Data\-Item} & Data to be inserted into the \hyperlink{class_b_s_tree}{B\-S\-Tree}\\
+\hline
+\end{DoxyParams}
+Algorithm\-:
+\begin{DoxyItemize}
+\item Use rec\-Insert member function 
+\end{DoxyItemize}\hypertarget{class_b_s_tree_a43768375369ca8fe641a86451997ad45}{\index{B\-S\-Tree@{B\-S\-Tree}!is\-Empty@{is\-Empty}}
+\index{is\-Empty@{is\-Empty}!BSTree@{B\-S\-Tree}}
+\subsubsection[{is\-Empty}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data\-Type , class Key\-Type $>$ bool {\bf B\-S\-Tree}$<$ Data\-Type, Key\-Type $>$\-::is\-Empty (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_b_s_tree_a43768375369ca8fe641a86451997ad45}
+\begin{DoxyPrecond}{Precondition}
+a B\-S\-Tree\-Class
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+returns if the tree is empty
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Returns}
+Returns true if root is pointing to N\-U\-L\-L
+\end{DoxyReturn}
+Algorithm\-:
+\begin{DoxyItemize}
+\item return true if root is pointing to N\-U\-L\-L 
+\end{DoxyItemize}\hypertarget{class_b_s_tree_ac36b0b564aa3c411c239d730f506f448}{\index{B\-S\-Tree@{B\-S\-Tree}!operator=@{operator=}}
+\index{operator=@{operator=}!BSTree@{B\-S\-Tree}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data\-Type , class Key\-Type $>$ {\bf B\-S\-Tree}$<$ Data\-Type, Key\-Type $>$ \& {\bf B\-S\-Tree}$<$ Data\-Type, Key\-Type $>$\-::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf B\-S\-Tree}$<$ Data\-Type, Key\-Type $>$ \&}]{other}
+\end{DoxyParamCaption}
+)}}\label{class_b_s_tree_ac36b0b564aa3c411c239d730f506f448}
+\begin{DoxyPrecond}{Precondition}
+a B\-S\-Tree\-Class
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+a deep copy of source \hyperlink{class_b_s_tree}{B\-S\-Tree}
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parameters}
+{\em source} & Source \hyperlink{class_b_s_tree}{B\-S\-Tree} to be deep copied\\
+\hline
+\end{DoxyParams}
+Algorithm\-:
+\begin{DoxyItemize}
+\item Use rec\-Copy to make a copy of each node in the \hyperlink{class_b_s_tree}{B\-S\-Tree} 
+\end{DoxyItemize}\hypertarget{class_b_s_tree_ad8cb8bd9aadee7296e35499f01268c8b}{\index{B\-S\-Tree@{B\-S\-Tree}!rec\-Clear@{rec\-Clear}}
+\index{rec\-Clear@{rec\-Clear}!BSTree@{B\-S\-Tree}}
+\subsubsection[{rec\-Clear}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data\-Type , class Key\-Type $>$ void {\bf B\-S\-Tree}$<$ Data\-Type, Key\-Type $>$\-::rec\-Clear (
+\begin{DoxyParamCaption}
+\item[{{\bf B\-S\-Tree\-Node} $\ast$\&}]{node}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_b_s_tree_ad8cb8bd9aadee7296e35499f01268c8b}
+\begin{DoxyPrecond}{Precondition}
+an B\-S\-Tree\-Class
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+deallocated B\-S\-Tree\-Class
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parameters}
+{\em node} & the node to be deleted.\\
+\hline
+\end{DoxyParams}
+Algorithm\-:
+\begin{DoxyItemize}
+\item Post order traverse the tree, deleting the node when bottom of tree is reached 
+\end{DoxyItemize}\hypertarget{class_b_s_tree_ae619346eb3e5af655cb4d4472e24881d}{\index{B\-S\-Tree@{B\-S\-Tree}!rec\-Copy@{rec\-Copy}}
+\index{rec\-Copy@{rec\-Copy}!BSTree@{B\-S\-Tree}}
+\subsubsection[{rec\-Copy}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data\-Type , class Key\-Type $>$ void {\bf B\-S\-Tree}$<$ Data\-Type, Key\-Type $>$\-::rec\-Copy (
+\begin{DoxyParamCaption}
+\item[{{\bf B\-S\-Tree\-Node} $\ast$\&}]{node, }
+\item[{{\bf B\-S\-Tree\-Node} $\ast$}]{other\-Node}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_b_s_tree_ae619346eb3e5af655cb4d4472e24881d}
+\begin{DoxyPrecond}{Precondition}
+an B\-S\-Tree\-Class
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+a deep copy of source \hyperlink{class_b_s_tree}{B\-S\-Tree}
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parameters}
+{\em node} & location in this tree \\
+\hline
+{\em other\-Node} & location in source tree\\
+\hline
+\end{DoxyParams}
+Algorithm\-:
+\begin{DoxyItemize}
+\item if the source node is not at a N\-U\-L\-L location -\/create temp nodes ptrs and copy those from source -\/create a node and point to the temp nodes 
+\end{DoxyItemize}\hypertarget{class_b_s_tree_a66ecc4a7bf33cbc8b509720f2fbe3d36}{\index{B\-S\-Tree@{B\-S\-Tree}!rec\-Get\-Count@{rec\-Get\-Count}}
+\index{rec\-Get\-Count@{rec\-Get\-Count}!BSTree@{B\-S\-Tree}}
+\subsubsection[{rec\-Get\-Count}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data\-Type , class Key\-Type $>$ int {\bf B\-S\-Tree}$<$ Data\-Type, Key\-Type $>$\-::rec\-Get\-Count (
+\begin{DoxyParamCaption}
+\item[{{\bf B\-S\-Tree\-Node} $\ast$}]{node}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_b_s_tree_a66ecc4a7bf33cbc8b509720f2fbe3d36}
+\begin{DoxyPrecond}{Precondition}
+a \hyperlink{class_b_s_tree_1_1_b_s_tree_node}{B\-S\-Tree\-Node}
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+returned amount of nodes in the tree
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Returns}
+Amount of nodes in the tree
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em node} & the location in the tree\\
+\hline
+\end{DoxyParams}
+Algorithm\-:
+\begin{DoxyItemize}
+\item if at a null position return 0
+\item else return 1 plus recursive call on the children 
+\end{DoxyItemize}\hypertarget{class_b_s_tree_ad16a44f4bf6249dac7ef04e9b4108d50}{\index{B\-S\-Tree@{B\-S\-Tree}!rec\-Get\-Height@{rec\-Get\-Height}}
+\index{rec\-Get\-Height@{rec\-Get\-Height}!BSTree@{B\-S\-Tree}}
+\subsubsection[{rec\-Get\-Height}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data\-Type , class Key\-Type $>$ void {\bf B\-S\-Tree}$<$ Data\-Type, Key\-Type $>$\-::rec\-Get\-Height (
+\begin{DoxyParamCaption}
+\item[{{\bf B\-S\-Tree\-Node} $\ast$}]{node, }
+\item[{int}]{current\-Level, }
+\item[{int \&}]{max\-Level}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_b_s_tree_ad16a44f4bf6249dac7ef04e9b4108d50}
+\begin{DoxyPrecond}{Precondition}
+a \hyperlink{class_b_s_tree_1_1_b_s_tree_node}{B\-S\-Tree\-Node}
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+returned value of the height of the tree
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parameters}
+{\em node} & the location in the tree \\
+\hline
+{\em current\-Level} & the current level of the tree \\
+\hline
+{\em max\-Level} & reference to the value to be returned\\
+\hline
+\end{DoxyParams}
+Algorithm\-:
+\begin{DoxyItemize}
+\item if at a leaf check if level is greater than max, if so return the value
+\item if not at a leaf go to children 
+\end{DoxyItemize}\hypertarget{class_b_s_tree_a6f3c9d9e0e06e3bcd52834c48d573f12}{\index{B\-S\-Tree@{B\-S\-Tree}!rec\-Insert@{rec\-Insert}}
+\index{rec\-Insert@{rec\-Insert}!BSTree@{B\-S\-Tree}}
+\subsubsection[{rec\-Insert}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data\-Type , class Key\-Type $>$ void {\bf B\-S\-Tree}$<$ Data\-Type, Key\-Type $>$\-::rec\-Insert (
+\begin{DoxyParamCaption}
+\item[{const Data\-Type \&}]{new\-Data\-Item, }
+\item[{{\bf B\-S\-Tree\-Node} $\ast$\&}]{node}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_b_s_tree_a6f3c9d9e0e06e3bcd52834c48d573f12}
+\begin{DoxyPrecond}{Precondition}
+an new \hyperlink{class_b_s_tree_1_1_b_s_tree_node}{B\-S\-Tree\-Node}
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+inserted Value in the tree
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parameters}
+{\em new\-Data\-Item} & new node data to be put into the tree \\
+\hline
+{\em $\ast$node} & Pointer to current node\\
+\hline
+\end{DoxyParams}
+Algorithm\-:
+\begin{DoxyItemize}
+\item check if youre at a leaf, if so insert the data
+\item check if you found a value of the same key, if so update
+\item check if your key is greater than current, if so traverse right
+\item else traverse left 
+\end{DoxyItemize}\hypertarget{class_b_s_tree_a86076589422d70f9b2ac69d3217d5ef8}{\index{B\-S\-Tree@{B\-S\-Tree}!rec\-Remove@{rec\-Remove}}
+\index{rec\-Remove@{rec\-Remove}!BSTree@{B\-S\-Tree}}
+\subsubsection[{rec\-Remove}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data\-Type , class Key\-Type $>$ bool {\bf B\-S\-Tree}$<$ Data\-Type, Key\-Type $>$\-::rec\-Remove (
+\begin{DoxyParamCaption}
+\item[{const Key\-Type \&}]{delete\-Key, }
+\item[{{\bf B\-S\-Tree\-Node} $\ast$\&}]{node}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_b_s_tree_a86076589422d70f9b2ac69d3217d5ef8}
+\begin{DoxyPrecond}{Precondition}
+a \hyperlink{class_b_s_tree_1_1_b_s_tree_node}{B\-S\-Tree\-Node}
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+node removed from the list
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Returns}
+Returns if successful
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em delete\-Key} & The key to be searched for in the tree. \\
+\hline
+{\em node} & the location in the tree to be checked\\
+\hline
+\end{DoxyParams}
+Algorithm\-:
+\begin{DoxyItemize}
+\item check if youre at the end of the list
+\item check if you're at the right location if so move on
+\item check if you are at a leaf if so delete the node
+\item else check if there is one child that is null
+\item if there is one child that is null delete the node
+\item else find the node just less than the node, replace it and delete the node
+\item if reaches end of the list return false 
+\end{DoxyItemize}\hypertarget{class_b_s_tree_a52621024ec6523e8dffa77580aa5e2b0}{\index{B\-S\-Tree@{B\-S\-Tree}!rec\-Retrieve@{rec\-Retrieve}}
+\index{rec\-Retrieve@{rec\-Retrieve}!BSTree@{B\-S\-Tree}}
+\subsubsection[{rec\-Retrieve}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data\-Type , class Key\-Type $>$ bool {\bf B\-S\-Tree}$<$ Data\-Type, Key\-Type $>$\-::rec\-Retrieve (
+\begin{DoxyParamCaption}
+\item[{const Key\-Type \&}]{search\-Key, }
+\item[{Data\-Type \&}]{search\-Data\-Item, }
+\item[{{\bf B\-S\-Tree\-Node} $\ast$}]{node}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_b_s_tree_a52621024ec6523e8dffa77580aa5e2b0}
+\begin{DoxyPrecond}{Precondition}
+a \hyperlink{class_b_s_tree_1_1_b_s_tree_node}{B\-S\-Tree\-Node}
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+a copy of the search data item
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Returns}
+Returns if successful
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em search\-Key} & The key to be searched for in the tree. \\
+\hline
+{\em search\-Data\-Item} & The reference variable to store the found data \\
+\hline
+{\em node} & the location in the tree to be checked\\
+\hline
+\end{DoxyParams}
+Algorithm\-:
+\begin{DoxyItemize}
+\item check if youre at the end of the list
+\item check if you are at the right key if so assign data
+\item else check if key is less than location, if so call function to left
+\item else call function to the right
+\item if reaches end of the list return false 
+\end{DoxyItemize}\hypertarget{class_b_s_tree_af9aa9675f0e2d264371ce8826c4e2128}{\index{B\-S\-Tree@{B\-S\-Tree}!rec\-Write\-Keys@{rec\-Write\-Keys}}
+\index{rec\-Write\-Keys@{rec\-Write\-Keys}!BSTree@{B\-S\-Tree}}
+\subsubsection[{rec\-Write\-Keys}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data\-Type , class Key\-Type $>$ void {\bf B\-S\-Tree}$<$ Data\-Type, Key\-Type $>$\-::rec\-Write\-Keys (
+\begin{DoxyParamCaption}
+\item[{{\bf B\-S\-Tree\-Node} $\ast$}]{node}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_b_s_tree_af9aa9675f0e2d264371ce8826c4e2128}
+\begin{DoxyPrecond}{Precondition}
+a \hyperlink{class_b_s_tree_1_1_b_s_tree_node}{B\-S\-Tree\-Node}
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+printed list of the keys
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parameters}
+{\em node} & the location in the tree to be checked\\
+\hline
+\end{DoxyParams}
+Algorithm\-:
+\begin{DoxyItemize}
+\item in order traversal of the tree printing the nodes 
+\end{DoxyItemize}\hypertarget{class_b_s_tree_a525852c9c852811e9df4a758835dd615}{\index{B\-S\-Tree@{B\-S\-Tree}!rec\-Write\-Less\-Than@{rec\-Write\-Less\-Than}}
+\index{rec\-Write\-Less\-Than@{rec\-Write\-Less\-Than}!BSTree@{B\-S\-Tree}}
+\subsubsection[{rec\-Write\-Less\-Than}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data\-Type , class Key\-Type $>$ void {\bf B\-S\-Tree}$<$ Data\-Type, Key\-Type $>$\-::rec\-Write\-Less\-Than (
+\begin{DoxyParamCaption}
+\item[{const Key\-Type \&}]{search\-Key, }
+\item[{{\bf B\-S\-Tree\-Node} $\ast$}]{node}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_b_s_tree_a525852c9c852811e9df4a758835dd615}
+\begin{DoxyPrecond}{Precondition}
+a \hyperlink{class_b_s_tree_1_1_b_s_tree_node}{B\-S\-Tree\-Node}
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+printed list of the keys
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parameters}
+{\em node} & the location in the tree to be checked\\
+\hline
+\end{DoxyParams}
+Algorithm\-:
+\begin{DoxyItemize}
+\item in order traversal of the tree printing the nodes only printing the trees if the key is less than the search key 
+\end{DoxyItemize}\hypertarget{class_b_s_tree_a755549f7b88d0178a96ca84afd5e04cf}{\index{B\-S\-Tree@{B\-S\-Tree}!remove@{remove}}
+\index{remove@{remove}!BSTree@{B\-S\-Tree}}
+\subsubsection[{remove}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data\-Type , class Key\-Type $>$ bool {\bf B\-S\-Tree}$<$ Data\-Type, Key\-Type $>$\-::remove (
+\begin{DoxyParamCaption}
+\item[{const Key\-Type \&}]{delete\-Key}
+\end{DoxyParamCaption}
+)}}\label{class_b_s_tree_a755549f7b88d0178a96ca84afd5e04cf}
+\begin{DoxyPrecond}{Precondition}
+a B\-S\-Tree\-Class
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+a data item removed from the list if found
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Returns}
+Returns true if deleted, false if not
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em delete\-Key} & The key value to be searched for in the tree\\
+\hline
+\end{DoxyParams}
+Algorithm\-:
+\begin{DoxyItemize}
+\item Use rec\-Remove member function 
+\end{DoxyItemize}\hypertarget{class_b_s_tree_a4359bfee390669b5adaf0380ef62b18d}{\index{B\-S\-Tree@{B\-S\-Tree}!retrieve@{retrieve}}
+\index{retrieve@{retrieve}!BSTree@{B\-S\-Tree}}
+\subsubsection[{retrieve}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data\-Type , class Key\-Type $>$ bool {\bf B\-S\-Tree}$<$ Data\-Type, Key\-Type $>$\-::retrieve (
+\begin{DoxyParamCaption}
+\item[{const Key\-Type \&}]{search\-Key, }
+\item[{Data\-Type \&}]{search\-Data\-Item}
+\end{DoxyParamCaption}
+) const}}\label{class_b_s_tree_a4359bfee390669b5adaf0380ef62b18d}
+\begin{DoxyPrecond}{Precondition}
+a B\-S\-Tree\-Class
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+a copy of the data\-Item found
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Returns}
+Returns true if found, false if not
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em search\-Key} & The key value to be searched for in the tree \\
+\hline
+{\em search\-Data\-Item} & The reference value to be changed if found\\
+\hline
+\end{DoxyParams}
+Algorithm\-:
+\begin{DoxyItemize}
+\item Use rec\-Retrieve member function 
+\end{DoxyItemize}\hypertarget{class_b_s_tree_a44b3002e3476eb410468a4b9aaaa73ef}{\index{B\-S\-Tree@{B\-S\-Tree}!show\-Helper@{show\-Helper}}
+\index{show\-Helper@{show\-Helper}!BSTree@{B\-S\-Tree}}
+\subsubsection[{show\-Helper}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data\-Type , typename Key\-Type $>$ void {\bf B\-S\-Tree}$<$ Data\-Type, Key\-Type $>$\-::show\-Helper (
+\begin{DoxyParamCaption}
+\item[{{\bf B\-S\-Tree\-Node} $\ast$}]{p, }
+\item[{int}]{level}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_b_s_tree_a44b3002e3476eb410468a4b9aaaa73ef}
+\hypertarget{class_b_s_tree_ac28277cacbf8ab33326473a419abf097}{\index{B\-S\-Tree@{B\-S\-Tree}!show\-Structure@{show\-Structure}}
+\index{show\-Structure@{show\-Structure}!BSTree@{B\-S\-Tree}}
+\subsubsection[{show\-Structure}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data\-Type , typename Key\-Type $>$ void {\bf B\-S\-Tree}$<$ Data\-Type, Key\-Type $>$\-::show\-Structure (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_b_s_tree_ac28277cacbf8ab33326473a419abf097}
+\hypertarget{class_b_s_tree_a7f08f48e6d1bbe3eb726856a947325e7}{\index{B\-S\-Tree@{B\-S\-Tree}!write\-Keys@{write\-Keys}}
+\index{write\-Keys@{write\-Keys}!BSTree@{B\-S\-Tree}}
+\subsubsection[{write\-Keys}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data\-Type , class Key\-Type $>$ void {\bf B\-S\-Tree}$<$ Data\-Type, Key\-Type $>$\-::write\-Keys (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_b_s_tree_a7f08f48e6d1bbe3eb726856a947325e7}
+\begin{DoxyPrecond}{Precondition}
+a B\-S\-Tree\-Class
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+The key values of the list printed in ascending order
+\end{DoxyPostcond}
+Algorithm\-:
+\begin{DoxyItemize}
+\item Use rec\-Write\-Keys member function 
+\end{DoxyItemize}\hypertarget{class_b_s_tree_a92079e5301185f41eebe1c32c2357258}{\index{B\-S\-Tree@{B\-S\-Tree}!write\-Less\-Than@{write\-Less\-Than}}
+\index{write\-Less\-Than@{write\-Less\-Than}!BSTree@{B\-S\-Tree}}
+\subsubsection[{write\-Less\-Than}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data\-Type , class Key\-Type $>$ void {\bf B\-S\-Tree}$<$ Data\-Type, Key\-Type $>$\-::write\-Less\-Than (
+\begin{DoxyParamCaption}
+\item[{const Key\-Type \&}]{search\-Key}
+\end{DoxyParamCaption}
+) const}}\label{class_b_s_tree_a92079e5301185f41eebe1c32c2357258}
+\begin{DoxyPrecond}{Precondition}
+a B\-S\-Tree\-Class
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+prints the key values less than the one given
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parameters}
+{\em search\-Key} & the key value to upper bound the list\\
+\hline
+\end{DoxyParams}
+Algorithm\-:
+\begin{DoxyItemize}
+\item use rec\-Write\-Less\-Than member function 
+\end{DoxyItemize}
+
+\subsection{Member Data Documentation}
+\hypertarget{class_b_s_tree_a83534afce9094181ac031f9f596a8625}{\index{B\-S\-Tree@{B\-S\-Tree}!root@{root}}
+\index{root@{root}!BSTree@{B\-S\-Tree}}
+\subsubsection[{root}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data\-Type, class Key\-Type$>$ {\bf B\-S\-Tree\-Node}$\ast$ {\bf B\-S\-Tree}$<$ Data\-Type, Key\-Type $>$\-::root\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_b_s_tree_a83534afce9094181ac031f9f596a8625}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_b_s_tree_8h}{B\-S\-Tree.\-h}\item 
+\hyperlink{_b_s_tree_8cpp}{B\-S\-Tree.\-cpp}\item 
+\hyperlink{show9_8cpp}{show9.\-cpp}\end{DoxyCompactItemize}

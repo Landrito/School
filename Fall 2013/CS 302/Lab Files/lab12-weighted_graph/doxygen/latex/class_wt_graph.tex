@@ -1,0 +1,156 @@
+\hypertarget{class_wt_graph}{\section{Wt\-Graph Class Reference}
+\label{class_wt_graph}\index{Wt\-Graph@{Wt\-Graph}}
+}
+
+
+{\ttfamily \#include $<$Weighted\-Graph3.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_wt_graph_aedc12a7f7377e58a6f58d5325ea1d828}{throw} (bad\-\_\-alloc)
+\item 
+\hyperlink{class_wt_graph_aa03cf442d9dfb33e3d0511d68b4d2a3a}{$\sim$\-Wt\-Graph} ()
+\item 
+void \hyperlink{class_wt_graph_a4ca3eb343548c81ca24fef7de7536437}{insert\-Vertex} (\hyperlink{class_vertex}{Vertex} new\-Vertex)  throw ( logic\-\_\-error )
+\item 
+void \hyperlink{class_wt_graph_aea0e33832423083bd5d532dc04ca1dff}{insert\-Edge} (char $\ast$v1, char $\ast$v2, int wt)  throw ( logic\-\_\-error )
+\item 
+bool \hyperlink{class_wt_graph_aee1b743d73b67a832e30c8603c9f2a0e}{retrieve\-Vertex} (char $\ast$v, \hyperlink{class_vertex}{Vertex} \&v\-Data) const 
+\item 
+bool \hyperlink{class_wt_graph_ac20ca5b112adb5403f50caf99e4ee8bd}{edge\-Weight} (char $\ast$v1, char $\ast$v2, int \&wt) const   throw ( logic\-\_\-error )
+\item 
+bool \hyperlink{class_wt_graph_afa768b2bfd49e68c1970e479cab00036}{get\-Edge\-Weight} (char $\ast$v1, char $\ast$v2, int \&wt) const   throw ( logic\-\_\-error )
+\item 
+void \hyperlink{class_wt_graph_aaabd4ba894d1c4251479837b1d0a0a78}{remove\-Vertex} (char $\ast$v)  throw ( logic\-\_\-error )
+\item 
+void \hyperlink{class_wt_graph_a7a1e566285ce7faefd211ba0d9ffa864}{remove\-Edge} (char $\ast$v1, char $\ast$v2)  throw ( logic\-\_\-error )
+\item 
+void \hyperlink{class_wt_graph_ad73f37d58e6e5132fbf6191b35e54e4e}{clear} ()
+\item 
+bool \hyperlink{class_wt_graph_ad521755a01e89cfd9e6cb4f3f0b8393b}{is\-Empty} () const 
+\item 
+bool \hyperlink{class_wt_graph_a2afac3672a8dd457da6dccc899e0a7f9}{is\-Full} () const 
+\item 
+bool \hyperlink{class_wt_graph_aad6215139213038e86eb7da9a3d6d2e6}{has\-Proper\-Coloring} () const 
+\item 
+void \hyperlink{class_wt_graph_aff09483a06de871dab7be3b5fb6a9f51}{show\-Structure} () const 
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_wt_graph_aa03cf442d9dfb33e3d0511d68b4d2a3a}{\index{Wt\-Graph@{Wt\-Graph}!$\sim$\-Wt\-Graph@{$\sim$\-Wt\-Graph}}
+\index{$\sim$\-Wt\-Graph@{$\sim$\-Wt\-Graph}!WtGraph@{Wt\-Graph}}
+\subsubsection[{$\sim$\-Wt\-Graph}]{\setlength{\rightskip}{0pt plus 5cm}Wt\-Graph\-::$\sim$\-Wt\-Graph (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_wt_graph_aa03cf442d9dfb33e3d0511d68b4d2a3a}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_wt_graph_ad73f37d58e6e5132fbf6191b35e54e4e}{\index{Wt\-Graph@{Wt\-Graph}!clear@{clear}}
+\index{clear@{clear}!WtGraph@{Wt\-Graph}}
+\subsubsection[{clear}]{\setlength{\rightskip}{0pt plus 5cm}void Wt\-Graph\-::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_wt_graph_ad73f37d58e6e5132fbf6191b35e54e4e}
+\hypertarget{class_wt_graph_ac20ca5b112adb5403f50caf99e4ee8bd}{\index{Wt\-Graph@{Wt\-Graph}!edge\-Weight@{edge\-Weight}}
+\index{edge\-Weight@{edge\-Weight}!WtGraph@{Wt\-Graph}}
+\subsubsection[{edge\-Weight}]{\setlength{\rightskip}{0pt plus 5cm}bool Wt\-Graph\-::edge\-Weight (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{v1, }
+\item[{char $\ast$}]{v2, }
+\item[{int \&}]{wt}
+\end{DoxyParamCaption}
+) const throw  logic\-\_\-error) }}\label{class_wt_graph_ac20ca5b112adb5403f50caf99e4ee8bd}
+\hypertarget{class_wt_graph_afa768b2bfd49e68c1970e479cab00036}{\index{Wt\-Graph@{Wt\-Graph}!get\-Edge\-Weight@{get\-Edge\-Weight}}
+\index{get\-Edge\-Weight@{get\-Edge\-Weight}!WtGraph@{Wt\-Graph}}
+\subsubsection[{get\-Edge\-Weight}]{\setlength{\rightskip}{0pt plus 5cm}bool Wt\-Graph\-::get\-Edge\-Weight (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{v1, }
+\item[{char $\ast$}]{v2, }
+\item[{int \&}]{wt}
+\end{DoxyParamCaption}
+) const throw  logic\-\_\-error) }}\label{class_wt_graph_afa768b2bfd49e68c1970e479cab00036}
+\hypertarget{class_wt_graph_aad6215139213038e86eb7da9a3d6d2e6}{\index{Wt\-Graph@{Wt\-Graph}!has\-Proper\-Coloring@{has\-Proper\-Coloring}}
+\index{has\-Proper\-Coloring@{has\-Proper\-Coloring}!WtGraph@{Wt\-Graph}}
+\subsubsection[{has\-Proper\-Coloring}]{\setlength{\rightskip}{0pt plus 5cm}bool Wt\-Graph\-::has\-Proper\-Coloring (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_wt_graph_aad6215139213038e86eb7da9a3d6d2e6}
+\hypertarget{class_wt_graph_aea0e33832423083bd5d532dc04ca1dff}{\index{Wt\-Graph@{Wt\-Graph}!insert\-Edge@{insert\-Edge}}
+\index{insert\-Edge@{insert\-Edge}!WtGraph@{Wt\-Graph}}
+\subsubsection[{insert\-Edge}]{\setlength{\rightskip}{0pt plus 5cm}void Wt\-Graph\-::insert\-Edge (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{v1, }
+\item[{char $\ast$}]{v2, }
+\item[{int}]{wt}
+\end{DoxyParamCaption}
+) throw  logic\-\_\-error) }}\label{class_wt_graph_aea0e33832423083bd5d532dc04ca1dff}
+\hypertarget{class_wt_graph_a4ca3eb343548c81ca24fef7de7536437}{\index{Wt\-Graph@{Wt\-Graph}!insert\-Vertex@{insert\-Vertex}}
+\index{insert\-Vertex@{insert\-Vertex}!WtGraph@{Wt\-Graph}}
+\subsubsection[{insert\-Vertex}]{\setlength{\rightskip}{0pt plus 5cm}void Wt\-Graph\-::insert\-Vertex (
+\begin{DoxyParamCaption}
+\item[{{\bf Vertex}}]{new\-Vertex}
+\end{DoxyParamCaption}
+) throw  logic\-\_\-error) }}\label{class_wt_graph_a4ca3eb343548c81ca24fef7de7536437}
+\hypertarget{class_wt_graph_ad521755a01e89cfd9e6cb4f3f0b8393b}{\index{Wt\-Graph@{Wt\-Graph}!is\-Empty@{is\-Empty}}
+\index{is\-Empty@{is\-Empty}!WtGraph@{Wt\-Graph}}
+\subsubsection[{is\-Empty}]{\setlength{\rightskip}{0pt plus 5cm}bool Wt\-Graph\-::is\-Empty (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_wt_graph_ad521755a01e89cfd9e6cb4f3f0b8393b}
+\hypertarget{class_wt_graph_a2afac3672a8dd457da6dccc899e0a7f9}{\index{Wt\-Graph@{Wt\-Graph}!is\-Full@{is\-Full}}
+\index{is\-Full@{is\-Full}!WtGraph@{Wt\-Graph}}
+\subsubsection[{is\-Full}]{\setlength{\rightskip}{0pt plus 5cm}bool Wt\-Graph\-::is\-Full (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_wt_graph_a2afac3672a8dd457da6dccc899e0a7f9}
+\hypertarget{class_wt_graph_a7a1e566285ce7faefd211ba0d9ffa864}{\index{Wt\-Graph@{Wt\-Graph}!remove\-Edge@{remove\-Edge}}
+\index{remove\-Edge@{remove\-Edge}!WtGraph@{Wt\-Graph}}
+\subsubsection[{remove\-Edge}]{\setlength{\rightskip}{0pt plus 5cm}void Wt\-Graph\-::remove\-Edge (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{v1, }
+\item[{char $\ast$}]{v2}
+\end{DoxyParamCaption}
+) throw  logic\-\_\-error) }}\label{class_wt_graph_a7a1e566285ce7faefd211ba0d9ffa864}
+\hypertarget{class_wt_graph_aaabd4ba894d1c4251479837b1d0a0a78}{\index{Wt\-Graph@{Wt\-Graph}!remove\-Vertex@{remove\-Vertex}}
+\index{remove\-Vertex@{remove\-Vertex}!WtGraph@{Wt\-Graph}}
+\subsubsection[{remove\-Vertex}]{\setlength{\rightskip}{0pt plus 5cm}void Wt\-Graph\-::remove\-Vertex (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{v}
+\end{DoxyParamCaption}
+) throw  logic\-\_\-error) }}\label{class_wt_graph_aaabd4ba894d1c4251479837b1d0a0a78}
+\hypertarget{class_wt_graph_aee1b743d73b67a832e30c8603c9f2a0e}{\index{Wt\-Graph@{Wt\-Graph}!retrieve\-Vertex@{retrieve\-Vertex}}
+\index{retrieve\-Vertex@{retrieve\-Vertex}!WtGraph@{Wt\-Graph}}
+\subsubsection[{retrieve\-Vertex}]{\setlength{\rightskip}{0pt plus 5cm}bool Wt\-Graph\-::retrieve\-Vertex (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{v, }
+\item[{{\bf Vertex} \&}]{v\-Data}
+\end{DoxyParamCaption}
+) const}}\label{class_wt_graph_aee1b743d73b67a832e30c8603c9f2a0e}
+\hypertarget{class_wt_graph_aff09483a06de871dab7be3b5fb6a9f51}{\index{Wt\-Graph@{Wt\-Graph}!show\-Structure@{show\-Structure}}
+\index{show\-Structure@{show\-Structure}!WtGraph@{Wt\-Graph}}
+\subsubsection[{show\-Structure}]{\setlength{\rightskip}{0pt plus 5cm}void Wt\-Graph\-::show\-Structure (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_wt_graph_aff09483a06de871dab7be3b5fb6a9f51}
+\hypertarget{class_wt_graph_aedc12a7f7377e58a6f58d5325ea1d828}{\index{Wt\-Graph@{Wt\-Graph}!throw@{throw}}
+\index{throw@{throw}!WtGraph@{Wt\-Graph}}
+\subsubsection[{throw}]{\setlength{\rightskip}{0pt plus 5cm}Wt\-Graph\-::throw (
+\begin{DoxyParamCaption}
+\item[{bad\-\_\-alloc}]{}
+\end{DoxyParamCaption}
+)}}\label{class_wt_graph_aedc12a7f7377e58a6f58d5325ea1d828}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_weighted_graph3_8h}{Weighted\-Graph3.\-h}\item 
+\hyperlink{_weighted_graph_8cs}{Weighted\-Graph.\-cs}\end{DoxyCompactItemize}

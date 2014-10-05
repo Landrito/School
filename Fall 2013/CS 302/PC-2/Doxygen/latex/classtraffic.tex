@@ -1,0 +1,251 @@
+\hypertarget{classtraffic}{\section{traffic Class Reference}
+\label{classtraffic}\index{traffic@{traffic}}
+}
+
+
+{\ttfamily \#include $<$rush\-Hour.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtraffic_a243bdc0d3985d8637961b00e646b4417}{traffic} ()
+\item 
+void \hyperlink{classtraffic_a6d877b4ad53af4500b797421c857e9e1}{get\-Data} (int num\-Cars)
+\item 
+bool \hyperlink{classtraffic_a6e4c103afa210fcb840d472eb69740c7}{can\-Move\-Forward} (int x\-Pos, int y\-Pos) const 
+\item 
+bool \hyperlink{classtraffic_a1dbfbfe64ea2c90546e8f7630a0c8d31}{can\-Move\-Back} (int x\-Pos, int y\-Pos) const 
+\item 
+void \hyperlink{classtraffic_a452914d8fc21187707eb3db2592be596}{rec\-Solve} (int moves\-So\-Far)
+\item 
+void \hyperlink{classtraffic_a8f4bd93b8017c34994793f25fafd97af}{move\-Backward} (int x\-Pos, int y\-Pos)
+\item 
+void \hyperlink{classtraffic_a3077350949a342adf47a30bd1830a23f}{move\-Forward} (int x\-Pos, int y\-Pos)
+\item 
+void \hyperlink{classtraffic_a257730086193c01f0930424b8b523ad9}{print\-Moves} () const 
+\item 
+void \hyperlink{classtraffic_a2e1dd0955f6f51b091f671ea12f575c2}{set\-Default} (\hyperlink{classvehicle}{vehicle} \&other)
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classtraffic_a243bdc0d3985d8637961b00e646b4417}{\index{traffic@{traffic}!traffic@{traffic}}
+\index{traffic@{traffic}!traffic@{traffic}}
+\subsubsection[{traffic}]{\setlength{\rightskip}{0pt plus 5cm}traffic\-::traffic (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classtraffic_a243bdc0d3985d8637961b00e646b4417}
+\begin{DoxyPrecond}{Precondition}
+Unitialized Traffic Class 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Grid Initialized num\-Cars and num\-Moves intialized
+\end{DoxyPostcond}
+Algorithm\-:
+\begin{DoxyItemize}
+\item Assign data members values
+\end{DoxyItemize}
+
+Exceptional/\-Error Conditions\-:
+\begin{DoxyItemize}
+\item none 
+\end{DoxyItemize}
+
+\subsection{Member Function Documentation}
+\hypertarget{classtraffic_a1dbfbfe64ea2c90546e8f7630a0c8d31}{\index{traffic@{traffic}!can\-Move\-Back@{can\-Move\-Back}}
+\index{can\-Move\-Back@{can\-Move\-Back}!traffic@{traffic}}
+\subsubsection[{can\-Move\-Back}]{\setlength{\rightskip}{0pt plus 5cm}bool traffic\-::can\-Move\-Back (
+\begin{DoxyParamCaption}
+\item[{int}]{x\-Pos, }
+\item[{int}]{y\-Pos}
+\end{DoxyParamCaption}
+) const}}\label{classtraffic_a1dbfbfe64ea2c90546e8f7630a0c8d31}
+\begin{DoxyPrecond}{Precondition}
+none
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+none
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parameters}
+{\em x\-Pos} & The x position of the vehicle to be checked \\
+\hline
+{\em y\-Pos} & The y position of the vehicle to be checked\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns if the car can move left or up
+\end{DoxyReturn}
+Algorithm\-:
+\begin{DoxyItemize}
+\item Check if moving will move it out of bounds
+\item check if moving will cause a collision 
+\end{DoxyItemize}\hypertarget{classtraffic_a6e4c103afa210fcb840d472eb69740c7}{\index{traffic@{traffic}!can\-Move\-Forward@{can\-Move\-Forward}}
+\index{can\-Move\-Forward@{can\-Move\-Forward}!traffic@{traffic}}
+\subsubsection[{can\-Move\-Forward}]{\setlength{\rightskip}{0pt plus 5cm}bool traffic\-::can\-Move\-Forward (
+\begin{DoxyParamCaption}
+\item[{int}]{x\-Pos, }
+\item[{int}]{y\-Pos}
+\end{DoxyParamCaption}
+) const}}\label{classtraffic_a6e4c103afa210fcb840d472eb69740c7}
+\begin{DoxyPrecond}{Precondition}
+none
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+none
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parameters}
+{\em x\-Pos} & The x position of the vehicle to be checked \\
+\hline
+{\em y\-Pos} & The y position of the vehicle to be checked\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns if the car can move right or down
+\end{DoxyReturn}
+Algorithm\-:
+\begin{DoxyItemize}
+\item Check if moving will move it out of bounds
+\item check if moving will cause a collision 
+\end{DoxyItemize}\hypertarget{classtraffic_a6d877b4ad53af4500b797421c857e9e1}{\index{traffic@{traffic}!get\-Data@{get\-Data}}
+\index{get\-Data@{get\-Data}!traffic@{traffic}}
+\subsubsection[{get\-Data}]{\setlength{\rightskip}{0pt plus 5cm}void traffic\-::get\-Data (
+\begin{DoxyParamCaption}
+\item[{int}]{num\-Cars}
+\end{DoxyParamCaption}
+)}}\label{classtraffic_a6d877b4ad53af4500b797421c857e9e1}
+\begin{DoxyPrecond}{Precondition}
+Initialized Grid
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Grid filled with vehicle data
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parameters}
+{\em num\-Cars} & This is how many cars to put into the grid\\
+\hline
+\end{DoxyParams}
+Algorithm\-:
+\begin{DoxyItemize}
+\item Get number of cars
+\item Insert cars into the Grid based on the input values 
+\end{DoxyItemize}\hypertarget{classtraffic_a8f4bd93b8017c34994793f25fafd97af}{\index{traffic@{traffic}!move\-Backward@{move\-Backward}}
+\index{move\-Backward@{move\-Backward}!traffic@{traffic}}
+\subsubsection[{move\-Backward}]{\setlength{\rightskip}{0pt plus 5cm}void traffic\-::move\-Backward (
+\begin{DoxyParamCaption}
+\item[{int}]{x\-Pos, }
+\item[{int}]{y\-Pos}
+\end{DoxyParamCaption}
+)}}\label{classtraffic_a8f4bd93b8017c34994793f25fafd97af}
+\begin{DoxyPrecond}{Precondition}
+none
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Vehicle in the grid will be moved Left or Up
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parameters}
+{\em x\-Pos} & This is the x Position of the vehicle head to be moved \\
+\hline
+{\em y\-Pos} & This is the y Position of the vehicle head to be moved\\
+\hline
+\end{DoxyParams}
+Algorithm\-:
+\begin{DoxyItemize}
+\item Change the head coordinates
+\item Assign new head coordinate the vehicle
+\item Set the tail of the vehicle to default values 
+\end{DoxyItemize}\hypertarget{classtraffic_a3077350949a342adf47a30bd1830a23f}{\index{traffic@{traffic}!move\-Forward@{move\-Forward}}
+\index{move\-Forward@{move\-Forward}!traffic@{traffic}}
+\subsubsection[{move\-Forward}]{\setlength{\rightskip}{0pt plus 5cm}void traffic\-::move\-Forward (
+\begin{DoxyParamCaption}
+\item[{int}]{x\-Pos, }
+\item[{int}]{y\-Pos}
+\end{DoxyParamCaption}
+)}}\label{classtraffic_a3077350949a342adf47a30bd1830a23f}
+\begin{DoxyPrecond}{Precondition}
+none
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Vehicle in the grid will be moved right or down
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parameters}
+{\em x\-Pos} & This is the x Position of the vehicle head to be moved \\
+\hline
+{\em y\-Pos} & This is the y Position of the vehicle head to be moved\\
+\hline
+\end{DoxyParams}
+Algorithm\-:
+\begin{DoxyItemize}
+\item Change the head coordinates
+\item Assign new head coordinate the vehicle
+\item Set the head of the vehicle to default values 
+\end{DoxyItemize}\hypertarget{classtraffic_a257730086193c01f0930424b8b523ad9}{\index{traffic@{traffic}!print\-Moves@{print\-Moves}}
+\index{print\-Moves@{print\-Moves}!traffic@{traffic}}
+\subsubsection[{print\-Moves}]{\setlength{\rightskip}{0pt plus 5cm}void traffic\-::print\-Moves (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classtraffic_a257730086193c01f0930424b8b523ad9}
+\begin{DoxyPrecond}{Precondition}
+none
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+printed moves
+\end{DoxyPostcond}
+Algorithm\-:
+\begin{DoxyItemize}
+\item output num\-Moves 
+\end{DoxyItemize}\hypertarget{classtraffic_a452914d8fc21187707eb3db2592be596}{\index{traffic@{traffic}!rec\-Solve@{rec\-Solve}}
+\index{rec\-Solve@{rec\-Solve}!traffic@{traffic}}
+\subsubsection[{rec\-Solve}]{\setlength{\rightskip}{0pt plus 5cm}void traffic\-::rec\-Solve (
+\begin{DoxyParamCaption}
+\item[{int}]{moves\-So\-Far}
+\end{DoxyParamCaption}
+)}}\label{classtraffic_a452914d8fc21187707eb3db2592be596}
+\begin{DoxyPrecond}{Precondition}
+none
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+num\-Moves will now be the smallest moves possible
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parameters}
+{\em moves\-So\-Far} & This is how many moves have been taken\\
+\hline
+\end{DoxyParams}
+Algorithm\-:
+\begin{DoxyItemize}
+\item Check if used too many moves
+\item Check if finished the puzzle
+\item If not, find any cars that can move
+\item Move the cars that can and repeat 
+\end{DoxyItemize}\hypertarget{classtraffic_a2e1dd0955f6f51b091f671ea12f575c2}{\index{traffic@{traffic}!set\-Default@{set\-Default}}
+\index{set\-Default@{set\-Default}!traffic@{traffic}}
+\subsubsection[{set\-Default}]{\setlength{\rightskip}{0pt plus 5cm}void traffic\-::set\-Default (
+\begin{DoxyParamCaption}
+\item[{{\bf vehicle} \&}]{other}
+\end{DoxyParamCaption}
+)}}\label{classtraffic_a2e1dd0955f6f51b091f671ea12f575c2}
+\begin{DoxyPrecond}{Precondition}
+none
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+vehicle values changed to default
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parameters}
+{\em other} & This is the vehicle to be changed\\
+\hline
+\end{DoxyParams}
+Algorithm\-:
+\begin{DoxyItemize}
+\item assign vehicle data members default values 
+\end{DoxyItemize}
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{rush_hour_8h}{rush\-Hour.\-h}\end{DoxyCompactItemize}

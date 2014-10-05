@@ -1,0 +1,233 @@
+\begin{theindex}
+
+  \item {$\sim $\discretionary {-}{}{}Weighted\discretionary {-}{}{}Graph}
+    \subitem {Weighted\discretionary {-}{}{}Graph}, \hyperpage{7, 8}
+  \item {$\sim $\discretionary {-}{}{}Wt\discretionary {-}{}{}Graph}
+    \subitem {Wt\discretionary {-}{}{}Graph}, \hyperpage{14}
+
+  \indexspace
+
+  \item {are\discretionary {-}{}{}All\discretionary {-}{}{}Even}
+    \subitem {Weighted\discretionary {-}{}{}Graph}, \hyperpage{8}
+
+  \indexspace
+
+  \item {clear}
+    \subitem {Weighted\discretionary {-}{}{}Graph}, \hyperpage{8}
+    \subitem {Wt\discretionary {-}{}{}Graph}, \hyperpage{14}
+  \item {color}
+    \subitem {Vertex}, \hyperpage{6}
+  \item {compute\discretionary {-}{}{}Paths}
+    \subitem {Weighted\discretionary {-}{}{}Graph}, \hyperpage{8}
+  \item {config.\discretionary {-}{}{}h}, \hyperpage{17}
+    \subitem {L\discretionary {-}{}{}A\discretionary {-}{}{}B12\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T1}, 
+		\hyperpage{17}
+    \subitem {L\discretionary {-}{}{}A\discretionary {-}{}{}B12\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T2}, 
+		\hyperpage{17}
+    \subitem {L\discretionary {-}{}{}A\discretionary {-}{}{}B12\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T3}, 
+		\hyperpage{17}
+
+  \indexspace
+
+  \item {D\discretionary {-}{}{}E\discretionary {-}{}{}F\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}M\discretionary {-}{}{}A\discretionary {-}{}{}X\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}G\discretionary {-}{}{}R\discretionary {-}{}{}A\discretionary {-}{}{}P\discretionary {-}{}{}H\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}S\discretionary {-}{}{}I\discretionary {-}{}{}Z\discretionary {-}{}{}E}
+    \subitem {Weighted\discretionary {-}{}{}Graph}, \hyperpage{13}
+  \item {def\discretionary {-}{}{}Max\discretionary {-}{}{}Graph\discretionary {-}{}{}Size}
+    \subitem {Weighted\discretionary {-}{}{}Graph3.\discretionary {-}{}{}h}, 
+		\hyperpage{19}
+
+  \indexspace
+
+  \item {edge\discretionary {-}{}{}Weight}
+    \subitem {Weighted\discretionary {-}{}{}Graph}, \hyperpage{9}
+    \subitem {Wt\discretionary {-}{}{}Graph}, \hyperpage{14}
+
+  \indexspace
+
+  \item {get\discretionary {-}{}{}Color}
+    \subitem {Weighted\discretionary {-}{}{}Graph\discretionary {-}{}{}::\discretionary {-}{}{}Vertex}, 
+		\hyperpage{5}
+  \item {get\discretionary {-}{}{}Edge\discretionary {-}{}{}Weight}
+    \subitem {Weighted\discretionary {-}{}{}Graph}, \hyperpage{9}
+    \subitem {Wt\discretionary {-}{}{}Graph}, \hyperpage{14}
+  \item {get\discretionary {-}{}{}Label}
+    \subitem {Weighted\discretionary {-}{}{}Graph\discretionary {-}{}{}::\discretionary {-}{}{}Vertex}, 
+		\hyperpage{5}
+
+  \indexspace
+
+  \item {has\discretionary {-}{}{}Proper\discretionary {-}{}{}Coloring}
+    \subitem {Weighted\discretionary {-}{}{}Graph}, \hyperpage{9}
+    \subitem {Wt\discretionary {-}{}{}Graph}, \hyperpage{14}
+
+  \indexspace
+
+  \item {I\discretionary {-}{}{}N\discretionary {-}{}{}F\discretionary {-}{}{}I\discretionary {-}{}{}N\discretionary {-}{}{}I\discretionary {-}{}{}T\discretionary {-}{}{}E\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}E\discretionary {-}{}{}D\discretionary {-}{}{}G\discretionary {-}{}{}E\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}W\discretionary {-}{}{}T}
+    \subitem {Weighted\discretionary {-}{}{}Graph}, \hyperpage{14}
+  \item {infinite\discretionary {-}{}{}Edge\discretionary {-}{}{}Wt}
+    \subitem {Weighted\discretionary {-}{}{}Graph3.\discretionary {-}{}{}h}, 
+		\hyperpage{19}
+  \item {insert\discretionary {-}{}{}Edge}
+    \subitem {Weighted\discretionary {-}{}{}Graph}, \hyperpage{9}
+    \subitem {Wt\discretionary {-}{}{}Graph}, \hyperpage{14}
+  \item {insert\discretionary {-}{}{}Vertex}
+    \subitem {Weighted\discretionary {-}{}{}Graph}, \hyperpage{10}
+    \subitem {Wt\discretionary {-}{}{}Graph}, \hyperpage{14}
+  \item {is\discretionary {-}{}{}Empty}
+    \subitem {Weighted\discretionary {-}{}{}Graph}, \hyperpage{10}
+    \subitem {Wt\discretionary {-}{}{}Graph}, \hyperpage{15}
+  \item {is\discretionary {-}{}{}Full}
+    \subitem {Weighted\discretionary {-}{}{}Graph}, \hyperpage{11}
+    \subitem {Wt\discretionary {-}{}{}Graph}, \hyperpage{15}
+
+  \indexspace
+
+  \item {L\discretionary {-}{}{}A\discretionary {-}{}{}B12\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T1}
+    \subitem {config.\discretionary {-}{}{}h}, \hyperpage{17}
+  \item {L\discretionary {-}{}{}A\discretionary {-}{}{}B12\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T2}
+    \subitem {config.\discretionary {-}{}{}h}, \hyperpage{17}
+  \item {L\discretionary {-}{}{}A\discretionary {-}{}{}B12\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T3}
+    \subitem {config.\discretionary {-}{}{}h}, \hyperpage{17}
+  \item {label}
+    \subitem {Vertex}, \hyperpage{6}
+
+  \indexspace
+
+  \item {M\discretionary {-}{}{}A\discretionary {-}{}{}X\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}G\discretionary {-}{}{}R\discretionary {-}{}{}A\discretionary {-}{}{}P\discretionary {-}{}{}H\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}S\discretionary {-}{}{}I\discretionary {-}{}{}Z\discretionary {-}{}{}E}
+    \subitem {Weighted\discretionary {-}{}{}Graph}, \hyperpage{14}
+  \item {main}
+    \subitem {test12.\discretionary {-}{}{}cpp}, \hyperpage{18}
+
+  \indexspace
+
+  \item {operator=}
+    \subitem {Weighted\discretionary {-}{}{}Graph}, \hyperpage{11}
+
+  \indexspace
+
+  \item {print\discretionary {-}{}{}\_\discretionary {-}{}{}help}
+    \subitem {test12.\discretionary {-}{}{}cpp}, \hyperpage{18}
+
+  \indexspace
+
+  \item {remove\discretionary {-}{}{}Edge}
+    \subitem {Weighted\discretionary {-}{}{}Graph}, \hyperpage{11, 12}
+    \subitem {Wt\discretionary {-}{}{}Graph}, \hyperpage{15}
+  \item {remove\discretionary {-}{}{}Vertex}
+    \subitem {Weighted\discretionary {-}{}{}Graph}, \hyperpage{12}
+    \subitem {Wt\discretionary {-}{}{}Graph}, \hyperpage{15}
+  \item {retrieve\discretionary {-}{}{}Vertex}
+    \subitem {Weighted\discretionary {-}{}{}Graph}, \hyperpage{12, 13}
+    \subitem {Wt\discretionary {-}{}{}Graph}, \hyperpage{15}
+
+  \indexspace
+
+  \item {set\discretionary {-}{}{}Color}
+    \subitem {Weighted\discretionary {-}{}{}Graph\discretionary {-}{}{}::\discretionary {-}{}{}Vertex}, 
+		\hyperpage{5}
+  \item {set\discretionary {-}{}{}Label}
+    \subitem {Weighted\discretionary {-}{}{}Graph\discretionary {-}{}{}::\discretionary {-}{}{}Vertex}, 
+		\hyperpage{5}
+  \item {show12.\discretionary {-}{}{}cpp}, \hyperpage{17}
+  \item {show\discretionary {-}{}{}Shortest\discretionary {-}{}{}Paths}
+    \subitem {Weighted\discretionary {-}{}{}Graph}, \hyperpage{13}
+  \item {show\discretionary {-}{}{}Structure}
+    \subitem {Weighted\discretionary {-}{}{}Graph}, \hyperpage{13}
+    \subitem {Wt\discretionary {-}{}{}Graph}, \hyperpage{15}
+
+  \indexspace
+
+  \item {test12.\discretionary {-}{}{}cpp}, \hyperpage{17}
+    \subitem {main}, \hyperpage{18}
+    \subitem {print\discretionary {-}{}{}\_\discretionary {-}{}{}help}, 
+		\hyperpage{18}
+  \item {throw}
+    \subitem {Wt\discretionary {-}{}{}Graph}, \hyperpage{15}
+
+  \indexspace
+
+  \item {V\discretionary {-}{}{}E\discretionary {-}{}{}R\discretionary {-}{}{}T\discretionary {-}{}{}E\discretionary {-}{}{}X\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}L\discretionary {-}{}{}A\discretionary {-}{}{}B\discretionary {-}{}{}E\discretionary {-}{}{}L\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}L\discretionary {-}{}{}E\discretionary {-}{}{}N\discretionary {-}{}{}G\discretionary {-}{}{}T\discretionary {-}{}{}H}
+    \subitem {Weighted\discretionary {-}{}{}Graph}, \hyperpage{14}
+  \item {Vertex}, \hyperpage{5}
+    \subitem {color}, \hyperpage{6}
+    \subitem {label}, \hyperpage{6}
+  \item {vertex\discretionary {-}{}{}Label\discretionary {-}{}{}Length}
+    \subitem {Weighted\discretionary {-}{}{}Graph3.\discretionary {-}{}{}h}, 
+		\hyperpage{19}
+
+  \indexspace
+
+  \item {Weighted\discretionary {-}{}{}Graph}, \hyperpage{6}
+    \subitem {$\sim $\discretionary {-}{}{}Weighted\discretionary {-}{}{}Graph}, 
+		\hyperpage{7, 8}
+    \subitem {are\discretionary {-}{}{}All\discretionary {-}{}{}Even}, 
+		\hyperpage{8}
+    \subitem {clear}, \hyperpage{8}
+    \subitem {compute\discretionary {-}{}{}Paths}, \hyperpage{8}
+    \subitem {D\discretionary {-}{}{}E\discretionary {-}{}{}F\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}M\discretionary {-}{}{}A\discretionary {-}{}{}X\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}G\discretionary {-}{}{}R\discretionary {-}{}{}A\discretionary {-}{}{}P\discretionary {-}{}{}H\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}S\discretionary {-}{}{}I\discretionary {-}{}{}Z\discretionary {-}{}{}E}, 
+		\hyperpage{13}
+    \subitem {edge\discretionary {-}{}{}Weight}, \hyperpage{9}
+    \subitem {get\discretionary {-}{}{}Edge\discretionary {-}{}{}Weight}, 
+		\hyperpage{9}
+    \subitem {has\discretionary {-}{}{}Proper\discretionary {-}{}{}Coloring}, 
+		\hyperpage{9}
+    \subitem {I\discretionary {-}{}{}N\discretionary {-}{}{}F\discretionary {-}{}{}I\discretionary {-}{}{}N\discretionary {-}{}{}I\discretionary {-}{}{}T\discretionary {-}{}{}E\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}E\discretionary {-}{}{}D\discretionary {-}{}{}G\discretionary {-}{}{}E\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}W\discretionary {-}{}{}T}, 
+		\hyperpage{14}
+    \subitem {insert\discretionary {-}{}{}Edge}, \hyperpage{9}
+    \subitem {insert\discretionary {-}{}{}Vertex}, \hyperpage{10}
+    \subitem {is\discretionary {-}{}{}Empty}, \hyperpage{10}
+    \subitem {is\discretionary {-}{}{}Full}, \hyperpage{11}
+    \subitem {M\discretionary {-}{}{}A\discretionary {-}{}{}X\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}G\discretionary {-}{}{}R\discretionary {-}{}{}A\discretionary {-}{}{}P\discretionary {-}{}{}H\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}S\discretionary {-}{}{}I\discretionary {-}{}{}Z\discretionary {-}{}{}E}, 
+		\hyperpage{14}
+    \subitem {operator=}, \hyperpage{11}
+    \subitem {remove\discretionary {-}{}{}Edge}, \hyperpage{11, 12}
+    \subitem {remove\discretionary {-}{}{}Vertex}, \hyperpage{12}
+    \subitem {retrieve\discretionary {-}{}{}Vertex}, \hyperpage{12, 13}
+    \subitem {show\discretionary {-}{}{}Shortest\discretionary {-}{}{}Paths}, 
+		\hyperpage{13}
+    \subitem {show\discretionary {-}{}{}Structure}, \hyperpage{13}
+    \subitem {V\discretionary {-}{}{}E\discretionary {-}{}{}R\discretionary {-}{}{}T\discretionary {-}{}{}E\discretionary {-}{}{}X\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}L\discretionary {-}{}{}A\discretionary {-}{}{}B\discretionary {-}{}{}E\discretionary {-}{}{}L\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}L\discretionary {-}{}{}E\discretionary {-}{}{}N\discretionary {-}{}{}G\discretionary {-}{}{}T\discretionary {-}{}{}H}, 
+		\hyperpage{14}
+    \subitem {Weighted\discretionary {-}{}{}Graph}, \hyperpage{7, 8}
+    \subitem {Weighted\discretionary {-}{}{}Graph}, \hyperpage{7, 8}
+  \item {Weighted\discretionary {-}{}{}Graph.\discretionary {-}{}{}cpp}, 
+		\hyperpage{18}
+  \item {Weighted\discretionary {-}{}{}Graph.\discretionary {-}{}{}cs}, 
+		\hyperpage{18}
+  \item {Weighted\discretionary {-}{}{}Graph.\discretionary {-}{}{}h}, 
+		\hyperpage{18}
+  \item {Weighted\discretionary {-}{}{}Graph2.\discretionary {-}{}{}h}, 
+		\hyperpage{18}
+  \item {Weighted\discretionary {-}{}{}Graph3.\discretionary {-}{}{}h}, 
+		\hyperpage{19}
+    \subitem {def\discretionary {-}{}{}Max\discretionary {-}{}{}Graph\discretionary {-}{}{}Size}, 
+		\hyperpage{19}
+    \subitem {infinite\discretionary {-}{}{}Edge\discretionary {-}{}{}Wt}, 
+		\hyperpage{19}
+    \subitem {vertex\discretionary {-}{}{}Label\discretionary {-}{}{}Length}, 
+		\hyperpage{19}
+  \item {Weighted\discretionary {-}{}{}Graph\discretionary {-}{}{}::\discretionary {-}{}{}Vertex}, 
+		\hyperpage{5}
+    \subitem {get\discretionary {-}{}{}Color}, \hyperpage{5}
+    \subitem {get\discretionary {-}{}{}Label}, \hyperpage{5}
+    \subitem {set\discretionary {-}{}{}Color}, \hyperpage{5}
+    \subitem {set\discretionary {-}{}{}Label}, \hyperpage{5}
+  \item {Wt\discretionary {-}{}{}Graph}, \hyperpage{14}
+    \subitem {$\sim $\discretionary {-}{}{}Wt\discretionary {-}{}{}Graph}, 
+		\hyperpage{14}
+    \subitem {clear}, \hyperpage{14}
+    \subitem {edge\discretionary {-}{}{}Weight}, \hyperpage{14}
+    \subitem {get\discretionary {-}{}{}Edge\discretionary {-}{}{}Weight}, 
+		\hyperpage{14}
+    \subitem {has\discretionary {-}{}{}Proper\discretionary {-}{}{}Coloring}, 
+		\hyperpage{14}
+    \subitem {insert\discretionary {-}{}{}Edge}, \hyperpage{14}
+    \subitem {insert\discretionary {-}{}{}Vertex}, \hyperpage{14}
+    \subitem {is\discretionary {-}{}{}Empty}, \hyperpage{15}
+    \subitem {is\discretionary {-}{}{}Full}, \hyperpage{15}
+    \subitem {remove\discretionary {-}{}{}Edge}, \hyperpage{15}
+    \subitem {remove\discretionary {-}{}{}Vertex}, \hyperpage{15}
+    \subitem {retrieve\discretionary {-}{}{}Vertex}, \hyperpage{15}
+    \subitem {show\discretionary {-}{}{}Structure}, \hyperpage{15}
+    \subitem {throw}, \hyperpage{15}
+
+\end{theindex}

@@ -1,0 +1,107 @@
+\hypertarget{class_login_info}{\section{Login\-Info Class Reference}
+\label{class_login_info}\index{Login\-Info@{Login\-Info}}
+}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_login_info_a586b57ec9c89876ccbf5824a6ae5d4c3}{set\-Info} (const string \&new\-Username, const string \&new\-Password)
+\item 
+string \hyperlink{class_login_info_a411a109569778357f30983baf84be761}{get\-Key} () const 
+\item 
+string \hyperlink{class_login_info_ade7dccc3354bc000a774f089c0afb4b0}{get\-Password} () const 
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static unsigned int \hyperlink{class_login_info_afccfb628b9806e6d19399fa36a3b13c1}{hash} (const string \&str)
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_login_info_a411a109569778357f30983baf84be761}{\index{Login\-Info@{Login\-Info}!get\-Key@{get\-Key}}
+\index{get\-Key@{get\-Key}!LoginInfo@{Login\-Info}}
+\subsubsection[{get\-Key}]{\setlength{\rightskip}{0pt plus 5cm}string Login\-Info\-::get\-Key (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_login_info_a411a109569778357f30983baf84be761}
+\begin{DoxyPrecond}{Precondition}
+a \hyperlink{class_login_info}{Login\-Info} class
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+a returned key of the data
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Returns}
+The key returned
+\end{DoxyReturn}
+Algorithm\-:
+\begin{DoxyItemize}
+\item return key 
+\end{DoxyItemize}\hypertarget{class_login_info_ade7dccc3354bc000a774f089c0afb4b0}{\index{Login\-Info@{Login\-Info}!get\-Password@{get\-Password}}
+\index{get\-Password@{get\-Password}!LoginInfo@{Login\-Info}}
+\subsubsection[{get\-Password}]{\setlength{\rightskip}{0pt plus 5cm}string Login\-Info\-::get\-Password (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_login_info_ade7dccc3354bc000a774f089c0afb4b0}
+\begin{DoxyPrecond}{Precondition}
+a \hyperlink{class_login_info}{Login\-Info} class
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+a returned password of the data
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Returns}
+The password returned
+\end{DoxyReturn}
+Algorithm\-:
+\begin{DoxyItemize}
+\item return password 
+\end{DoxyItemize}\hypertarget{class_login_info_afccfb628b9806e6d19399fa36a3b13c1}{\index{Login\-Info@{Login\-Info}!hash@{hash}}
+\index{hash@{hash}!LoginInfo@{Login\-Info}}
+\subsubsection[{hash}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Login\-Info\-::hash (
+\begin{DoxyParamCaption}
+\item[{const string \&}]{str}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_login_info_afccfb628b9806e6d19399fa36a3b13c1}
+\begin{DoxyPrecond}{Precondition}
+a \hyperlink{class_login_info}{Login\-Info} class
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+a returned sum of the value of the chars in the string
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Returns}
+sum of the value of the chars in the string
+\end{DoxyReturn}
+Algorithm\-:
+\begin{DoxyItemize}
+\item for each char of the string, add the value to val
+\item return val 
+\end{DoxyItemize}\hypertarget{class_login_info_a586b57ec9c89876ccbf5824a6ae5d4c3}{\index{Login\-Info@{Login\-Info}!set\-Info@{set\-Info}}
+\index{set\-Info@{set\-Info}!LoginInfo@{Login\-Info}}
+\subsubsection[{set\-Info}]{\setlength{\rightskip}{0pt plus 5cm}void Login\-Info\-::set\-Info (
+\begin{DoxyParamCaption}
+\item[{const string \&}]{new\-Username, }
+\item[{const string \&}]{new\-Password}
+\end{DoxyParamCaption}
+)}}\label{class_login_info_a586b57ec9c89876ccbf5824a6ae5d4c3}
+\begin{DoxyPrecond}{Precondition}
+\hyperlink{class_login_info}{Login\-Info} class 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Values set 
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parameters}
+{\em new\-Username} & string key is going to be assigned \\
+\hline
+{\em new\-Password} & string password is going to be assigned\\
+\hline
+\end{DoxyParams}
+Algorithm\-:
+\begin{DoxyItemize}
+\item assign values 
+\end{DoxyItemize}
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{login_8cpp}{login.\-cpp}\end{DoxyCompactItemize}

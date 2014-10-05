@@ -1,0 +1,184 @@
+\hypertarget{class_priority_queue}{\section{Priority\-Queue$<$ Data\-Type, Key\-Type, Comparator $>$ Class Template Reference}
+\label{class_priority_queue}\index{Priority\-Queue$<$ Data\-Type, Key\-Type, Comparator $>$@{Priority\-Queue$<$ Data\-Type, Key\-Type, Comparator $>$}}
+}
+
+
+{\ttfamily \#include $<$Priority\-Queue.\-h$>$}
+
+Inheritance diagram for Priority\-Queue$<$ Data\-Type, Key\-Type, Comparator $>$\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_priority_queue}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_priority_queue_a47de2a46cff1d6a6ed30a99c94dc1b14}{Priority\-Queue} (int max\-Number=\hyperlink{_priority_queue_8h_a88703212007be018800be64f2f5fde2f}{def\-Max\-Queue\-Size})
+\item 
+\hyperlink{class_priority_queue_ab3b8c46007394fe44868b316ec157b92}{Priority\-Queue} (const \hyperlink{class_heap}{Heap}$<$ Data\-Type, Key\-Type, Comparator $>$ \&other)
+\item 
+\hyperlink{class_priority_queue}{Priority\-Queue} \& \hyperlink{class_priority_queue_ad4a011c82e41027ff8c2b55fe1923b33}{operator=} (const \hyperlink{class_priority_queue}{Priority\-Queue} \&other)
+\item 
+\hyperlink{class_priority_queue_a7d959dc823b18c647aa0ee4a80f27881}{$\sim$\-Priority\-Queue} ()
+\item 
+void \hyperlink{class_priority_queue_a61f3339cf0e87c67ed004f8eff0a1bfa}{enqueue} (const Data\-Type \&new\-Data\-Item)
+\item 
+Data\-Type \hyperlink{class_priority_queue_a5bc758e313d6244e672ea6e81d695a46}{dequeue} ()
+\item 
+void \hyperlink{class_priority_queue_a8386c8ea2b5806646cc7de9dd1b8df4b}{clear} ()
+\item 
+bool \hyperlink{class_priority_queue_a8cc481ad399a3117de6b1779a9d3edfe}{is\-Empty} ()
+\item 
+bool \hyperlink{class_priority_queue_a959aa69891bcbf024674ceaf527eeeec}{is\-Full} ()
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_priority_queue_a47de2a46cff1d6a6ed30a99c94dc1b14}{\index{Priority\-Queue@{Priority\-Queue}!Priority\-Queue@{Priority\-Queue}}
+\index{Priority\-Queue@{Priority\-Queue}!PriorityQueue@{Priority\-Queue}}
+\subsubsection[{Priority\-Queue}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data\-Type , typename Key\-Type  = int, typename Comparator  = Less$<$\-Key\-Type$>$$>$ {\bf Priority\-Queue}$<$ Data\-Type, Key\-Type, Comparator $>$\-::{\bf Priority\-Queue} (
+\begin{DoxyParamCaption}
+\item[{int}]{max\-Number = {\ttfamily {\bf def\-Max\-Queue\-Size}}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_priority_queue_a47de2a46cff1d6a6ed30a99c94dc1b14}
+\hypertarget{class_priority_queue_ab3b8c46007394fe44868b316ec157b92}{\index{Priority\-Queue@{Priority\-Queue}!Priority\-Queue@{Priority\-Queue}}
+\index{Priority\-Queue@{Priority\-Queue}!PriorityQueue@{Priority\-Queue}}
+\subsubsection[{Priority\-Queue}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data\-Type , typename Key\-Type  = int, typename Comparator  = Less$<$\-Key\-Type$>$$>$ {\bf Priority\-Queue}$<$ Data\-Type, Key\-Type, Comparator $>$\-::{\bf Priority\-Queue} (
+\begin{DoxyParamCaption}
+\item[{const {\bf Heap}$<$ Data\-Type, Key\-Type, Comparator $>$ \&}]{other}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_priority_queue_ab3b8c46007394fe44868b316ec157b92}
+\hypertarget{class_priority_queue_a7d959dc823b18c647aa0ee4a80f27881}{\index{Priority\-Queue@{Priority\-Queue}!$\sim$\-Priority\-Queue@{$\sim$\-Priority\-Queue}}
+\index{$\sim$\-Priority\-Queue@{$\sim$\-Priority\-Queue}!PriorityQueue@{Priority\-Queue}}
+\subsubsection[{$\sim$\-Priority\-Queue}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data\-Type , typename Key\-Type  = int, typename Comparator  = Less$<$\-Key\-Type$>$$>$ {\bf Priority\-Queue}$<$ Data\-Type, Key\-Type, Comparator $>$\-::$\sim${\bf Priority\-Queue} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_priority_queue_a7d959dc823b18c647aa0ee4a80f27881}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_priority_queue_a8386c8ea2b5806646cc7de9dd1b8df4b}{\index{Priority\-Queue@{Priority\-Queue}!clear@{clear}}
+\index{clear@{clear}!PriorityQueue@{Priority\-Queue}}
+\subsubsection[{clear}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data\-Type , typename Key\-Type , typename Comparator $>$ void {\bf Priority\-Queue}$<$ Data\-Type, Key\-Type, Comparator $>$\-::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_priority_queue_a8386c8ea2b5806646cc7de9dd1b8df4b}
+\begin{DoxyPrecond}{Precondition}
+a Priority Queue
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+a cleared Priority Queue
+\end{DoxyPostcond}
+Algorithm\-:
+\begin{DoxyItemize}
+\item use heap clear function 
+\end{DoxyItemize}\hypertarget{class_priority_queue_a5bc758e313d6244e672ea6e81d695a46}{\index{Priority\-Queue@{Priority\-Queue}!dequeue@{dequeue}}
+\index{dequeue@{dequeue}!PriorityQueue@{Priority\-Queue}}
+\subsubsection[{dequeue}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data\-Type , typename Key\-Type , typename Comparator $>$ Data\-Type {\bf Priority\-Queue}$<$ Data\-Type, Key\-Type, Comparator $>$\-::dequeue (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_priority_queue_a5bc758e313d6244e672ea6e81d695a46}
+\begin{DoxyPrecond}{Precondition}
+a Priority Queue
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+Priority Queue with front removed
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Returns}
+returns the data at the front of the Queue
+\end{DoxyReturn}
+Algorithm\-:
+\begin{DoxyItemize}
+\item use heap remove function 
+\end{DoxyItemize}\hypertarget{class_priority_queue_a61f3339cf0e87c67ed004f8eff0a1bfa}{\index{Priority\-Queue@{Priority\-Queue}!enqueue@{enqueue}}
+\index{enqueue@{enqueue}!PriorityQueue@{Priority\-Queue}}
+\subsubsection[{enqueue}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data\-Type , typename Key\-Type , typename Comparator $>$ void {\bf Priority\-Queue}$<$ Data\-Type, Key\-Type, Comparator $>$\-::enqueue (
+\begin{DoxyParamCaption}
+\item[{const Data\-Type \&}]{new\-Data\-Item}
+\end{DoxyParamCaption}
+)}}\label{class_priority_queue_a61f3339cf0e87c67ed004f8eff0a1bfa}
+\begin{DoxyPrecond}{Precondition}
+a Priority Queue
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+a new data inserted at the appropriate array location of the \hyperlink{class_heap}{Heap}
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parameters}
+{\em new\-Data\-Item} & Data to be inserted into the \hyperlink{class_heap}{Heap}\\
+\hline
+\end{DoxyParams}
+Algorithm\-:
+\begin{DoxyItemize}
+\item use the \hyperlink{class_heap}{Heap} insert function 
+\end{DoxyItemize}\hypertarget{class_priority_queue_a8cc481ad399a3117de6b1779a9d3edfe}{\index{Priority\-Queue@{Priority\-Queue}!is\-Empty@{is\-Empty}}
+\index{is\-Empty@{is\-Empty}!PriorityQueue@{Priority\-Queue}}
+\subsubsection[{is\-Empty}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data\-Type , typename Key\-Type , typename Comparator $>$ bool {\bf Priority\-Queue}$<$ Data\-Type, Key\-Type, Comparator $>$\-::is\-Empty (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_priority_queue_a8cc481ad399a3117de6b1779a9d3edfe}
+\begin{DoxyPrecond}{Precondition}
+a Priority Queue
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+returns if the Priority Queue is empty
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Returns}
+returns if the Priority Queue is empty
+\end{DoxyReturn}
+Algorithm\-:
+\begin{DoxyItemize}
+\item use heap is empty function 
+\end{DoxyItemize}\hypertarget{class_priority_queue_a959aa69891bcbf024674ceaf527eeeec}{\index{Priority\-Queue@{Priority\-Queue}!is\-Full@{is\-Full}}
+\index{is\-Full@{is\-Full}!PriorityQueue@{Priority\-Queue}}
+\subsubsection[{is\-Full}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data\-Type , typename Key\-Type , typename Comparator $>$ bool {\bf Priority\-Queue}$<$ Data\-Type, Key\-Type, Comparator $>$\-::is\-Full (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_priority_queue_a959aa69891bcbf024674ceaf527eeeec}
+\begin{DoxyPrecond}{Precondition}
+a Priority Queue
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+returns if the Priority Queue is full
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Returns}
+returns if the Priority Queue is full
+\end{DoxyReturn}
+Algorithm\-:
+\begin{DoxyItemize}
+\item use heap is empty function 
+\end{DoxyItemize}\hypertarget{class_priority_queue_ad4a011c82e41027ff8c2b55fe1923b33}{\index{Priority\-Queue@{Priority\-Queue}!operator=@{operator=}}
+\index{operator=@{operator=}!PriorityQueue@{Priority\-Queue}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data\-Type , typename Key\-Type , typename Comparator $>$ {\bf Priority\-Queue}$<$ Data\-Type, Key\-Type, Comparator $>$ \& {\bf Priority\-Queue}$<$ Data\-Type, Key\-Type, Comparator $>$\-::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Priority\-Queue}$<$ Data\-Type, Key\-Type, Comparator $>$ \&}]{other}
+\end{DoxyParamCaption}
+)}}\label{class_priority_queue_ad4a011c82e41027ff8c2b55fe1923b33}
+\begin{DoxyPrecond}{Precondition}
+a \hyperlink{class_heap}{Heap} class
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+a deep copy of source heap
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parameters}
+{\em source} & Source \hyperlink{class_heap}{Heap} to be deep copied\\
+\hline
+\end{DoxyParams}
+Algorithm\-:
+\begin{DoxyItemize}
+\item if the heap is not empt and it isnt itself clear the heap
+\item copy the data 
+\end{DoxyItemize}
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_priority_queue_8h}{Priority\-Queue.\-h}\item 
+\hyperlink{_priority_queue_8cpp}{Priority\-Queue.\-cpp}\end{DoxyCompactItemize}

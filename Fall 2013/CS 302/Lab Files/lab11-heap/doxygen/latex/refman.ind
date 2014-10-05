@@ -1,0 +1,191 @@
+\begin{theindex}
+
+  \item {$\sim $\discretionary {-}{}{}Heap}
+    \subitem {Heap}, \hyperpage{8}
+  \item {$\sim $\discretionary {-}{}{}Priority\discretionary {-}{}{}Queue}
+    \subitem {Priority\discretionary {-}{}{}Queue}, \hyperpage{12}
+
+  \indexspace
+
+  \item {arrived}
+    \subitem {Task\discretionary {-}{}{}Data}, \hyperpage{15}
+
+  \indexspace
+
+  \item {clear}
+    \subitem {Heap}, \hyperpage{9}
+    \subitem {Priority\discretionary {-}{}{}Queue}, \hyperpage{13}
+  \item {config.\discretionary {-}{}{}h}, \hyperpage{17}
+    \subitem {L\discretionary {-}{}{}A\discretionary {-}{}{}B11\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T1}, 
+		\hyperpage{17}
+
+  \indexspace
+
+  \item {def\discretionary {-}{}{}Max\discretionary {-}{}{}Queue\discretionary {-}{}{}Size}
+    \subitem {Priority\discretionary {-}{}{}Queue.\discretionary {-}{}{}h}, 
+		\hyperpage{19}
+  \item {dequeue}
+    \subitem {Priority\discretionary {-}{}{}Queue}, \hyperpage{13}
+
+  \indexspace
+
+  \item {enqueue}
+    \subitem {Priority\discretionary {-}{}{}Queue}, \hyperpage{13}
+
+  \indexspace
+
+  \item {get\discretionary {-}{}{}Priority}
+    \subitem {Task\discretionary {-}{}{}Data}, \hyperpage{15}
+    \subitem {Test\discretionary {-}{}{}Data}, \hyperpage{16}
+    \subitem {Test\discretionary {-}{}{}Data\discretionary {-}{}{}Item}, 
+		\hyperpage{16}
+  \item {Greater}
+    \subitem {operator()}, \hyperpage{7}
+  \item {Greater$<$ Key\discretionary {-}{}{}Type $>$}, \hyperpage{7}
+
+  \indexspace
+
+  \item {Heap}
+    \subitem {$\sim $\discretionary {-}{}{}Heap}, \hyperpage{8}
+    \subitem {clear}, \hyperpage{9}
+    \subitem {Heap}, \hyperpage{8}
+    \subitem {insert}, \hyperpage{9}
+    \subitem {is\discretionary {-}{}{}Empty}, \hyperpage{9}
+    \subitem {is\discretionary {-}{}{}Full}, \hyperpage{9}
+    \subitem {operator=}, \hyperpage{10}
+    \subitem {remove}, \hyperpage{10}
+    \subitem {show\discretionary {-}{}{}Structure}, \hyperpage{11}
+    \subitem {write\discretionary {-}{}{}Levels}, \hyperpage{11}
+  \item {Heap$<$ Data\discretionary {-}{}{}Type, Key\discretionary {-}{}{}Type, Comparator $>$}, 
+		\hyperpage{7}
+  \item {Heap.\discretionary {-}{}{}cpp}, \hyperpage{17}
+  \item {Heap.\discretionary {-}{}{}h}, \hyperpage{17}
+  \item {Heap2.\discretionary {-}{}{}cpp}, \hyperpage{17}
+  \item {heap\discretionary {-}{}{}Sort}
+    \subitem {heapsort.\discretionary {-}{}{}cs}, \hyperpage{18}
+  \item {heapsort.\discretionary {-}{}{}cs}, \hyperpage{18}
+    \subitem {heap\discretionary {-}{}{}Sort}, \hyperpage{18}
+    \subitem {move\discretionary {-}{}{}Down}, \hyperpage{18}
+
+  \indexspace
+
+  \item {insert}
+    \subitem {Heap}, \hyperpage{9}
+  \item {is\discretionary {-}{}{}Empty}
+    \subitem {Heap}, \hyperpage{9}
+    \subitem {Priority\discretionary {-}{}{}Queue}, \hyperpage{13}
+  \item {is\discretionary {-}{}{}Full}
+    \subitem {Heap}, \hyperpage{9}
+    \subitem {Priority\discretionary {-}{}{}Queue}, \hyperpage{14}
+
+  \indexspace
+
+  \item {L\discretionary {-}{}{}A\discretionary {-}{}{}B11\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}T\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}T1}
+    \subitem {config.\discretionary {-}{}{}h}, \hyperpage{17}
+  \item {Less}
+    \subitem {operator()}, \hyperpage{12}
+  \item {Less$<$ Key\discretionary {-}{}{}Type $>$}, \hyperpage{11}
+
+  \indexspace
+
+  \item {M\discretionary {-}{}{}A\discretionary {-}{}{}X\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}N\discretionary {-}{}{}U\discretionary {-}{}{}M\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}D\discretionary {-}{}{}A\discretionary {-}{}{}T\discretionary {-}{}{}A\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}I\discretionary {-}{}{}T\discretionary {-}{}{}E\discretionary {-}{}{}M\discretionary {-}{}{}S}
+    \subitem {test11hs.\discretionary {-}{}{}cpp}, \hyperpage{20}
+  \item {main}
+    \subitem {ossim.\discretionary {-}{}{}cpp}, \hyperpage{18}
+    \subitem {ossim.\discretionary {-}{}{}cs}, \hyperpage{19}
+    \subitem {test11.\discretionary {-}{}{}cpp}, \hyperpage{20}
+    \subitem {test11hs.\discretionary {-}{}{}cpp}, \hyperpage{20}
+    \subitem {test11pq.\discretionary {-}{}{}cpp}, \hyperpage{21}
+  \item {move\discretionary {-}{}{}Down}
+    \subitem {heapsort.\discretionary {-}{}{}cs}, \hyperpage{18}
+
+  \indexspace
+
+  \item {operator()}
+    \subitem {Greater}, \hyperpage{7}
+    \subitem {Less}, \hyperpage{12}
+  \item {operator=}
+    \subitem {Heap}, \hyperpage{10}
+    \subitem {Priority\discretionary {-}{}{}Queue}, \hyperpage{14}
+  \item {ossim.\discretionary {-}{}{}cpp}, \hyperpage{18}
+    \subitem {main}, \hyperpage{18}
+  \item {ossim.\discretionary {-}{}{}cs}, \hyperpage{18}
+    \subitem {main}, \hyperpage{19}
+
+  \indexspace
+
+  \item {print\discretionary {-}{}{}Help}
+    \subitem {test11.\discretionary {-}{}{}cpp}, \hyperpage{20}
+    \subitem {test11pq.\discretionary {-}{}{}cpp}, \hyperpage{21}
+  \item {priority}
+    \subitem {Task\discretionary {-}{}{}Data}, \hyperpage{15}
+  \item {Priority\discretionary {-}{}{}Queue}
+    \subitem {$\sim $\discretionary {-}{}{}Priority\discretionary {-}{}{}Queue}, 
+		\hyperpage{12}
+    \subitem {clear}, \hyperpage{13}
+    \subitem {dequeue}, \hyperpage{13}
+    \subitem {enqueue}, \hyperpage{13}
+    \subitem {is\discretionary {-}{}{}Empty}, \hyperpage{13}
+    \subitem {is\discretionary {-}{}{}Full}, \hyperpage{14}
+    \subitem {operator=}, \hyperpage{14}
+    \subitem {Priority\discretionary {-}{}{}Queue}, \hyperpage{12}
+    \subitem {Priority\discretionary {-}{}{}Queue}, \hyperpage{12}
+  \item {Priority\discretionary {-}{}{}Queue$<$ Data\discretionary {-}{}{}Type, Key\discretionary {-}{}{}Type, Comparator $>$}, 
+		\hyperpage{12}
+  \item {Priority\discretionary {-}{}{}Queue.\discretionary {-}{}{}cpp}, 
+		\hyperpage{19}
+  \item {Priority\discretionary {-}{}{}Queue.\discretionary {-}{}{}h}, 
+		\hyperpage{19}
+    \subitem {def\discretionary {-}{}{}Max\discretionary {-}{}{}Queue\discretionary {-}{}{}Size}, 
+		\hyperpage{19}
+
+  \indexspace
+
+  \item {remove}
+    \subitem {Heap}, \hyperpage{10}
+
+  \indexspace
+
+  \item {set\discretionary {-}{}{}Priority}
+    \subitem {Test\discretionary {-}{}{}Data}, \hyperpage{16}
+    \subitem {Test\discretionary {-}{}{}Data\discretionary {-}{}{}Item}, 
+		\hyperpage{16}
+  \item {show11.\discretionary {-}{}{}cpp}, \hyperpage{19}
+  \item {show\discretionary {-}{}{}Structure}
+    \subitem {Heap}, \hyperpage{11}
+
+  \indexspace
+
+  \item {Task\discretionary {-}{}{}Data}, \hyperpage{15}
+    \subitem {arrived}, \hyperpage{15}
+    \subitem {get\discretionary {-}{}{}Priority}, \hyperpage{15}
+    \subitem {priority}, \hyperpage{15}
+  \item {test11.\discretionary {-}{}{}cpp}, \hyperpage{19}
+    \subitem {main}, \hyperpage{20}
+    \subitem {print\discretionary {-}{}{}Help}, \hyperpage{20}
+  \item {test11hs.\discretionary {-}{}{}cpp}, \hyperpage{20}
+    \subitem {M\discretionary {-}{}{}A\discretionary {-}{}{}X\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}N\discretionary {-}{}{}U\discretionary {-}{}{}M\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}D\discretionary {-}{}{}A\discretionary {-}{}{}T\discretionary {-}{}{}A\discretionary {-}{}{}\_\discretionary {-}{}{}\discretionary {-}{}{}I\discretionary {-}{}{}T\discretionary {-}{}{}E\discretionary {-}{}{}M\discretionary {-}{}{}S}, 
+		\hyperpage{20}
+    \subitem {main}, \hyperpage{20}
+  \item {test11pq.\discretionary {-}{}{}cpp}, \hyperpage{20}
+    \subitem {main}, \hyperpage{21}
+    \subitem {print\discretionary {-}{}{}Help}, \hyperpage{21}
+  \item {Test\discretionary {-}{}{}Data}, \hyperpage{15}
+    \subitem {get\discretionary {-}{}{}Priority}, \hyperpage{16}
+    \subitem {set\discretionary {-}{}{}Priority}, \hyperpage{16}
+  \item {Test\discretionary {-}{}{}Data\discretionary {-}{}{}Item}
+    \subitem {get\discretionary {-}{}{}Priority}, \hyperpage{16}
+    \subitem {set\discretionary {-}{}{}Priority}, \hyperpage{16}
+    \subitem {Test\discretionary {-}{}{}Data\discretionary {-}{}{}Item}, 
+		\hyperpage{16}
+    \subitem {Test\discretionary {-}{}{}Data\discretionary {-}{}{}Item}, 
+		\hyperpage{16}
+  \item {Test\discretionary {-}{}{}Data\discretionary {-}{}{}Item$<$ Key\discretionary {-}{}{}Type $>$}, 
+		\hyperpage{16}
+
+  \indexspace
+
+  \item {write\discretionary {-}{}{}Levels}
+    \subitem {Heap}, \hyperpage{11}
+
+\end{theindex}

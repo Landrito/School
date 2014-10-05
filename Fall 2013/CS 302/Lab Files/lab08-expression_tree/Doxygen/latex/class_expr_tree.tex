@@ -1,0 +1,245 @@
+\hypertarget{class_expr_tree}{\section{Expr\-Tree$<$ Data\-Type $>$ Class Template Reference}
+\label{class_expr_tree}\index{Expr\-Tree$<$ Data\-Type $>$@{Expr\-Tree$<$ Data\-Type $>$}}
+}
+
+
+{\ttfamily \#include $<$Expression\-Tree.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_expr_tree_a9336ce90bcb807499172d184729f46a7}{Expr\-Tree} ()
+\item 
+\hyperlink{class_expr_tree_aeec9dc6139cf32fcc911840bab438239}{Expr\-Tree} (const \hyperlink{class_expr_tree}{Expr\-Tree} \&source)
+\item 
+\hyperlink{class_expr_tree}{Expr\-Tree} \& \hyperlink{class_expr_tree_a9a7b2120af2c2df666b1154eec20008a}{operator=} (const \hyperlink{class_expr_tree}{Expr\-Tree} \&source)
+\item 
+\hyperlink{class_expr_tree_a8976e9af7e1209b9db475b863ab9f31d}{$\sim$\-Expr\-Tree} ()
+\item 
+void \hyperlink{class_expr_tree_a283a61049eb163f6f370d562cc92c824}{build} ()
+\item 
+void \hyperlink{class_expr_tree_ac367645dc4ccaf488e121cd5a0a8c07d}{expression} () const 
+\item 
+Data\-Type \hyperlink{class_expr_tree_ad1579e64d55cdfcd500a634ef69ed792}{evaluate} () const   throw (logic\-\_\-error)
+\item 
+void \hyperlink{class_expr_tree_a87d6593a3ad6199b5521f6d1e3ba851f}{clear} ()
+\item 
+void \hyperlink{class_expr_tree_a8bfcf0da6dfd93f4228a35cded704fb4}{commute} ()
+\item 
+bool \hyperlink{class_expr_tree_ae64a4e3b5008fa2f533fd7461ead2485}{is\-Equivalent} (const \hyperlink{class_expr_tree}{Expr\-Tree} \&source) const 
+\item 
+void \hyperlink{class_expr_tree_a6f4c5e2ae8224fb53fb893231814e6d9}{show\-Structure} () const 
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_expr_tree_a9336ce90bcb807499172d184729f46a7}{\index{Expr\-Tree@{Expr\-Tree}!Expr\-Tree@{Expr\-Tree}}
+\index{Expr\-Tree@{Expr\-Tree}!ExprTree@{Expr\-Tree}}
+\subsubsection[{Expr\-Tree}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename $>$ {\bf Expr\-Tree}$<$ typename $>$\-::{\bf Expr\-Tree} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_expr_tree_a9336ce90bcb807499172d184729f46a7}
+\begin{DoxyPrecond}{Precondition}
+New \hyperlink{class_expr_tree}{Expr\-Tree} Class 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+root pointing to null
+\end{DoxyPostcond}
+Algorithm\-:
+\begin{DoxyItemize}
+\item point root to null
+\end{DoxyItemize}
+
+Exceptional/\-Error Conditions\-:
+\begin{DoxyItemize}
+\item none 
+\end{DoxyItemize}\hypertarget{class_expr_tree_aeec9dc6139cf32fcc911840bab438239}{\index{Expr\-Tree@{Expr\-Tree}!Expr\-Tree@{Expr\-Tree}}
+\index{Expr\-Tree@{Expr\-Tree}!ExprTree@{Expr\-Tree}}
+\subsubsection[{Expr\-Tree}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data\-Type $>$ {\bf Expr\-Tree}$<$ Data\-Type $>$\-::{\bf Expr\-Tree} (
+\begin{DoxyParamCaption}
+\item[{const {\bf Expr\-Tree}$<$ Data\-Type $>$ \&}]{source}
+\end{DoxyParamCaption}
+)}}\label{class_expr_tree_aeec9dc6139cf32fcc911840bab438239}
+\begin{DoxyPrecond}{Precondition}
+new \hyperlink{class_expr_tree}{Expr\-Tree} class
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+a deep copy of source \hyperlink{class_expr_tree}{Expr\-Tree}
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parameters}
+{\em source} & Source \hyperlink{class_expr_tree}{Expr\-Tree} to be deep copied\\
+\hline
+\end{DoxyParams}
+Algorithm\-:
+\begin{DoxyItemize}
+\item Use overloaded assignment operator to copy the data from the source to this class 
+\end{DoxyItemize}\hypertarget{class_expr_tree_a8976e9af7e1209b9db475b863ab9f31d}{\index{Expr\-Tree@{Expr\-Tree}!$\sim$\-Expr\-Tree@{$\sim$\-Expr\-Tree}}
+\index{$\sim$\-Expr\-Tree@{$\sim$\-Expr\-Tree}!ExprTree@{Expr\-Tree}}
+\subsubsection[{$\sim$\-Expr\-Tree}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data\-Type $>$ {\bf Expr\-Tree}$<$ Data\-Type $>$\-::$\sim${\bf Expr\-Tree} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_expr_tree_a8976e9af7e1209b9db475b863ab9f31d}
+\begin{DoxyPrecond}{Precondition}
+an Expr\-Tree\-Class
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+deallocated Expr\-Tree\-Class
+\end{DoxyPostcond}
+Algorithm\-:
+\begin{DoxyItemize}
+\item Use clear member function to deallocate the tree 
+\end{DoxyItemize}
+
+\subsection{Member Function Documentation}
+\hypertarget{class_expr_tree_a283a61049eb163f6f370d562cc92c824}{\index{Expr\-Tree@{Expr\-Tree}!build@{build}}
+\index{build@{build}!ExprTree@{Expr\-Tree}}
+\subsubsection[{build}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data\-Type $>$ void {\bf Expr\-Tree}$<$ Data\-Type $>$\-::build (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_expr_tree_a283a61049eb163f6f370d562cc92c824}
+\begin{DoxyPrecond}{Precondition}
+an Expr\-Tree\-Class
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+a built Expression tree
+\end{DoxyPostcond}
+Algorithm\-:
+\begin{DoxyItemize}
+\item Use rec\-Build member function to make the expression tree 
+\end{DoxyItemize}\hypertarget{class_expr_tree_a87d6593a3ad6199b5521f6d1e3ba851f}{\index{Expr\-Tree@{Expr\-Tree}!clear@{clear}}
+\index{clear@{clear}!ExprTree@{Expr\-Tree}}
+\subsubsection[{clear}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data\-Type $>$ void {\bf Expr\-Tree}$<$ Data\-Type $>$\-::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_expr_tree_a87d6593a3ad6199b5521f6d1e3ba851f}
+\begin{DoxyPrecond}{Precondition}
+an Expr\-Tree\-Class
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+deallocated Expr\-Tree\-Class
+\end{DoxyPostcond}
+Algorithm\-:
+\begin{DoxyItemize}
+\item use the rec\-Clear member function to deallocate the expr\-Tree 
+\end{DoxyItemize}\hypertarget{class_expr_tree_a8bfcf0da6dfd93f4228a35cded704fb4}{\index{Expr\-Tree@{Expr\-Tree}!commute@{commute}}
+\index{commute@{commute}!ExprTree@{Expr\-Tree}}
+\subsubsection[{commute}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data\-Type $>$ void {\bf Expr\-Tree}$<$ Data\-Type $>$\-::commute (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_expr_tree_a8bfcf0da6dfd93f4228a35cded704fb4}
+\begin{DoxyPrecond}{Precondition}
+an Expr\-Tree\-Class
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+commuted Expression Tree
+\end{DoxyPostcond}
+Algorithm\-:
+\begin{DoxyItemize}
+\item use the rec\-Commute member function to commute the expr\-Tree 
+\end{DoxyItemize}\hypertarget{class_expr_tree_ad1579e64d55cdfcd500a634ef69ed792}{\index{Expr\-Tree@{Expr\-Tree}!evaluate@{evaluate}}
+\index{evaluate@{evaluate}!ExprTree@{Expr\-Tree}}
+\subsubsection[{evaluate}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data\-Type $>$ Data\-Type {\bf Expr\-Tree}$<$ Data\-Type $>$\-::evaluate (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const throw  logic\-\_\-error) }}\label{class_expr_tree_ad1579e64d55cdfcd500a634ef69ed792}
+\begin{DoxyPrecond}{Precondition}
+a built Expr\-Tree\-Class
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+The mathematical expression is evaluated
+\end{DoxyPostcond}
+\begin{DoxyReturn}{Returns}
+The mathematical evaluation of the expression of the tree
+\end{DoxyReturn}
+Algorithm\-:
+\begin{DoxyItemize}
+\item use the rec\-Evaluate member function to evaluate the expr\-Tree
+\end{DoxyItemize}
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em A} & logic error is thrown if the tree is empty \\
+\hline
+\end{DoxyExceptions}
+\hypertarget{class_expr_tree_ac367645dc4ccaf488e121cd5a0a8c07d}{\index{Expr\-Tree@{Expr\-Tree}!expression@{expression}}
+\index{expression@{expression}!ExprTree@{Expr\-Tree}}
+\subsubsection[{expression}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data\-Type $>$ void {\bf Expr\-Tree}$<$ Data\-Type $>$\-::expression (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_expr_tree_ac367645dc4ccaf488e121cd5a0a8c07d}
+\begin{DoxyPrecond}{Precondition}
+a built Expr\-Tree\-Class
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+The mathematical expression is printed on screen infix notation
+\end{DoxyPostcond}
+Algorithm\-:
+\begin{DoxyItemize}
+\item Use rec\-Expression member function to print the expression 
+\end{DoxyItemize}\hypertarget{class_expr_tree_ae64a4e3b5008fa2f533fd7461ead2485}{\index{Expr\-Tree@{Expr\-Tree}!is\-Equivalent@{is\-Equivalent}}
+\index{is\-Equivalent@{is\-Equivalent}!ExprTree@{Expr\-Tree}}
+\subsubsection[{is\-Equivalent}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data\-Type $>$ bool {\bf Expr\-Tree}$<$ Data\-Type $>$\-::is\-Equivalent (
+\begin{DoxyParamCaption}
+\item[{const {\bf Expr\-Tree}$<$ Data\-Type $>$ \&}]{source}
+\end{DoxyParamCaption}
+) const}}\label{class_expr_tree_ae64a4e3b5008fa2f533fd7461ead2485}
+\begin{DoxyPrecond}{Precondition}
+an Expr\-Tree\-Class
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+returned boolean if the trees are equivalent
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parameters}
+{\em source} & Source \hyperlink{class_expr_tree}{Expr\-Tree} to be compared\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+This function returns if the trees are equivalent based on commutative properties
+\end{DoxyReturn}
+Algorithm\-:
+\begin{DoxyItemize}
+\item use the rec\-Is\-Equivalent member function to check equivalence 
+\end{DoxyItemize}\hypertarget{class_expr_tree_a9a7b2120af2c2df666b1154eec20008a}{\index{Expr\-Tree@{Expr\-Tree}!operator=@{operator=}}
+\index{operator=@{operator=}!ExprTree@{Expr\-Tree}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data\-Type $>$ {\bf Expr\-Tree}$<$ Data\-Type $>$ \& {\bf Expr\-Tree}$<$ Data\-Type $>$\-::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Expr\-Tree}$<$ Data\-Type $>$ \&}]{source}
+\end{DoxyParamCaption}
+)}}\label{class_expr_tree_a9a7b2120af2c2df666b1154eec20008a}
+\begin{DoxyPrecond}{Precondition}
+an Expr\-Tree\-Class
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondition}
+a deep copy of source \hyperlink{class_expr_tree}{Expr\-Tree}
+\end{DoxyPostcond}
+
+\begin{DoxyParams}{Parameters}
+{\em source} & Source \hyperlink{class_expr_tree}{Expr\-Tree} to be deep copied\\
+\hline
+\end{DoxyParams}
+Algorithm\-:
+\begin{DoxyItemize}
+\item Use rec\-Copy to make a copy of each node in the \hyperlink{class_expr_tree}{Expr\-Tree} 
+\end{DoxyItemize}\hypertarget{class_expr_tree_a6f4c5e2ae8224fb53fb893231814e6d9}{\index{Expr\-Tree@{Expr\-Tree}!show\-Structure@{show\-Structure}}
+\index{show\-Structure@{show\-Structure}!ExprTree@{Expr\-Tree}}
+\subsubsection[{show\-Structure}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename Data\-Type $>$ void {\bf Expr\-Tree}$<$ Data\-Type $>$\-::show\-Structure (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_expr_tree_a6f4c5e2ae8224fb53fb893231814e6d9}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_expression_tree_8h}{Expression\-Tree.\-h}\item 
+\hyperlink{_expression_tree_8cpp}{Expression\-Tree.\-cpp}\item 
+\hyperlink{show8_8cpp}{show8.\-cpp}\end{DoxyCompactItemize}
