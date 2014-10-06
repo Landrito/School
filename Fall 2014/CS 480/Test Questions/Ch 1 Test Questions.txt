@@ -1,0 +1,40 @@
+Chapter 1 Test Questions
+========================
+Ernest Landrito
+September 13, 2014
+CS 480
+------------------------
+
+True/False:
+The output of the raterizer is a set of fragments for each primitive.
+True. 
+Interactive Computer Graphics: Page 37
+
+Multiple Choice:
+In a synthetic camera model, an image of a point on an object on the image plane is found by:
+A. drawing a line from the point orthogonally to the image plane.
+B. drawing a line from the point through the image plane to the center of projection.
+C. drawing a line from the point through center of projection to the viewing plane.
+D. none of the above.
+
+B.
+Interactive Computer Graphics: Page 24
+
+Fill in the Blank:
+Separating the modeling of a scene from the production of the image is called:
+
+rendering
+Interactive Computer Graphics: Page 32
+
+Short Answer:
+The Graphics Pipeline is composed of four major steps:
+1.
+2.
+3.
+4.
+
+1. Vertex Processing
+2. Clipping and Primitive Assembly
+3. Raseterization
+4. Fragment Processing
+Interactive Computer Graphics: Page 35a

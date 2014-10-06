@@ -3,8 +3,8 @@
 #include <vector>
 
 /****************************************************************************/
-//Stop and wait is the essentially the same code as both GBN and Selected 
-//Repeat except it always has a window size of 1
+//Stop and wait is the essentially the same code as GBN but it accepts the 
+//file if the file is even if it isnt at the start of the window.
 /****************************************************************************/
 const int WINDOW_SIZE = 1; 
 const int NUM_PACKETS = 100;

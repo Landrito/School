@@ -3,9 +3,9 @@
 #include <vector>
 
 const int NUM_PACKETS = 100;
-const int WINDOW_SIZE = 12;
+const int WINDOW_SIZE = 2;
 const int SEED = 1;
-const float ERROR_RATE = 0.0;
+const float ERROR_RATE = 0.1;
 
 struct Packet
 {
