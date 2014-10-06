@@ -9,7 +9,7 @@
 const int WINDOW_SIZE = 1; 
 const int NUM_PACKETS = 100;
 const int SEED = 1;
-const float ERROR_RATE = 0.0;
+const float ERROR_RATE = 0.5;
 
 struct Packet
 {
