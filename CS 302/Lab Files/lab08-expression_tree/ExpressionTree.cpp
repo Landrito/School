@@ -82,6 +82,7 @@ ExprTree<DataType>::ExprTree()
 template <typename DataType>
 ExprTree<DataType>::ExprTree(const ExprTree& source)
 {
+	//This needs to be redone.
 	*this = source;
 }
 
@@ -558,20 +559,20 @@ bool ExprTree<DataType>::recIsEquivalent(ExprTreeNode * thisExprTreePtr, ExprTre
 	{
 		return true;
 	}
-	else if(thisExprTreePtr != NULL && thisExprTreePtr != NULL)
+	else if(thisExprTreePtr != NULL && otherExprTreePtr != NULL)
 	{
 		if(thisExprTreePtr->dataItem == otherExprTreePtr->dataItem)
 		{
-			if(recIsEquivalent(thisExprTreePtr->right, thisExprTreePtr->right) 
+			if(recIsEquivalent(thisExprTreePtr->right, otherExprTreePtr->right) 
 				&&
-			   recIsEquivalent(thisExprTreePtr->left, thisExprTreePtr->left))
+			   recIsEquivalent(thisExprTreePtr->left, otherExprTreePtr->left))
 			{
 				return true;
 			}
 			else if
-				(recIsEquivalent(thisExprTreePtr->right, thisExprTreePtr->left)
+				(recIsEquivalent(thisExprTreePtr->right, otherExprTreePtr->left)
 				 &&
-				recIsEquivalent(thisExprTreePtr->left, thisExprTreePtr->right))
+				recIsEquivalent(thisExprTreePtr->left, otherExprTreePtr->right))
 			{
 				if (thisExprTreePtr->dataItem == '+' ||
 				 	 thisExprTreePtr->dataItem == '*')

@@ -2,11 +2,11 @@
 #include <stdlib.h>
 #include <vector>
 #include <time.h>
-const int NUM_PACKETS = 100;
+const int NUM_PACKETS = 1000;
 const int SEED = 1;
 const int MAX_TRIALS = 10;
 const int MIN_WINDOW_SIZE = 4;
-const int MAX_WINDOW_SIZE = 100;
+const int MAX_WINDOW_SIZE = 16;
 const float ERROR_RATE = 0.2;
 
 struct Packet
@@ -28,8 +28,11 @@ class Window
 		bool isFull();
 		bool complete();
 		void increasePacketsInTransit();
+		int getWindowStart();
+		int getNumRetransmissions();
 
 	private:
+		int numRetransmissions;
 		int packetsInTransit;
 		bool sent[NUM_PACKETS];
 		int windowStart; //This will hold the starting position of the window
@@ -42,11 +45,57 @@ class Window
 int main()
 {
 	FILE * outFile = fopen("GoBackN.csv", "w");
-	fprintf(outFile, "Window Size,Average Throughput\n");
+	FILE * outFile2 = fopen("GoBackN.txt", "w");
+	fprintf(outFile, "Error Rate,Average Throughput,Number of Retransmissions\n");
+	fprintf(outFile2, "Go Back N\n");
+
+	for(int err = 0; err <= 50; err+=10)
+	{
+		float throughput = 0.0;
+		float sum = 0.0;
+		int rtSum = 0;
+		for(int trialNum = 0; trialNum < MAX_TRIALS; trialNum++)
+		{
+			srand( trialNum );
+			Window window(4, float(err) / 100.0);
+			int t = 0;
+			int i = 0;
+			
+			while( !window.complete() )
+			{
+				if( !window.isFull() && i < NUM_PACKETS )
+				{
+					window.increasePacketsInTransit();
+					window.sendPacket(i);
+					i++;
+				}
+				window.checkRecieved();
+				window.updateTimers();
+				t++;
+			}
+			throughput = ( 100.0 * NUM_PACKETS ) / t;
+			sum += throughput;
+
+			printf("Go Back N Error Rate 0.%i Trial #%i Throughput: %f \n", 
+					err, trialNum + 1, throughput );
+			fprintf(outFile2, "Go Back N Error Rate %i Trial #%i Throughput: %f \n", 
+					err, trialNum + 1, throughput );
+			rtSum += window.getNumRetransmissions();
+		}
+		printf("\nGo Back N Error Rate 0.%i Average Throughput: %f \n \n",
+				err, sum / MAX_TRIALS );
+		fprintf(outFile2, "\nGo Back N Error Rate 0.%i Average Throughput: %f \n \n",
+				err, sum / MAX_TRIALS );
+		fprintf(outFile, "0.%i,%f,%i\n", err, sum / MAX_TRIALS, rtSum / MAX_TRIALS);
+	}
+
+	fprintf(outFile, "\nWindow Size, Average Throughput\n");
+
 	for(int windowSize = MIN_WINDOW_SIZE; windowSize <= MAX_WINDOW_SIZE; windowSize+=4)
 	{
 		float throughput = 0.0;
 		float sum = 0.0;
+		int rtSum = 0;
 		for(int trialNum = 0; trialNum < MAX_TRIALS; trialNum++)
 		{
 			srand( trialNum );
@@ -68,12 +117,17 @@ int main()
 			}
 			throughput = ( 100.0 * NUM_PACKETS ) / t;
 			sum += throughput;
-			//printf("Selective Repeat Window Size %i Trial #%i Throughput: %f \n", 
-			//		windowSize, trialNum,throughput );
+			printf("Go Back N Window Size %i Trial #%i Throughput: %f \n", 
+					windowSize, trialNum,throughput );
+			fprintf(outFile2, "Go Back N Window Size %i Trial #%i Throughput: %f \n", 
+					windowSize, trialNum,throughput );
+			rtSum += window.getNumRetransmissions();
 		}
-		printf("Go Back N Window Size %i Average Throughput: %f \n",
+		printf("\nGo Back N Window Size %i Average Throughput: %f \n\n",
 				windowSize, sum / MAX_TRIALS );
-		fprintf(outFile, "%i,%f\n", windowSize, sum / MAX_TRIALS);
+		fprintf(outFile2,"\nGo Back N Window Size %i Average Throughput: %f \n\n",
+				windowSize, sum / MAX_TRIALS );
+		fprintf(outFile, "%i,%f, %i\n", windowSize, sum / MAX_TRIALS, rtSum / MAX_TRIALS);
 	}
 
 	fclose(outFile);
@@ -88,6 +142,7 @@ int main()
 
 Window::Window(int ws, float er)
 {
+	numRetransmissions = 0;
 	packetsInTransit = 0;
 	windowStart = 0;
 	windowSize = ws;
@@ -128,6 +183,7 @@ void Window::checkRecieved()
 				//printf("Error packet %i\n", it->sequence);
 				temp.push_back(it->sequence);
 				it = packets.erase(it) - 1;
+				numRetransmissions++;
 			}
 		}
 		else
@@ -138,6 +194,7 @@ void Window::checkRecieved()
 				{
 					//printf("Received packet %i out of order resending\n", it->sequence);
 					temp.push_back(it->sequence);
+					numRetransmissions++;
 				}
 				else
 				{
@@ -149,9 +206,15 @@ void Window::checkRecieved()
 				
 				it = packets.erase(it) - 1;
 			}
+			else if(sent[it->sequence] && it->timer >= 45 )
+			{
+				//printf("Received packet already %i\n", it->sequence);
+				it = packets.erase(it) - 1;
+			}
 			else if( it->timer == 45 )
 			{
 				temp.push_back(it->sequence);
+				numRetransmissions++;
 				//printf("Timeout packet %i resending\n", it->sequence);
 
 			}
@@ -185,4 +248,14 @@ void Window::increasePacketsInTransit()
 bool Window::complete()
 {
 	return sent[NUM_PACKETS - 1];
+}
+
+int Window::getWindowStart()
+{
+	return windowStart;
+}
+
+int Window::getNumRetransmissions()
+{
+	return numRetransmissions;
 }

@@ -1,0 +1,131 @@
+Go Back N
+Go Back N Error Rate 0 Trial #1 Throughput: 6.081615 
+Go Back N Error Rate 0 Trial #2 Throughput: 6.081615 
+Go Back N Error Rate 0 Trial #3 Throughput: 6.019382 
+Go Back N Error Rate 0 Trial #4 Throughput: 5.702229 
+Go Back N Error Rate 0 Trial #5 Throughput: 5.971575 
+Go Back N Error Rate 0 Trial #6 Throughput: 5.857202 
+Go Back N Error Rate 0 Trial #7 Throughput: 5.983366 
+Go Back N Error Rate 0 Trial #8 Throughput: 5.970506 
+Go Back N Error Rate 0 Trial #9 Throughput: 6.077919 
+Go Back N Error Rate 0 Trial #10 Throughput: 6.220066 
+
+Go Back N Error Rate 0.0 Average Throughput: 5.996547 
+ 
+Go Back N Error Rate 10 Trial #1 Throughput: 4.691972 
+Go Back N Error Rate 10 Trial #2 Throughput: 4.691972 
+Go Back N Error Rate 10 Trial #3 Throughput: 4.748789 
+Go Back N Error Rate 10 Trial #4 Throughput: 4.608295 
+Go Back N Error Rate 10 Trial #5 Throughput: 4.518548 
+Go Back N Error Rate 10 Trial #6 Throughput: 4.650298 
+Go Back N Error Rate 10 Trial #7 Throughput: 4.572056 
+Go Back N Error Rate 10 Trial #8 Throughput: 4.918597 
+Go Back N Error Rate 10 Trial #9 Throughput: 4.797544 
+Go Back N Error Rate 10 Trial #10 Throughput: 4.631989 
+
+Go Back N Error Rate 0.10 Average Throughput: 4.683006 
+ 
+Go Back N Error Rate 20 Trial #1 Throughput: 3.525471 
+Go Back N Error Rate 20 Trial #2 Throughput: 3.525471 
+Go Back N Error Rate 20 Trial #3 Throughput: 3.676065 
+Go Back N Error Rate 20 Trial #4 Throughput: 3.623976 
+Go Back N Error Rate 20 Trial #5 Throughput: 3.667033 
+Go Back N Error Rate 20 Trial #6 Throughput: 3.602305 
+Go Back N Error Rate 20 Trial #7 Throughput: 3.675525 
+Go Back N Error Rate 20 Trial #8 Throughput: 3.881837 
+Go Back N Error Rate 20 Trial #9 Throughput: 3.622139 
+Go Back N Error Rate 20 Trial #10 Throughput: 3.553660 
+
+Go Back N Error Rate 0.20 Average Throughput: 3.635349 
+ 
+Go Back N Error Rate 30 Trial #1 Throughput: 2.858368 
+Go Back N Error Rate 30 Trial #2 Throughput: 2.858368 
+Go Back N Error Rate 30 Trial #3 Throughput: 2.877201 
+Go Back N Error Rate 30 Trial #4 Throughput: 2.959105 
+Go Back N Error Rate 30 Trial #5 Throughput: 2.766711 
+Go Back N Error Rate 30 Trial #6 Throughput: 2.792672 
+Go Back N Error Rate 30 Trial #7 Throughput: 2.649428 
+Go Back N Error Rate 30 Trial #8 Throughput: 2.764340 
+Go Back N Error Rate 30 Trial #9 Throughput: 2.744313 
+Go Back N Error Rate 30 Trial #10 Throughput: 2.794311 
+
+Go Back N Error Rate 0.30 Average Throughput: 2.806482 
+ 
+Go Back N Error Rate 40 Trial #1 Throughput: 2.294157 
+Go Back N Error Rate 40 Trial #2 Throughput: 2.294157 
+Go Back N Error Rate 40 Trial #3 Throughput: 2.331872 
+Go Back N Error Rate 40 Trial #4 Throughput: 2.307710 
+Go Back N Error Rate 40 Trial #5 Throughput: 2.125489 
+Go Back N Error Rate 40 Trial #6 Throughput: 2.243964 
+Go Back N Error Rate 40 Trial #7 Throughput: 2.219460 
+Go Back N Error Rate 40 Trial #8 Throughput: 2.289011 
+Go Back N Error Rate 40 Trial #9 Throughput: 2.245274 
+Go Back N Error Rate 40 Trial #10 Throughput: 2.242555 
+
+Go Back N Error Rate 0.40 Average Throughput: 2.259365 
+ 
+Go Back N Error Rate 50 Trial #1 Throughput: 1.718922 
+Go Back N Error Rate 50 Trial #2 Throughput: 1.718922 
+Go Back N Error Rate 50 Trial #3 Throughput: 1.758644 
+Go Back N Error Rate 50 Trial #4 Throughput: 1.747702 
+Go Back N Error Rate 50 Trial #5 Throughput: 1.826584 
+Go Back N Error Rate 50 Trial #6 Throughput: 1.796590 
+Go Back N Error Rate 50 Trial #7 Throughput: 1.758953 
+Go Back N Error Rate 50 Trial #8 Throughput: 1.758365 
+Go Back N Error Rate 50 Trial #9 Throughput: 1.677149 
+Go Back N Error Rate 50 Trial #10 Throughput: 1.782309 
+
+Go Back N Error Rate 0.50 Average Throughput: 1.754414 
+ 
+Go Back N Window Size 4 Trial #0 Throughput: 3.525471 
+Go Back N Window Size 4 Trial #1 Throughput: 3.525471 
+Go Back N Window Size 4 Trial #2 Throughput: 3.676065 
+Go Back N Window Size 4 Trial #3 Throughput: 3.623976 
+Go Back N Window Size 4 Trial #4 Throughput: 3.667033 
+Go Back N Window Size 4 Trial #5 Throughput: 3.602305 
+Go Back N Window Size 4 Trial #6 Throughput: 3.675525 
+Go Back N Window Size 4 Trial #7 Throughput: 3.881837 
+Go Back N Window Size 4 Trial #8 Throughput: 3.622139 
+Go Back N Window Size 4 Trial #9 Throughput: 3.553660 
+
+Go Back N Window Size 4 Average Throughput: 3.635349 
+
+Go Back N Window Size 8 Trial #0 Throughput: 4.231550 
+Go Back N Window Size 8 Trial #1 Throughput: 4.231550 
+Go Back N Window Size 8 Trial #2 Throughput: 4.204684 
+Go Back N Window Size 8 Trial #3 Throughput: 4.195687 
+Go Back N Window Size 8 Trial #4 Throughput: 4.115396 
+Go Back N Window Size 8 Trial #5 Throughput: 4.082966 
+Go Back N Window Size 8 Trial #6 Throughput: 4.139073 
+Go Back N Window Size 8 Trial #7 Throughput: 4.271679 
+Go Back N Window Size 8 Trial #8 Throughput: 4.195687 
+Go Back N Window Size 8 Trial #9 Throughput: 3.929582 
+
+Go Back N Window Size 8 Average Throughput: 4.159785 
+
+Go Back N Window Size 12 Trial #0 Throughput: 4.691532 
+Go Back N Window Size 12 Trial #1 Throughput: 4.691532 
+Go Back N Window Size 12 Trial #2 Throughput: 4.645545 
+Go Back N Window Size 12 Trial #3 Throughput: 4.394832 
+Go Back N Window Size 12 Trial #4 Throughput: 4.590314 
+Go Back N Window Size 12 Trial #5 Throughput: 4.628987 
+Go Back N Window Size 12 Trial #6 Throughput: 4.398118 
+Go Back N Window Size 12 Trial #7 Throughput: 4.560795 
+Go Back N Window Size 12 Trial #8 Throughput: 4.338960 
+Go Back N Window Size 12 Trial #9 Throughput: 4.572683 
+
+Go Back N Window Size 12 Average Throughput: 4.551330 
+
+Go Back N Window Size 16 Trial #0 Throughput: 4.904365 
+Go Back N Window Size 16 Trial #1 Throughput: 4.904365 
+Go Back N Window Size 16 Trial #2 Throughput: 5.029675 
+Go Back N Window Size 16 Trial #3 Throughput: 5.119803 
+Go Back N Window Size 16 Trial #4 Throughput: 5.198046 
+Go Back N Window Size 16 Trial #5 Throughput: 5.132943 
+Go Back N Window Size 16 Trial #6 Throughput: 5.171700 
+Go Back N Window Size 16 Trial #7 Throughput: 4.890693 
+Go Back N Window Size 16 Trial #8 Throughput: 4.989273 
+Go Back N Window Size 16 Trial #9 Throughput: 5.051015 
+
+Go Back N Window Size 16 Average Throughput: 5.039188 
+

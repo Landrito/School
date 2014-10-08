@@ -1,2 +1,7 @@
-Window Size,Average Throughput
-1,0.332668
+Error Rate,Average Throughput,Number of Retransmissions
+0.0,3.236483, 988
+0.10,2.793041, 1168
+0.20,2.410856, 1455
+0.30,1.974753, 1848
+0.40,1.657807, 2256
+0.50,1.340786, 2972

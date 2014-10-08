@@ -1,0 +1,131 @@
+Selective Repeat
+Selective Repeat Error Rate 0 Trial #1 Throughput: 12.794269 
+Selective Repeat Error Rate 0 Trial #2 Throughput: 12.794269 
+Selective Repeat Error Rate 0 Trial #3 Throughput: 12.961762 
+Selective Repeat Error Rate 0 Trial #4 Throughput: 12.677485 
+Selective Repeat Error Rate 0 Trial #5 Throughput: 12.923236 
+Selective Repeat Error Rate 0 Trial #6 Throughput: 12.682308 
+Selective Repeat Error Rate 0 Trial #7 Throughput: 12.992075 
+Selective Repeat Error Rate 0 Trial #8 Throughput: 12.884937 
+Selective Repeat Error Rate 0 Trial #9 Throughput: 12.712942 
+Selective Repeat Error Rate 0 Trial #10 Throughput: 12.784454 
+
+Selective Repeat Error Rate 0.0 Average Throughput: 12.820773 
+ 
+Selective Repeat Error Rate 10 Trial #1 Throughput: 10.702055 
+Selective Repeat Error Rate 10 Trial #2 Throughput: 10.702055 
+Selective Repeat Error Rate 10 Trial #3 Throughput: 10.790978 
+Selective Repeat Error Rate 10 Trial #4 Throughput: 11.213277 
+Selective Repeat Error Rate 10 Trial #5 Throughput: 10.954103 
+Selective Repeat Error Rate 10 Trial #6 Throughput: 10.849517 
+Selective Repeat Error Rate 10 Trial #7 Throughput: 11.129661 
+Selective Repeat Error Rate 10 Trial #8 Throughput: 10.915839 
+Selective Repeat Error Rate 10 Trial #9 Throughput: 11.171936 
+Selective Repeat Error Rate 10 Trial #10 Throughput: 10.979359 
+
+Selective Repeat Error Rate 0.10 Average Throughput: 10.940878 
+ 
+Selective Repeat Error Rate 20 Trial #1 Throughput: 9.175996 
+Selective Repeat Error Rate 20 Trial #2 Throughput: 9.175996 
+Selective Repeat Error Rate 20 Trial #3 Throughput: 9.219139 
+Selective Repeat Error Rate 20 Trial #4 Throughput: 9.658103 
+Selective Repeat Error Rate 20 Trial #5 Throughput: 9.075233 
+Selective Repeat Error Rate 20 Trial #6 Throughput: 9.308387 
+Selective Repeat Error Rate 20 Trial #7 Throughput: 9.452689 
+Selective Repeat Error Rate 20 Trial #8 Throughput: 9.521090 
+Selective Repeat Error Rate 20 Trial #9 Throughput: 9.567547 
+Selective Repeat Error Rate 20 Trial #10 Throughput: 9.480471 
+
+Selective Repeat Error Rate 0.20 Average Throughput: 9.363464 
+ 
+Selective Repeat Error Rate 30 Trial #1 Throughput: 7.617887 
+Selective Repeat Error Rate 30 Trial #2 Throughput: 7.617887 
+Selective Repeat Error Rate 30 Trial #3 Throughput: 8.175946 
+Selective Repeat Error Rate 30 Trial #4 Throughput: 7.899518 
+Selective Repeat Error Rate 30 Trial #5 Throughput: 7.726184 
+Selective Repeat Error Rate 30 Trial #6 Throughput: 7.726781 
+Selective Repeat Error Rate 30 Trial #7 Throughput: 7.602828 
+Selective Repeat Error Rate 30 Trial #8 Throughput: 8.203445 
+Selective Repeat Error Rate 30 Trial #9 Throughput: 7.557436 
+Selective Repeat Error Rate 30 Trial #10 Throughput: 7.639420 
+
+Selective Repeat Error Rate 0.30 Average Throughput: 7.776733 
+ 
+Selective Repeat Error Rate 40 Trial #1 Throughput: 6.430041 
+Selective Repeat Error Rate 40 Trial #2 Throughput: 6.430041 
+Selective Repeat Error Rate 40 Trial #3 Throughput: 6.862947 
+Selective Repeat Error Rate 40 Trial #4 Throughput: 6.721785 
+Selective Repeat Error Rate 40 Trial #5 Throughput: 6.567282 
+Selective Repeat Error Rate 40 Trial #6 Throughput: 6.350416 
+Selective Repeat Error Rate 40 Trial #7 Throughput: 6.465796 
+Selective Repeat Error Rate 40 Trial #8 Throughput: 6.726306 
+Selective Repeat Error Rate 40 Trial #9 Throughput: 6.290891 
+Selective Repeat Error Rate 40 Trial #10 Throughput: 6.325511 
+
+Selective Repeat Error Rate 0.40 Average Throughput: 6.517101 
+ 
+Selective Repeat Error Rate 50 Trial #1 Throughput: 5.203455 
+Selective Repeat Error Rate 50 Trial #2 Throughput: 5.203455 
+Selective Repeat Error Rate 50 Trial #3 Throughput: 5.349596 
+Selective Repeat Error Rate 50 Trial #4 Throughput: 5.467768 
+Selective Repeat Error Rate 50 Trial #5 Throughput: 5.088023 
+Selective Repeat Error Rate 50 Trial #6 Throughput: 5.193187 
+Selective Repeat Error Rate 50 Trial #7 Throughput: 5.175180 
+Selective Repeat Error Rate 50 Trial #8 Throughput: 5.433011 
+Selective Repeat Error Rate 50 Trial #9 Throughput: 5.132153 
+Selective Repeat Error Rate 50 Trial #10 Throughput: 5.169829 
+
+Selective Repeat Error Rate 0.50 Average Throughput: 5.241565 
+ 
+Selective Repeat Window Size 4 Trial #0 Throughput: 9.175996 
+Selective Repeat Window Size 4 Trial #1 Throughput: 9.175996 
+Selective Repeat Window Size 4 Trial #2 Throughput: 9.219139 
+Selective Repeat Window Size 4 Trial #3 Throughput: 9.658103 
+Selective Repeat Window Size 4 Trial #4 Throughput: 9.075233 
+Selective Repeat Window Size 4 Trial #5 Throughput: 9.308387 
+Selective Repeat Window Size 4 Trial #6 Throughput: 9.452689 
+Selective Repeat Window Size 4 Trial #7 Throughput: 9.521090 
+Selective Repeat Window Size 4 Trial #8 Throughput: 9.567547 
+Selective Repeat Window Size 4 Trial #9 Throughput: 9.480471 
+
+Selective Repeat Window Size 4 Average Throughput: 9.363464 
+
+Selective Repeat Window Size 8 Trial #0 Throughput: 18.580454 
+Selective Repeat Window Size 8 Trial #1 Throughput: 18.580454 
+Selective Repeat Window Size 8 Trial #2 Throughput: 18.532246 
+Selective Repeat Window Size 8 Trial #3 Throughput: 18.674137 
+Selective Repeat Window Size 8 Trial #4 Throughput: 18.362101 
+Selective Repeat Window Size 8 Trial #5 Throughput: 18.450184 
+Selective Repeat Window Size 8 Trial #6 Throughput: 18.993353 
+Selective Repeat Window Size 8 Trial #7 Throughput: 18.691589 
+Selective Repeat Window Size 8 Trial #8 Throughput: 19.193857 
+Selective Repeat Window Size 8 Trial #9 Throughput: 18.740629 
+
+Selective Repeat Window Size 8 Average Throughput: 18.679901 
+
+Selective Repeat Window Size 12 Trial #0 Throughput: 27.412281 
+Selective Repeat Window Size 12 Trial #1 Throughput: 27.412281 
+Selective Repeat Window Size 12 Trial #2 Throughput: 27.855154 
+Selective Repeat Window Size 12 Trial #3 Throughput: 28.810141 
+Selective Repeat Window Size 12 Trial #4 Throughput: 27.800945 
+Selective Repeat Window Size 12 Trial #5 Throughput: 27.181299 
+Selective Repeat Window Size 12 Trial #6 Throughput: 28.272547 
+Selective Repeat Window Size 12 Trial #7 Throughput: 28.169014 
+Selective Repeat Window Size 12 Trial #8 Throughput: 28.893383 
+Selective Repeat Window Size 12 Trial #9 Throughput: 27.894003 
+
+Selective Repeat Window Size 12 Average Throughput: 27.970104 
+
+Selective Repeat Window Size 16 Trial #0 Throughput: 36.643459 
+Selective Repeat Window Size 16 Trial #1 Throughput: 36.643459 
+Selective Repeat Window Size 16 Trial #2 Throughput: 36.337208 
+Selective Repeat Window Size 16 Trial #3 Throughput: 38.153378 
+Selective Repeat Window Size 16 Trial #4 Throughput: 36.536354 
+Selective Repeat Window Size 16 Trial #5 Throughput: 36.656891 
+Selective Repeat Window Size 16 Trial #6 Throughput: 37.285606 
+Selective Repeat Window Size 16 Trial #7 Throughput: 37.216225 
+Selective Repeat Window Size 16 Trial #8 Throughput: 37.850113 
+Selective Repeat Window Size 16 Trial #9 Throughput: 37.425148 
+
+Selective Repeat Window Size 16 Average Throughput: 37.074783 
+

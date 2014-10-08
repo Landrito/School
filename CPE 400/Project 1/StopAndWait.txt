@@ -1,0 +1,79 @@
+Stop and Wait
+Stop and Wait Error Rate 0.0 Trial #1 Throughput: 3.209140 
+Stop and Wait Error Rate 0.0 Trial #2 Throughput: 3.195501 
+Stop and Wait Error Rate 0.0 Trial #3 Throughput: 3.219368 
+Stop and Wait Error Rate 0.0 Trial #4 Throughput: 3.269790 
+Stop and Wait Error Rate 0.0 Trial #5 Throughput: 3.230913 
+Stop and Wait Error Rate 0.0 Trial #6 Throughput: 3.248546 
+Stop and Wait Error Rate 0.0 Trial #7 Throughput: 3.246542 
+Stop and Wait Error Rate 0.0 Trial #8 Throughput: 3.191523 
+Stop and Wait Error Rate 0.0 Trial #9 Throughput: 3.329782 
+Stop and Wait Error Rate 0.0 Trial #10 Throughput: 3.223727 
+
+Stop and Wait Error Rate 0.0 Average Throughput: 3.236483 
+ 
+Stop and Wait Error Rate 0.10 Trial #1 Throughput: 2.798455 
+Stop and Wait Error Rate 0.10 Trial #2 Throughput: 2.792204 
+Stop and Wait Error Rate 0.10 Trial #3 Throughput: 2.837926 
+Stop and Wait Error Rate 0.10 Trial #4 Throughput: 2.828374 
+Stop and Wait Error Rate 0.10 Trial #5 Throughput: 2.771158 
+Stop and Wait Error Rate 0.10 Trial #6 Throughput: 2.830296 
+Stop and Wait Error Rate 0.10 Trial #7 Throughput: 2.788545 
+Stop and Wait Error Rate 0.10 Trial #8 Throughput: 2.721533 
+Stop and Wait Error Rate 0.10 Trial #9 Throughput: 2.814364 
+Stop and Wait Error Rate 0.10 Trial #10 Throughput: 2.747555 
+
+Stop and Wait Error Rate 0.10 Average Throughput: 2.793041 
+ 
+Stop and Wait Error Rate 0.20 Trial #1 Throughput: 2.465240 
+Stop and Wait Error Rate 0.20 Trial #2 Throughput: 2.489606 
+Stop and Wait Error Rate 0.20 Trial #3 Throughput: 2.368938 
+Stop and Wait Error Rate 0.20 Trial #4 Throughput: 2.426831 
+Stop and Wait Error Rate 0.20 Trial #5 Throughput: 2.395037 
+Stop and Wait Error Rate 0.20 Trial #6 Throughput: 2.409580 
+Stop and Wait Error Rate 0.20 Trial #7 Throughput: 2.386635 
+Stop and Wait Error Rate 0.20 Trial #8 Throughput: 2.293946 
+Stop and Wait Error Rate 0.20 Trial #9 Throughput: 2.488677 
+Stop and Wait Error Rate 0.20 Trial #10 Throughput: 2.384074 
+
+Stop and Wait Error Rate 0.20 Average Throughput: 2.410856 
+ 
+Stop and Wait Error Rate 0.30 Trial #1 Throughput: 1.945298 
+Stop and Wait Error Rate 0.30 Trial #2 Throughput: 1.928306 
+Stop and Wait Error Rate 0.30 Trial #3 Throughput: 2.042692 
+Stop and Wait Error Rate 0.30 Trial #4 Throughput: 2.036992 
+Stop and Wait Error Rate 0.30 Trial #5 Throughput: 2.023309 
+Stop and Wait Error Rate 0.30 Trial #6 Throughput: 1.960400 
+Stop and Wait Error Rate 0.30 Trial #7 Throughput: 1.943446 
+Stop and Wait Error Rate 0.30 Trial #8 Throughput: 1.930726 
+Stop and Wait Error Rate 0.30 Trial #9 Throughput: 1.964173 
+Stop and Wait Error Rate 0.30 Trial #10 Throughput: 1.972192 
+
+Stop and Wait Error Rate 0.30 Average Throughput: 1.974753 
+ 
+Stop and Wait Error Rate 0.40 Trial #1 Throughput: 1.626889 
+Stop and Wait Error Rate 0.40 Trial #2 Throughput: 1.624089 
+Stop and Wait Error Rate 0.40 Trial #3 Throughput: 1.711713 
+Stop and Wait Error Rate 0.40 Trial #4 Throughput: 1.712036 
+Stop and Wait Error Rate 0.40 Trial #5 Throughput: 1.646280 
+Stop and Wait Error Rate 0.40 Trial #6 Throughput: 1.680616 
+Stop and Wait Error Rate 0.40 Trial #7 Throughput: 1.612617 
+Stop and Wait Error Rate 0.40 Trial #8 Throughput: 1.650274 
+Stop and Wait Error Rate 0.40 Trial #9 Throughput: 1.624537 
+Stop and Wait Error Rate 0.40 Trial #10 Throughput: 1.689018 
+
+Stop and Wait Error Rate 0.40 Average Throughput: 1.657807 
+ 
+Stop and Wait Error Rate 0.50 Trial #1 Throughput: 1.392777 
+Stop and Wait Error Rate 0.50 Trial #2 Throughput: 1.294331 
+Stop and Wait Error Rate 0.50 Trial #3 Throughput: 1.403863 
+Stop and Wait Error Rate 0.50 Trial #4 Throughput: 1.392952 
+Stop and Wait Error Rate 0.50 Trial #5 Throughput: 1.369713 
+Stop and Wait Error Rate 0.50 Trial #6 Throughput: 1.300712 
+Stop and Wait Error Rate 0.50 Trial #7 Throughput: 1.322786 
+Stop and Wait Error Rate 0.50 Trial #8 Throughput: 1.285248 
+Stop and Wait Error Rate 0.50 Trial #9 Throughput: 1.335863 
+Stop and Wait Error Rate 0.50 Trial #10 Throughput: 1.309620 
+
+Stop and Wait Error Rate 0.50 Average Throughput: 1.340786 
+ 
