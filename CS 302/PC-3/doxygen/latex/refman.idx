@@ -1,0 +1,32 @@
+\indexentry{board@{board}|hyperpage}{3}
+\indexentry{board@{board}!board@{board}|hyperpage}{3}
+\indexentry{board@{board}!board@{board}|hyperpage}{3}
+\indexentry{board@{board}!board@{board}|hyperpage}{3}
+\indexentry{board@{board}!board@{board}|hyperpage}{3}
+\indexentry{board@{board}!can\discretionary {-}{}{}Move\discretionary {-}{}{}Here@{can\discretionary {-}{}{}Move\discretionary {-}{}{}Here}|hyperpage}{4}
+\indexentry{can\discretionary {-}{}{}Move\discretionary {-}{}{}Here@{can\discretionary {-}{}{}Move\discretionary {-}{}{}Here}!board@{board}|hyperpage}{4}
+\indexentry{board@{board}!get\discretionary {-}{}{}Data@{get\discretionary {-}{}{}Data}|hyperpage}{4}
+\indexentry{get\discretionary {-}{}{}Data@{get\discretionary {-}{}{}Data}!board@{board}|hyperpage}{4}
+\indexentry{board@{board}!get\discretionary {-}{}{}Num\discretionary {-}{}{}Cars@{get\discretionary {-}{}{}Num\discretionary {-}{}{}Cars}|hyperpage}{5}
+\indexentry{get\discretionary {-}{}{}Num\discretionary {-}{}{}Cars@{get\discretionary {-}{}{}Num\discretionary {-}{}{}Cars}!board@{board}|hyperpage}{5}
+\indexentry{board@{board}!is\discretionary {-}{}{}Solved@{is\discretionary {-}{}{}Solved}|hyperpage}{5}
+\indexentry{is\discretionary {-}{}{}Solved@{is\discretionary {-}{}{}Solved}!board@{board}|hyperpage}{5}
+\indexentry{board@{board}!move\discretionary {-}{}{}Backward@{move\discretionary {-}{}{}Backward}|hyperpage}{5}
+\indexentry{move\discretionary {-}{}{}Backward@{move\discretionary {-}{}{}Backward}!board@{board}|hyperpage}{5}
+\indexentry{board@{board}!move\discretionary {-}{}{}Forward@{move\discretionary {-}{}{}Forward}|hyperpage}{6}
+\indexentry{move\discretionary {-}{}{}Forward@{move\discretionary {-}{}{}Forward}!board@{board}|hyperpage}{6}
+\indexentry{board@{board}!operator!=@{operator!=}|hyperpage}{6}
+\indexentry{operator!=@{operator!=}!board@{board}|hyperpage}{6}
+\indexentry{board@{board}!operator$<$@{operator$<$}|hyperpage}{7}
+\indexentry{operator$<$@{operator$<$}!board@{board}|hyperpage}{7}
+\indexentry{board@{board}!operator=@{operator=}|hyperpage}{7}
+\indexentry{operator=@{operator=}!board@{board}|hyperpage}{7}
+\indexentry{board@{board}!operator==@{operator==}|hyperpage}{8}
+\indexentry{operator==@{operator==}!board@{board}|hyperpage}{8}
+\indexentry{car@{car}|hyperpage}{8}
+\indexentry{car@{car}!operator!=@{operator!=}|hyperpage}{9}
+\indexentry{operator!=@{operator!=}!car@{car}|hyperpage}{9}
+\indexentry{car@{car}!operator$<$@{operator$<$}|hyperpage}{9}
+\indexentry{operator$<$@{operator$<$}!car@{car}|hyperpage}{9}
+\indexentry{car@{car}!operator==@{operator==}|hyperpage}{9}
+\indexentry{operator==@{operator==}!car@{car}|hyperpage}{9}

@@ -24,6 +24,7 @@ void Timer::stop() throw (logic_error){
 
 double Timer::getElapsedTime() const {
     // Place your code here
+	return (duration / CLOCKS_PER_SEC);
 }
 
 #endif	//#ifndef TIMER_CPP

@@ -3,10 +3,9 @@
 #ifndef TIMER_H
 #define TIMER_H
 
-#include <ctime>
+#include <sys/time.h>
 #include <stdexcept>
 #include <iostream>
-
 using namespace std;
 
 
@@ -18,8 +17,8 @@ class Timer {
     double getElapsedTime() const throw (logic_error);
 
   private:
-    clock_t beginTime;
-    clock_t duration;
+    struct timeval beginTime;
+    long long int duration;
     bool timerWasStarted;
 };
 
