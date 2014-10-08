@@ -288,7 +288,7 @@ bool initialize(char * objPath, char * imgPath)
     glGenTextures(1, &text);
     glBindTexture(GL_TEXTURE_2D, text);
     glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, m_pImage->columns(), m_pImage->rows(), 0, 
-    				GL_RGB, GL_UNSIGNED_BYTE, m_blob.data() );
+    				GL_RGBA, GL_UNSIGNED_BYTE, m_blob.data() );
     glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
    	glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
 

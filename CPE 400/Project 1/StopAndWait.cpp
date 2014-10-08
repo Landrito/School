@@ -1,15 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <vector>
-
-/****************************************************************************/
-//Stop and wait is the essentially the same code as GBN but it accepts the 
-//file if the file is even if it isnt at the start of the window.
-/****************************************************************************/
-const int WINDOW_SIZE = 1; 
+#include <time.h>
 const int NUM_PACKETS = 100;
 const int SEED = 1;
-const float ERROR_RATE = 0.5;
+const int MAX_TRIALS = 10;
+const int MIN_WINDOW_SIZE = 4;
+const int MAX_WINDOW_SIZE = 100;
+const float ERROR_RATE = 0.2;
 
 struct Packet
 {
@@ -22,7 +20,8 @@ struct Packet
 class Window
 {
 	public:
-		Window();
+		Window(int ws, float er);
+		~Window();
 		void sendPacket(int seq);
 		void checkRecieved();
 		void updateTimers();
@@ -31,55 +30,86 @@ class Window
 		void increasePacketsInTransit();
 
 	private:
-		int numInQueue;
 		int packetsInTransit;
 		bool sent[NUM_PACKETS];
 		int windowStart; //This will hold the starting position of the window
+		int windowSize;
+		float errorRate;
 		std::vector<Packet> packets;
 };
 
 
 int main()
 {
-	Window window;
-	int t = 0;
-	int i = 0;
-
-	while( !window.complete() )
+	FILE * outFile = fopen("StopAndWait.csv", "w");
+	fprintf(outFile, "Window Size,Average Throughput\n");
+	for(int windowSize = 1; windowSize <= 1; windowSize+=4)
 	{
-		if( !window.isFull() && i < NUM_PACKETS )
+		float throughput = 0.0;
+		float sum = 0.0;
+		for(int trialNum = 0; trialNum < 1; trialNum++)
 		{
-			window.increasePacketsInTransit();
-			window.sendPacket(i);
-			i++;
+			srand( trialNum );
+			Window window(windowSize, 0);
+			int t = 0;
+			int i = 0;
+
+			while( !window.complete() )
+			{
+				if( !window.isFull() && i < NUM_PACKETS )
+				{
+					window.increasePacketsInTransit();
+					window.sendPacket(i);
+					i++;
+				}
+				window.checkRecieved();
+				window.updateTimers();
+				t++;
+			}
+			throughput = ( 100.0 * NUM_PACKETS ) / t;
+			sum += throughput;
+			//printf("Selective Repeat Window Size %i Trial #%i Throughput: %f \n", 
+			//		windowSize, trialNum,throughput );
 		}
-		window.checkRecieved();
-		window.updateTimers();
-		t++;
+		printf("Stop and Wait Size %i Average Throughput: %f \n",
+				windowSize, sum / MAX_TRIALS );
+		fprintf(outFile, "%i,%f\n", windowSize, sum / MAX_TRIALS);
 	}
 
-	printf("Total Time: %i \n", t);
-	printf("Throughput: %f \n", 100.0*NUM_PACKETS / t);
+	fclose(outFile);
+
+
+
+	//printf("Total Time: %d \n", t);
+	//printf("Throughput: %f \n", 100.0*NUM_PACKETS / t);
 	return 0;
 
 }
 
-Window::Window()
+Window::Window(int ws, float er)
 {
+	packetsInTransit = 0;
 	windowStart = 0;
+	windowSize = ws;
+	errorRate = er;
+	packets.clear();
 	for( int i = 0; i < NUM_PACKETS; i++ )
 	{
 		sent[ i ] = false;
 	}
 }
 
+Window::~Window()
+{
+
+}
 
 void Window::sendPacket(int seq)
 {
 	Packet packet;
 	packet.rtt =  	 ( rand() % 41 ) + 10;
 	packet.timer = 	 0;
-	packet.error = 	 ( (rand() % 101) < (ERROR_RATE * 100) );
+	packet.error = 	 ( (rand() % 101) < (errorRate * 100) );
 	packet.sequence = seq;
 
 	packets.push_back(packet);
@@ -88,13 +118,14 @@ void Window::sendPacket(int seq)
 void Window::checkRecieved()
 {
 	std::vector<int> temp;
+	temp.clear();
 	for( std::vector<Packet>::iterator it = packets.begin(); it != packets.end(); it++ )
 	{
 		if(it->error)
 		{
 			if( it->timer >= 45 )//if it errored out, wait 45 and resend;
 			{
-				printf("Error packet %i\n", it->sequence);
+				//printf("Error packet %i\n", it->sequence);
 				temp.push_back(it->sequence);
 				it = packets.erase(it) - 1;
 			}
@@ -103,26 +134,17 @@ void Window::checkRecieved()
 		{
 			if(it->timer == it->rtt)
 			{
-				if( sent[it->sequence] )
+				if( it->sequence != windowStart )
 				{
-					printf("Already received packet %i\n", it->sequence);
-
+					//printf("Received packet %i out of order resending\n", it->sequence);
+					temp.push_back(it->sequence);
 				}
 				else
 				{
-					if( it->sequence != windowStart )
-					{
-						printf("Received packet %i out of order resending\n", it->sequence);
-						temp.push_back(it->sequence);
-					}
-					else
-					{
-						printf("Received packet %i\n", it->sequence);
-						sent[it->sequence] = true;
-						packetsInTransit--;
-						windowStart++;
-					}
-					
+					//printf("Received packet %i\n", it->sequence);
+					sent[it->sequence] = true;
+					packetsInTransit--;
+					windowStart++;
 				}
 				
 				it = packets.erase(it) - 1;
@@ -130,7 +152,7 @@ void Window::checkRecieved()
 			else if( it->timer == 45 )
 			{
 				temp.push_back(it->sequence);
-				printf("Timeout packet %i resending\n", it->sequence);
+				//printf("Timeout packet %i resending\n", it->sequence);
 
 			}
 		}
@@ -152,7 +174,7 @@ void Window::updateTimers()
 
 bool Window::isFull()
 {
-	return packetsInTransit >= WINDOW_SIZE;
+	return packetsInTransit >= windowSize;
 }
 
 void Window::increasePacketsInTransit()

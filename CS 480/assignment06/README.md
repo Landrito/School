@@ -1,17 +1,18 @@
-PA4 Asset Importer
+PA6 Texture Loading
 ===========================================
 
 General Information
 -------------------
 
-This program shows the successful use of the Open Asset Importer Library.
+This program shows the successful use of the Open Asset Importer Library to
+import and render an object with a texture.
 
 
 Run Instructions
 ----------------
 
 Make the file in build. Then run the executable Matrix in the bin file passing
-the file name of the model as a command line argument.
+the file name of the model and the file name of the texture as command line arguments.
 
 
 Interactions
