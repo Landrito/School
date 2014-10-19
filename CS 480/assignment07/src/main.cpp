@@ -3,6 +3,7 @@
 #include <GL/glew.h> // glew must be included before the main gl libs
 #include <GL/glut.h> // doing otherwise causes compiler shouting
 #include <iostream>
+#include <stdio.h>
 #include <chrono>
 #include <vector>
 #include <fstream>
@@ -47,7 +48,7 @@ private:
     float revTilt;
     glm::mat4 model;
     celestial * parent;
-    GLuint text;
+    //GLuint text;
     char imgPath[30];
 
 };
@@ -55,6 +56,15 @@ private:
 
 //Global Constant
 const float SCALING_FACTOR = 696000;//Suns radius should be unit length
+
+// camera global variables
+float eyeX = 0.0;
+float eyeY = 10.0;
+float eyeZ = 30.0;
+
+float focX = 0.0;
+float focY = 0.0;
+float focZ = 0.0;
 
 //Global List of celestial bodies
 vector<celestial> * solarSystem;
@@ -74,6 +84,7 @@ GLuint program;// The GLSL program handle
 GLuint vbo_geometry;// VBO handle for our geometry
 GLuint text;
 int numVertices;
+int planetCounter = 0;
 
 Magick::Blob m_blob;
 
@@ -86,7 +97,7 @@ GLint loc_position;
 GLint texAttrib;
 
 //transform matrices
-glm::mat4 model;//obj->world each object should have its own model matrix
+//glm::mat4 model;//obj->world each object should have its own model matrix
 glm::mat4 view;//world->eye
 glm::mat4 projection;//eye->clip
 glm::mat4 mvp;//premultiplied modelviewprojection
@@ -184,11 +195,11 @@ void update()
     for( unsigned int i = 0; i < solarSystem->size(); i++ )
         solarSystem->at(i).revolve();
     
-    for( unsigned int i = 0; i < solarSystem->size(); i++ )
-        solarSystem->at(i).rotate();
+    //for( unsigned int i = 0; i < solarSystem->size(); i++ )
+      //  solarSystem->at(i).rotate();
 
-    for( unsigned int i = 0; i < solarSystem->size(); i++ )
-        solarSystem->at(i).scale();
+    //for( unsigned int i = 0; i < solarSystem->size(); i++ )
+      //  solarSystem->at(i).scale();
     
     // Update the state of the scene
     glutPostRedisplay();//call the display callback
@@ -226,6 +237,15 @@ void keyboard(unsigned char key, int x_pos, int y_pos)
     {
         rotationSpeed -= .5;
     }
+    // Handles camera changes
+    if(key == 73 || key == 105)//'i'
+    {
+        eyeY += .5;
+    }
+    if(key == 75 || key == 107)//'k'
+    {
+        eyeY -= .5;
+    }
 }
 
 void mouse(int button, int state, int x_pos, int y_pos)
@@ -261,18 +281,17 @@ bool initialize(char * objPath, char * imgPath)
     // Initialize Loaders for shaders
     ShaderLoader vertShader, fragShader;
 
-    
     // Initialize the solarsystem
     solarSystem = loadSystemAttributes("../bin/solarSystem.txt");
-    for( unsigned int i = 0; i < solarSystem->size(); i++ )
-        solarSystem->at(i).createTextureBuffer();
 
-    
+
+    //for( unsigned int i = 0; i < solarSystem->size(); i++ )
+      //  solarSystem->at(i).createTextureBuffer();
+
     // Initialize basic geometry and shaders for this example
     //this defines a cube, this is why a model loader is nice
     //you can also do this with a draw elements and indices, try to get that working
     Vertex * geometry = loadOBJ("../bin/sphere.obj");
-
 
 
     // Create a Vertex Buffer object to store this vertex info on the GPU
@@ -281,11 +300,15 @@ bool initialize(char * objPath, char * imgPath)
     glBufferData(GL_ARRAY_BUFFER, numVertices * sizeof(Vertex), geometry, GL_STATIC_DRAW);
 
     //--Geometry done
+    Magick::Image * m_pImage = new Magick::Image("texture_moon.jpg");
+    m_pImage->write(&m_blob, "RGBA");
 
-    //Create a Texture Buffer Object for each
-    solarSystem = loadSystemAttributes("solar system");
-    for( unsigned int i = 0; i < solarSystem->size(); i++ )
-        solarSystem->at(i).createTextureBuffer();
+    glGenTextures(1, &text);
+    glBindTexture(GL_TEXTURE_2D, text);
+    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, m_pImage->columns(), m_pImage->rows(), 0, 
+                    GL_RGBA, GL_UNSIGNED_BYTE, m_blob.data() );
+    glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+    glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
 
 
     //Set the shaders
@@ -385,7 +408,7 @@ bool initialize(char * objPath, char * imgPath)
     //  if you will be having a moving camera the view matrix will need to more dynamic
     //  ...Like you should update it before you render more dynamic 
     //  for this project having them static will be fine
-    view = glm::lookAt( glm::vec3(0.0, 8.0, -16.0), //Eye Position
+    view = glm::lookAt( glm::vec3(0.0, 8.0, -60.0), //Eye Position
                         glm::vec3(0.0, 0.0, 0.0), //Focus point
                         glm::vec3(0.0, 1.0, 0.0)); //Positive Y is up
 
@@ -475,6 +498,7 @@ vector<celestial> * loadSystemAttributes( const char fileName[32] )
 
 
     fin >> celestialType;
+    int i = 0;
     while( fin.good() )
     {
         fin >> attribute >> rotSpeed;
@@ -485,8 +509,10 @@ vector<celestial> * loadSystemAttributes( const char fileName[32] )
         fin >> attribute >> revTilt;
         fin >> attribute >> imgPath;
 
-        revRadius = revRadius / SCALING_FACTOR;
-        radius = radius / SCALING_FACTOR;
+        radius = 0.5;
+        revSpeed = 1;
+        //revRadius = revRadius / SCALING_FACTOR;
+        //radius = radius / SCALING_FACTOR;
         axialTilt *= conversionFactor;
         revTilt *= conversionFactor;
 
@@ -498,25 +524,30 @@ vector<celestial> * loadSystemAttributes( const char fileName[32] )
         }
         else if( strcmp(celestialType, "Planet:") == 0 )
         {
-            parent = returnSystem->data() + sunIndex;
-            mostRecentPlanetIndex = returnSystem->size();           
+            parent = &( (*returnSystem)[sunIndex] );
+            mostRecentPlanetIndex = returnSystem->size();
+            
         }
         else if( strcmp(celestialType, "Moon:") == 0 )
         {
-            parent = returnSystem->data() + mostRecentPlanetIndex;  
+            revRadius = 1;
+            parent = &( (*returnSystem)[mostRecentPlanetIndex] ); 
+            revSpeed = 0;
         }
 
         returnSystem->push_back(celestial( rotSpeed, revSpeed, radius, 
             axialTilt, revRadius, revTilt, parent, imgPath ));
 
         fin >> celestialType;
+        i += 1;
     }
+
     return returnSystem;
 }
 
 celestial::celestial() : 
     rotSpeed(0.0), revSpeed(0.0), radius(0.0), axialTilt(0.0),
-    revRadius(0.0), revTilt(0.0), model(1.0f), parent(NULL), text(0)
+    revRadius(0.0), revTilt(0.0), model(1.0f), parent(NULL) //text(0)
     {
         strcpy(imgPath, "temp.jpg");
     }
@@ -525,7 +556,7 @@ celestial::celestial( float rtSpeed, float rvSpeed, float rad,
                     float axTlt, float rvRad, float rvTilt,
                     celestial * par, char texFName[])  : 
     rotSpeed(rtSpeed), revSpeed(rvSpeed), radius(rad), axialTilt(axTlt),
-    revRadius(rvRad), revTilt(rvTilt), model(1.0f), parent(par), text(0)
+    revRadius(rvRad), revTilt(rvTilt), model(1.0f), parent(par) //text(0)
     {
         strcpy(imgPath, texFName);
     }
@@ -533,7 +564,7 @@ celestial::celestial( float rtSpeed, float rvSpeed, float rad,
 celestial::celestial( const celestial & src ) : 
     rotSpeed(src.rotSpeed), revSpeed(src.revSpeed), radius(src.radius), 
     axialTilt(src.axialTilt), revRadius(src.revRadius), revTilt(src.revTilt), 
-    model(src.model), parent(src.parent), text(src.text) {} 
+    model(src.model), parent(src.parent) {}//text(src.text) {} 
 
 celestial::~celestial() {}
 
@@ -544,8 +575,8 @@ void celestial::createTextureBuffer()
     m_pImage->write(&m_blob, "RGBA");
 
     //Create a Texture Buffer Object
-    glGenTextures(1, &this->text);
-    glBindTexture(GL_TEXTURE_2D, this->text);
+    glGenTextures(1, &text);
+    glBindTexture(GL_TEXTURE_2D, text);
     glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, m_pImage->columns(), m_pImage->rows(), 0, 
                     GL_RGBA, GL_UNSIGNED_BYTE, m_blob.data() );
     glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
@@ -559,12 +590,14 @@ void celestial::revolve()
 
     glm::mat4 parentModel;
     if(parent != NULL)
+    {
         parentModel = parent->model;
+    }
     else
         parentModel = glm::mat4(1.0f);
 
     angle += dt * 2 * M_PI * revSpeed;
-    model = glm::translate( parentModel, glm::vec3( revRadius * sin(angle), 0.0, revRadius * cos(angle)));
+    this->model = glm::translate( parentModel, glm::vec3( revRadius * sin(angle), 0.0, revRadius * cos(angle)));
 }
 
 void celestial::rotate()
@@ -572,12 +605,16 @@ void celestial::rotate()
     static float spin = 0.0;
     float dt = getDT();
 
-    spin += dt * M_PI * rotSpeed;
+    spin += dt * M_PI;
     model *= glm::rotate( glm::mat4(1.0f), spin, glm::vec3( sin(axialTilt), cos(axialTilt), 0.0) );
 }
 
 void celestial::render()
 {
+ //--Render the scene
+    view = glm::lookAt( glm::vec3(eyeX, eyeY, eyeZ), //Eye Position
+                        glm::vec3(focX, focY, focZ), //Focus point
+                        glm::vec3(0.0, 1.0, 0.0)); //Positive Y is up   
     //premultiply the matrix for this example
     mvp = projection * view * this->model;
 
@@ -593,9 +630,8 @@ void celestial::render()
     glBindBuffer(GL_ARRAY_BUFFER, vbo_geometry);
     
     glActiveTexture(GL_TEXTURE0);
-    glBindTexture(GL_TEXTURE_2D, this->text);
+    glBindTexture(GL_TEXTURE_2D, text);
 
-    //
 
     //set pointers into the vbo for each of the attributes(position and color)
     glVertexAttribPointer( loc_position,//location of attribute
