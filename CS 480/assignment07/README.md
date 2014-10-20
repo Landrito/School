@@ -1,4 +1,4 @@
-PA6 Texture Loading
+PA7 Solar System 
 ===========================================
 
 General Information
