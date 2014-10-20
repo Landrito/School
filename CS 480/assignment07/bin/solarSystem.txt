@@ -38,14 +38,14 @@ Moon:
 	self-spin: 0.00015252
 	revolution: -0.000154321
 	Axial-tilt: 6.687
-	Radius: 1737.5 
-	Revolution-radius: 384000
+	Radius: 937.5 
+	Revolution-radius: 38400
 	Revolution-tilt-angle: 6.687
 	Texture-file-name: texture_moon.jpg
 	
 
 Planet:
-	Self-spin: 0.0040610786224821
+	Self-spin: 0.000040610786224821
 	Revolution:  0.00000495092993100945
 	Axial-tilt: 25.19
 	Radius: 3389.5 
@@ -72,7 +72,7 @@ Moon:
 	Texture-file-name: texture_moon.jpg
 
 Planet:
-	Self-spin: 0.0100755667506297
+	Self-spin: 0.000100755667506297
 	Revolution: 0.00001044591522930873
 	Axial-tilt: 3.13
 	Radius: 71492
@@ -99,7 +99,7 @@ Moon:
 	Texture-file-name: texture_moon.jpg
 
 Planet: 
-	Self-spin: 0.00949126803340926347760060744115
+	Self-spin: 0.0000949126803340926347760060744115
 	Revolution:  0.000000355073287 
 	Axial-tilt: 26.73
 	Radius: 60268 
@@ -107,26 +107,26 @@ Planet:
 	Revolution-tilt-angle: 2.485
 	Texture-file-name: texture_saturn.jpg
 
-Moon:
-	Self-spin: 0.00220715237438389548621447941398
-	Revolution: 0.00220715237438389548621447941398
-	Axial-tilt: 0.0
-	Radius: 12.4 
-	Revolution-radius: 294619 
-	Revolution-tilt-angle: 1.19
-	Texture-file-name: texture_moon.jpg
+Rings: 
+	Self-spin: 0.0000949126803340926347760060744115
+	Revolution:  0.000000355073287 
+	Axial-tilt: 26.73
+	Radius: 60268 
+	Revolution-radius:  0
+	Revolution-tilt-angle: 2.485
+	Texture-file-name: texture_saturn_ring.jpg
 
 Moon:
-	Self-spin: 0.00724573782152689867857305627467
+	Self-spin: 0.000724573782152689867857305627467
 	Revolution: 0.00724573782152689867857305627467 
 	Axial-tilt: 0.0
-	Radius: 14.1 
-	Revolution-radius: 133584 
+	Radius: 3121.6 
+	Revolution-radius: 543584 
 	Revolution-tilt-angle: 0
 	Texture-file-name: texture_moon.jpg
 
 Planet:
-	Self-spin: -0.00580049095355430883669993828278
+	Self-spin: -0.0000580049095355430883669993828278
 	Revolution: 0.00000013528536038694210549584871460238
 	Axial-tilt: 97.77
 	Radius: 25559 
@@ -135,7 +135,7 @@ Planet:
 	Texture-file-name: texture_uranus.jpg
 
 Moon:
-	Self-spin: 0.0124365487283877656198077409059
+	Self-spin: 0.0000124365487283877656198077409059
 	Revolution: 0.0124365487283877656198077409059 
 	Axial-tilt: 0.0
 	Radius: 20 
@@ -144,8 +144,8 @@ Moon:
 	Texture-file-name: texture_moon.jpg
 
 Moon:
-	Self-spin: 0.0110694898293527447906980863066
-	Revolution: 0.0110694898293527447906980863066
+	Self-spin: 0.0000110694898293527447906980863066
+	Revolution: 0.0000110694898293527447906980863066
 	Axial-tilt: 0.0
 	Radius: 21.5 
 	Revolution-radius: 53764 
@@ -153,7 +153,7 @@ Moon:
 	Texture-file-name: texture_moon.jpg
 
 Planet:
-	Self-spin: 0.0069444
+	Self-spin: 0.0000069444
 	Revolution: 0.00000006906731
 	Axial-tilt: 28.32 
 	Radius: 24764 
@@ -162,8 +162,8 @@ Planet:
 	Texture-file-name: texture_neptune.jpg
 
 Moon:
-	Self-spin: 0.01417233560090702947845804988662
-	Revolution: 0.01417233560090702947845804988662
+	Self-spin: 0.00001417233560090702947845804988662
+	Revolution: 0.00001417233560090702947845804988662
 	Axial-tilt: 0.0
 	Radius: 33 
 	Revolution-radius: 48227 
@@ -171,8 +171,8 @@ Moon:
 	Texture-file-name: texture_moon.jpg
 
 Moon:
-	Self-spin: 0.01339764201500535905680600214362
-	Revolution: 0.01339764201500535905680600214362
+	Self-spin: 0.00001339764201500535905680600214362
+	Revolution: 0.00001339764201500535905680600214362
 	Axial-tilt: 0.0
 	Radius: 41 
 	Revolution-radius: 50075 
@@ -187,4 +187,18 @@ Planet:
 	Revolution-radius: 5906440628
 	Revolution-tilt-angle: 17.14
 	Texture-file-name: texture_moon.jpg
+
+Star:
+	Self-spin(degree-per-sec): 0.0166333999
+	Revolution(degree-per-sec): 0.0
+	Axial-tilt(degrees): 7.25
+	Radius(Km): 20000000
+	Revolution-Radius(Km): 0.0
+	Revolution-tilt-angle: 0.0
+	Texture-file-name: texture_stars.png
+
+
+
+
+
 

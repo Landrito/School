@@ -22,52 +22,42 @@ using namespace std;
 #include "ShaderLoader.h" //Gets the shader files
 
 
-//Planet class
-class celestial
+//Planet struct
+struct celestial
 {
-public:
-    celestial();
-    celestial( float rtSpeed, float rvSpeed, float rad,
-              float axTlt, float revRad, float revTilt,
-              celestial * par, char texFName[] );
-    celestial( const celestial & src );
-    ~celestial();
-    
-    void createTextureBuffer();
-    void rotate();
-    void revolve(); //we will give it the parent's location to revolve around
-    void render();
-    void scale();
-
-private:
     float rotSpeed;
     float revSpeed;
     float radius;
     float axialTilt;
     float revRadius;
     float revTilt;
-    glm::mat4 model;
-    celestial * parent;
-    //GLuint text;
+    int parent;
     char imgPath[30];
-
+    glm::mat4 model;
+    glm::mat4 translation;
+    glm::vec3 position;
 };
 
-
+//struct functions
+void loadSystemAttributes( const char fileName[32], vector<celestial>&  returnSystem);
 //Global Constant
 const float SCALING_FACTOR = 696000;//Suns radius should be unit length
+const float EARTHS_DEG_PER_SEC = 0.00001145833;
+const float MOON_DEG_PER_SEC = 0.000154321;
 
 // camera global variables
-float eyeX = 0.0;
+float eyeX = 10.0;
 float eyeY = 10.0;
-float eyeZ = 30.0;
+float eyeZ = 10.0;
 
 float focX = 0.0;
 float focY = 0.0;
 float focZ = 0.0;
 
+float distance = 7;
+
 //Global List of celestial bodies
-vector<celestial> * solarSystem;
+vector<celestial> solarSystem;
 
 //--Data typescd s
 //This object will define the attributes of a vertex(position, color, etc...)
@@ -82,11 +72,11 @@ struct Vertex
 int w = 640, h = 480;// Window size
 GLuint program;// The GLSL program handle
 GLuint vbo_geometry;// VBO handle for our geometry
-GLuint text;
+GLuint * text = NULL;
 int numVertices;
-int planetCounter = 0;
+int numPlanets = 0;
 
-Magick::Blob m_blob;
+Magick::Blob * m_blob = NULL;
 
 
 //uniform locations
@@ -103,9 +93,10 @@ glm::mat4 projection;//eye->clip
 glm::mat4 mvp;//premultiplied modelviewprojection
 
 //spin/rotation flags
-int spinCube = 0;
+int spinCube = 1;
 int rotationDirection = 1;
 float rotationSpeed = 1;
+int planetID = 0;
 
 //--GLUT Callbacks
 void render();
@@ -124,7 +115,7 @@ float getDT();
 std::chrono::time_point<std::chrono::high_resolution_clock> t1,t2;
 
 Vertex * loadOBJ( const char * path );
-vector<celestial> * loadSystemAttributes( const char fileName[32] );
+
 
 //--Main
 int main(int argc, char **argv)
@@ -134,12 +125,12 @@ int main(int argc, char **argv)
     glutInitDisplayMode(GLUT_DOUBLE | GLUT_DEPTH);
     glutInitWindowSize(w, h);
     // Name and create the Window
-    glutCreateWindow("Matrix Example");
+    glutCreateWindow("Solar System");
 
     // Create menu
     glutCreateMenu(menu);
-    glutAddMenuEntry("Start Cube Spin", 1);
-    glutAddMenuEntry("Stop Cube Spin", 2);
+    glutAddMenuEntry("Start Spin", 1);
+    glutAddMenuEntry("Stop Spin", 2);
     glutAddMenuEntry("Exit", 3);  
     glutAttachMenu(GLUT_RIGHT_BUTTON);
 
@@ -182,25 +173,117 @@ void render()
     glClearColor(0.0, 0.0, 0.2, 1.0);
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
+    glActiveTexture(GL_TEXTURE0);
+
     //Render each celestial body
-    for( unsigned int i = 0; i < solarSystem->size(); i++ )
-        solarSystem->at(i).render();
-                           
+   for(int i = 0; i < numPlanets; i++)
+{
+	//premultiply the matrix for this example
+    mvp = projection * view * solarSystem[i].model;
+
+    //enable the shader program
+    glUseProgram(program);
+
+    //upload the matrix to the shader
+    glUniformMatrix4fv(loc_mvpmat, 1, GL_FALSE, glm::value_ptr(mvp));
+
+    //set up the Vertex Buffer Object so it can be drawn
+    glEnableVertexAttribArray(loc_position);
+    glEnableVertexAttribArray(texAttrib);
+    glBindBuffer(GL_ARRAY_BUFFER, vbo_geometry);
+    
+    glBindTexture(GL_TEXTURE_2D, text[i]);
+
+
+    //set pointers into the vbo for each of the attributes(position and color)
+    glVertexAttribPointer( loc_position,//location of attribute
+                           3,//number of elements
+                           GL_FLOAT,//type
+                           GL_FALSE,//normalized?
+                           sizeof(Vertex),//stride
+                           0);//offset
+
+    glVertexAttribPointer( texAttrib,
+                           2,
+                           GL_FLOAT,
+                           GL_FALSE,
+                           sizeof(Vertex),
+                           (void*)offsetof(Vertex,uv));
+
+    glDrawArrays(GL_TRIANGLES, 0, numVertices);//mode, starting index, count
+
+    //clean up
+    glDisableVertexAttribArray(loc_position);
+    glDisableVertexAttribArray(texAttrib);
+}
     //swap the buffers
     glutSwapBuffers();
 }
 
 void update()
 {
-    for( unsigned int i = 0; i < solarSystem->size(); i++ )
-        solarSystem->at(i).revolve();
-    
-    //for( unsigned int i = 0; i < solarSystem->size(); i++ )
-      //  solarSystem->at(i).rotate();
+static float angle = 0.0;
+static float spin = 0.0;
+float dt = getDT();
 
-    //for( unsigned int i = 0; i < solarSystem->size(); i++ )
-      //  solarSystem->at(i).scale();
+angle += dt * 2 * M_PI * spinCube;
+spin += dt * 2 * M_PI * spinCube;
+
+glm::mat4 translation;
+glm::mat4 rotation;
+glm::mat4 scaling;
+
+for(int i = 0; i < numPlanets; i++)
+{
+    glm::mat4 parentModel;
+	int parentPlanet = solarSystem[i].parent;
+    solarSystem[i].model = glm::mat4(1.0f);
+
+    if (parentPlanet == 0)
+    {
+        parentModel = glm::mat4(1.0f);
+    }
+    else
+    {
+        parentModel = solarSystem[parentPlanet].model;
+    }
+
+    translation = glm::translate( parentModel, 
+        glm::vec3( solarSystem[i].revRadius * sin(angle * solarSystem[i].revSpeed), solarSystem[i].revRadius * sin(angle * solarSystem[i].revSpeed)*tan(-1*solarSystem[i].revTilt), solarSystem[i].revRadius * cos(angle * solarSystem[i].revSpeed) ) );
+
+	//translation = parentModel * glm::translate( glm::mat4(1.0f), 
+	//	glm::vec3( solarSystem[i].revRadius * sin(angle * solarSystem[i].revSpeed), 0.0, solarSystem[i].revRadius * cos(angle * solarSystem[i].revSpeed) ) );
+
+
+    solarSystem[i].position = glm::vec3( solarSystem[i].revRadius * sin(angle * solarSystem[i].revSpeed), solarSystem[i].revRadius * sin(angle * solarSystem[i].revSpeed)*tan(-1*solarSystem[i].revTilt), solarSystem[i].revRadius * cos(angle * solarSystem[i].revSpeed) ) ;
+    solarSystem[i].model *= translation;
+
+}
+
+
+
+view = glm::lookAt( glm::vec3( (eyeX * solarSystem[planetID].radius) + solarSystem[planetID].position.x, (eyeY * solarSystem[planetID].radius) + solarSystem[planetID].position.y, (eyeZ * solarSystem[planetID].radius) + solarSystem[planetID].position.z), // this is the camera position 
+               solarSystem[planetID].position,  // this the focus point
+               glm::vec3( 0.0, 1.0, 0.0 ) ); // y is up
+
+
+
+for(int i = 0; i < numPlanets; i++)
+{
+    rotation = glm::rotate( glm::mat4(1.0f), spin * solarSystem[i].rotSpeed, glm::vec3( sin(solarSystem[i].axialTilt), cos(solarSystem[i].axialTilt), 0.0) );
+    solarSystem[i].model *= rotation;
+}
+
+for(int i = 0; i < numPlanets; i++)
+{
+
+    if(i != 12)
+        scaling = glm::scale(glm::mat4(1.0f), glm::vec3( solarSystem[i].radius, solarSystem[i].radius, solarSystem[i].radius ) );
+    else 
+        scaling = glm::scale(glm::mat4(1.0f), glm::vec3( 0.7 * solarSystem[i].radius, 0.001 * solarSystem[i].radius, 0.7 * solarSystem[i].radius ) );
     
+    solarSystem[i].model *= scaling;
+}
     // Update the state of the scene
     glutPostRedisplay();//call the display callback
 }
@@ -225,26 +308,46 @@ void keyboard(unsigned char key, int x_pos, int y_pos)
     {
         exit(0);
     }
-    if(key == 65 || key == 97)//'A'
+    // Handle planet switches
+    if(key == 48)  //'0' Sun
     {
-        rotationDirection *= -1; //Change the direction the cube is rotating
+          planetID = 0;
     }
-    if(key == 83 || key == 115)//'S'
+    if(key == 49)  //'1' Mercury
     {
-        rotationSpeed += .5;
+          planetID = 1;
     }
-    if(key == 68 || key == 100)//'D'
+    if(key == 50)  //'2' Venus
     {
-        rotationSpeed -= .5;
+          planetID = 2;
     }
-    // Handles camera changes
-    if(key == 73 || key == 105)//'i'
+    if(key == 51)  //'3' 3rd Rock from the Sun  
     {
-        eyeY += .5;
+          planetID = 3;
     }
-    if(key == 75 || key == 107)//'k'
+    if(key == 52)  //'4' Mars
     {
-        eyeY -= .5;
+          planetID = 5;
+    }
+    if(key == 53)  //'5' Jupiter
+    {
+          planetID = 8;
+    }
+    if(key == 54)  //6 Saturn
+    {
+          planetID = 11;
+    }
+    if(key == 55)  //'7' Uranis
+    {
+          planetID = 14;
+    }
+    if(key == 56) //'8' Neptune
+    {
+          planetID = 17;
+    }
+    if(key == 57)  //'9' Pluto
+    {
+          planetID = 20;
     }
 }
 
@@ -282,7 +385,9 @@ bool initialize(char * objPath, char * imgPath)
     ShaderLoader vertShader, fragShader;
 
     // Initialize the solarsystem
-    solarSystem = loadSystemAttributes("../bin/solarSystem.txt");
+    loadSystemAttributes("../bin/solarSystem.txt",solarSystem);
+    m_blob = new Magick::Blob[ solarSystem.size() ];
+    text = new GLuint[ solarSystem.size() ];
 
 
     //for( unsigned int i = 0; i < solarSystem->size(); i++ )
@@ -294,22 +399,30 @@ bool initialize(char * objPath, char * imgPath)
     Vertex * geometry = loadOBJ("../bin/sphere.obj");
 
 
+
     // Create a Vertex Buffer object to store this vertex info on the GPU
     glGenBuffers(1, &vbo_geometry);
     glBindBuffer(GL_ARRAY_BUFFER, vbo_geometry);
     glBufferData(GL_ARRAY_BUFFER, numVertices * sizeof(Vertex), geometry, GL_STATIC_DRAW);
 
     //--Geometry done
-    Magick::Image * m_pImage = new Magick::Image("texture_moon.jpg");
-    m_pImage->write(&m_blob, "RGBA");
+glGenTextures( (int)(solarSystem.size()), text );
+   for(unsigned int i = 0; i < solarSystem.size(); i++)
+{
 
-    glGenTextures(1, &text);
-    glBindTexture(GL_TEXTURE_2D, text);
+    Magick::Image * m_pImage = new Magick::Image( solarSystem[i].imgPath );
+    m_pImage->write(&m_blob[i], "RGBA");
+
+    glActiveTexture(GL_TEXTURE0);
+    glBindTexture(GL_TEXTURE_2D, text[i]);
     glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, m_pImage->columns(), m_pImage->rows(), 0, 
-                    GL_RGBA, GL_UNSIGNED_BYTE, m_blob.data() );
+                    GL_RGBA, GL_UNSIGNED_BYTE, m_blob[i].data() );
     glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
     glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
 
+    delete m_pImage;
+    m_pImage = NULL;
+}
 
     //Set the shaders
     GLuint vertex_shader = glCreateShader(GL_VERTEX_SHADER);
@@ -408,7 +521,7 @@ bool initialize(char * objPath, char * imgPath)
     //  if you will be having a moving camera the view matrix will need to more dynamic
     //  ...Like you should update it before you render more dynamic 
     //  for this project having them static will be fine
-    view = glm::lookAt( glm::vec3(0.0, 8.0, -60.0), //Eye Position
+    view = glm::lookAt( glm::vec3(0.0, 8.0, -16.0), //Eye Position
                         glm::vec3(0.0, 0.0, 0.0), //Focus point
                         glm::vec3(0.0, 1.0, 0.0)); //Positive Y is up
 
@@ -474,9 +587,8 @@ Vertex * loadOBJ( const char * objPath)
     return geo;
 }
 
-vector<celestial> * loadSystemAttributes( const char fileName[32] )
+void loadSystemAttributes( const char fileName[32], vector<celestial>&  returnSystem)
 {
-    vector<celestial> * returnSystem = new vector<celestial>;
 
     ifstream fin;
     fin.clear();
@@ -484,181 +596,87 @@ vector<celestial> * loadSystemAttributes( const char fileName[32] )
 
     char celestialType[32];
     char attribute[32];
-    int sunIndex = 0;
     int mostRecentPlanetIndex = 0;
 
     float conversionFactor = (M_PI/180.0);
-    float rotSpeed = 0.0;
-    float revSpeed = 0.0;
-    float radius = 0.0;
-    float axialTilt = 0.0;
-    float revRadius = 0.0;
-    float revTilt = 0.0;
-    char imgPath[30] = "temporary.jpg";
-
+    celestial temp;
 
     fin >> celestialType;
     int i = 0;
     while( fin.good() )
     {
-        fin >> attribute >> rotSpeed;
-        fin >> attribute >> revSpeed;
-        fin >> attribute >> axialTilt;
-        fin >> attribute >> radius;
-        fin >> attribute >> revRadius;
-        fin >> attribute >> revTilt;
-        fin >> attribute >> imgPath;
+        fin >> attribute >> temp.rotSpeed;
+        fin >> attribute >> temp.revSpeed;
+        fin >> attribute >> temp.axialTilt;
+        fin >> attribute >> temp.radius;
+        fin >> attribute >> temp.revRadius;
+        fin >> attribute >> temp.revTilt;
+        fin >> attribute >> temp.imgPath;
 
-        radius = 0.5;
-        revSpeed = 1;
-        //revRadius = revRadius / SCALING_FACTOR;
-        //radius = radius / SCALING_FACTOR;
-        axialTilt *= conversionFactor;
-        revTilt *= conversionFactor;
+        cout << attribute << temp.rotSpeed << endl;
+        cout << attribute << temp.revSpeed << endl;
+        cout << attribute << temp.axialTilt << endl;
+        cout << attribute << temp.radius << endl;
+        cout << attribute << temp.revRadius << endl;
+        cout << attribute << temp.revTilt << endl;
+        cout << attribute << temp.imgPath << endl;
+        
+        temp.axialTilt *= conversionFactor;
+        temp.revTilt *= conversionFactor;
 
-        celestial * parent = NULL;
+        
+        temp.model = glm::mat4(1.0f);
+        temp.translation = glm::mat4(1.0f);
+        temp.position = glm::vec3(0.0f);
 
+        
+ 	      temp.parent = 0;
         if( strcmp(celestialType, "Star:") == 0 )
         {
-            sunIndex = returnSystem->size();
+            temp.radius /= SCALING_FACTOR;
+           temp.revRadius = 0;
         }
         else if( strcmp(celestialType, "Planet:") == 0 )
         {
-            parent = &( (*returnSystem)[sunIndex] );
-            mostRecentPlanetIndex = returnSystem->size();
+            temp.radius /= SCALING_FACTOR;
+            temp.rotSpeed = temp.rotSpeed / EARTHS_DEG_PER_SEC * 0.05;
+            temp.revSpeed = temp.revSpeed / EARTHS_DEG_PER_SEC * 0.05;
+           temp.revRadius = 1 + i;
+           mostRecentPlanetIndex = i;  
+            
+        }
+        else if( strcmp(celestialType, "Rings:") == 0 )
+        {
+            temp.radius /= SCALING_FACTOR;
+            temp.radius *= 3; 
+            temp.rotSpeed = temp.rotSpeed / EARTHS_DEG_PER_SEC * 0.05;
+            temp.revSpeed = temp.revSpeed / EARTHS_DEG_PER_SEC * 0.05;
+           temp.parent = mostRecentPlanetIndex; 
             
         }
         else if( strcmp(celestialType, "Moon:") == 0 )
         {
-            revRadius = 1;
-            parent = &( (*returnSystem)[mostRecentPlanetIndex] ); 
-            revSpeed = 0;
+            temp.radius  /= SCALING_FACTOR;
+            temp.radius *= 3; 
+            temp.rotSpeed = temp.rotSpeed / MOON_DEG_PER_SEC * 0.005;
+
+            temp.revSpeed = temp.revSpeed / MOON_DEG_PER_SEC * 0.005;
+            temp.revRadius /= SCALING_FACTOR;
+            temp.revRadius /= 3;
+            temp.parent = mostRecentPlanetIndex; 
+
         }
 
-        returnSystem->push_back(celestial( rotSpeed, revSpeed, radius, 
-            axialTilt, revRadius, revTilt, parent, imgPath ));
+        returnSystem.push_back(temp);
 
         fin >> celestialType;
+        numPlanets++;
         i += 1;
     }
 
-    return returnSystem;
+   
 }
 
-celestial::celestial() : 
-    rotSpeed(0.0), revSpeed(0.0), radius(0.0), axialTilt(0.0),
-    revRadius(0.0), revTilt(0.0), model(1.0f), parent(NULL) //text(0)
-    {
-        strcpy(imgPath, "temp.jpg");
-    }
 
-celestial::celestial( float rtSpeed, float rvSpeed, float rad, 
-                    float axTlt, float rvRad, float rvTilt,
-                    celestial * par, char texFName[])  : 
-    rotSpeed(rtSpeed), revSpeed(rvSpeed), radius(rad), axialTilt(axTlt),
-    revRadius(rvRad), revTilt(rvTilt), model(1.0f), parent(par) //text(0)
-    {
-        strcpy(imgPath, texFName);
-    }
-
-celestial::celestial( const celestial & src ) : 
-    rotSpeed(src.rotSpeed), revSpeed(src.revSpeed), radius(src.radius), 
-    axialTilt(src.axialTilt), revRadius(src.revRadius), revTilt(src.revTilt), 
-    model(src.model), parent(src.parent) {}//text(src.text) {} 
-
-celestial::~celestial() {}
-
-void celestial::createTextureBuffer()
-{
-    //initialize magick for textures
-    Magick::Image * m_pImage = new Magick::Image(imgPath);
-    m_pImage->write(&m_blob, "RGBA");
-
-    //Create a Texture Buffer Object
-    glGenTextures(1, &text);
-    glBindTexture(GL_TEXTURE_2D, text);
-    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, m_pImage->columns(), m_pImage->rows(), 0, 
-                    GL_RGBA, GL_UNSIGNED_BYTE, m_blob.data() );
-    glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
-    glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-}
-
-void celestial::revolve()
-{
-    static float angle = 0.0;
-    float dt = getDT();
-
-    glm::mat4 parentModel;
-    if(parent != NULL)
-    {
-        parentModel = parent->model;
-    }
-    else
-        parentModel = glm::mat4(1.0f);
-
-    angle += dt * 2 * M_PI * revSpeed;
-    this->model = glm::translate( parentModel, glm::vec3( revRadius * sin(angle), 0.0, revRadius * cos(angle)));
-}
-
-void celestial::rotate()
-{
-    static float spin = 0.0;
-    float dt = getDT();
-
-    spin += dt * M_PI;
-    model *= glm::rotate( glm::mat4(1.0f), spin, glm::vec3( sin(axialTilt), cos(axialTilt), 0.0) );
-}
-
-void celestial::render()
-{
- //--Render the scene
-    view = glm::lookAt( glm::vec3(eyeX, eyeY, eyeZ), //Eye Position
-                        glm::vec3(focX, focY, focZ), //Focus point
-                        glm::vec3(0.0, 1.0, 0.0)); //Positive Y is up   
-    //premultiply the matrix for this example
-    mvp = projection * view * this->model;
-
-    //enable the shader program
-    glUseProgram(program);
-
-    //upload the matrix to the shader
-    glUniformMatrix4fv(loc_mvpmat, 1, GL_FALSE, glm::value_ptr(mvp));
-
-    //set up the Vertex Buffer Object so it can be drawn
-    glEnableVertexAttribArray(loc_position);
-    glEnableVertexAttribArray(texAttrib);
-    glBindBuffer(GL_ARRAY_BUFFER, vbo_geometry);
-    
-    glActiveTexture(GL_TEXTURE0);
-    glBindTexture(GL_TEXTURE_2D, text);
-
-
-    //set pointers into the vbo for each of the attributes(position and color)
-    glVertexAttribPointer( loc_position,//location of attribute
-                           3,//number of elements
-                           GL_FLOAT,//type
-                           GL_FALSE,//normalized?
-                           sizeof(Vertex),//stride
-                           0);//offset
-
-    glVertexAttribPointer( texAttrib,
-                           2,
-                           GL_FLOAT,
-                           GL_FALSE,
-                           sizeof(Vertex),
-                           (void*)offsetof(Vertex,uv));
-
-    glDrawArrays(GL_TRIANGLES, 0, numVertices);//mode, starting index, count
-
-    //clean up
-    glDisableVertexAttribArray(loc_position);
-    glDisableVertexAttribArray(texAttrib);
-}
-
-void celestial::scale()
-{
-    glm::mat4 scale = glm::scale(glm::mat4(1.0f), glm::vec3(radius, radius, radius));
-    model *= scale;
-}
 
 
