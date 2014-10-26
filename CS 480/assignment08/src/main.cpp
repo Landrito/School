@@ -269,11 +269,15 @@ void update()
     fallRigidBody->applyCentralImpulse(btVector3(sphereX, 0, sphereZ));
     fallRigidBody->getMotionState()->getWorldTransform(trans);
     trans.getOpenGLMatrix(m);
+    sphereX = 0;
+    sphereZ = 0;
     (*gameObjects)[SPHERE].model = glm::make_mat4(m);
 
     cylinderRigidBody->applyCentralImpulse(btVector3(cylX, 0, cylZ));
     cylinderRigidBody->getMotionState()->getWorldTransform(trans);
     trans.getOpenGLMatrix(m);
+    cylX = 0;
+    cylZ = 0;
     (*gameObjects)[CYL].model = glm::make_mat4(m);
 
     groundRigidBody->getMotionState()->getWorldTransform(trans);
