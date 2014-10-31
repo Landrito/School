@@ -552,10 +552,10 @@ vector<Object> * initialize()
     Object board, puck, paddleOne, paddleTwo;
 
     //If any of the load objects doesn't work return;
-    if( !board.loadObject("big_floor.obj") ||
-    	!puck.loadObject("unit_cube.obj") ||
-    	!paddleOne.loadObject("unit_cyl.obj") ||
-    	!paddleTwo.loadObject("unit_sphere.obj") )
+    if( !board.loadObject("objects/tablev1.obj") ||
+    	!puck.loadObject("objects/puck.obj") ||
+    	!paddleOne.loadObject("objects/paddle.obj") ||
+    	!paddleTwo.loadObject("objects/paddle.obj") )
     	return NULL;
 
     //If any of the load textures doesn't work return;
