@@ -50,6 +50,7 @@ public:
     //setters
     void setVertexBuffer(GLuint vbo);
     void setTextureBuffer(GLuint vbo);
+    void setCollisionShape();
 
     glm::mat4 model;
     GLuint vbo_geometry;
@@ -58,6 +59,8 @@ public:
 	int numVertices;
 	Magick::Image * image;
 	Magick::Blob * blob;
+    bool movingDynamic;
+    btCollisionShape * collisionShape;
     
 };
 
@@ -75,6 +78,8 @@ int sphereX =0;
 int sphereZ =0; 
 int cylX =0;
 int cylZ =0;
+
+
 
     // BULLET initialize
     //build broadphase
@@ -158,6 +163,9 @@ void cleanUp();
 //Time things
 float getDT();
 std::chrono::time_point<std::chrono::high_resolution_clock> t1,t2;
+
+btVector3 toBtVec3(Vertex vec);
+
 
 int main(int argc, char **argv)
 {
@@ -565,6 +573,16 @@ vector<Object> * initialize()
     	!paddleTwo.loadTexture("texture_earth_clouds.jpg") )
     	return NULL;
 
+    board.movingDynamic = false;
+    puck.movingDynamic = true;
+    paddleOne.movingDynamic = true;
+    paddleTwo.movingDynamic = true;
+
+
+    board.setCollisionShape();
+    puck.setCollisionShape();
+    paddleOne.collisionShape = new btCylinderShape( btVector3(1,1,0) );
+    paddleTwo.collisionShape = new btCylinderShape( btVector3(1,1,0) );
 
     //push each object into the vector
     vector<Object> * objectVector = new vector<Object>;
@@ -749,3 +767,31 @@ float getDT()
     return ret;
 }
 
+void Object::setCollisionShape()
+{
+    btTriangleMesh* trimesh = new btTriangleMesh();
+    for (int i=0;i<numVertices / 3;i++)
+    {
+        trimesh->addTriangle(toBtVec3(geometry[i] ), toBtVec3(geometry[i+1] ), toBtVec3(geometry[i+2]) );
+    }
+
+    if(collisionShape != NULL)
+    {
+        delete collisionShape; 
+        collisionShape = NULL;
+    }
+
+    if(movingDynamic)
+        collisionShape = new btConvexTriangleMeshShape(trimesh);
+
+    else
+    {
+        bool useQuantization = true;
+        collisionShape = new btBvhTriangleMeshShape(trimesh,useQuantization);
+    }
+}
+
+btVector3 toBtVec3( Vertex vec)
+{
+    return btVector3(vec.position[0], vec.position[1], vec.position[2]);
+}
