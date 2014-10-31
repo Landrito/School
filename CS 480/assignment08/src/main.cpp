@@ -485,6 +485,7 @@ bool Object::loadObject(const char * path)
 
         geometry -= numVertices;
 
+        printf("%s has %d vertices\n", path, numVertices / 3);
 		//return true cause you found the stuff!
 		return true;
     }
@@ -538,11 +539,8 @@ vector<Object> * initialize()
     //initialize dynamics world
     dynamicsWorld->setGravity(btVector3(0,-9.81, 0));
     // put ground rigid body in to dynamics world
-    dynamicsWorld->addRigidBody(groundRigidBody);/*
-    dynamicsWorld->addRigidBody(frontRigidBody);
-    dynamicsWorld->addRigidBody(backRigidBody);
-    dynamicsWorld->addRigidBody(rightRigidBody);
-    dynamicsWorld->addRigidBody(leftRigidBody);*/
+    dynamicsWorld->addRigidBody(groundRigidBody);
+    
     //calculate inertia and mass put sphere rigid body in to dynamics world
     fallShape->calculateLocalInertia(mass, fallInertia);
     btRigidBody::btRigidBodyConstructionInfo fallRigidBodyCI(mass, fallMotionState, fallShape, fallInertia);
@@ -559,6 +557,9 @@ vector<Object> * initialize()
     //Initialize objects to put into the list;
     Object board, puck, paddleOne, paddleTwo;
 
+
+
+
     //If any of the load objects doesn't work return;
     if( !board.loadObject("objects/tablev1.obj") ||
     	!puck.loadObject("objects/puck.obj") ||
@@ -573,12 +574,13 @@ vector<Object> * initialize()
     	!paddleTwo.loadTexture("texture_earth_clouds.jpg") )
     	return NULL;
 
+    //set if the object is a dynamic moving object
     board.movingDynamic = false;
     puck.movingDynamic = true;
     paddleOne.movingDynamic = true;
     paddleTwo.movingDynamic = true;
 
-
+    //set the collision shapes
     board.setCollisionShape();
     puck.setCollisionShape();
     paddleOne.collisionShape = new btCylinderShape( btVector3(1,1,0) );
@@ -770,15 +772,9 @@ float getDT()
 void Object::setCollisionShape()
 {
     btTriangleMesh* trimesh = new btTriangleMesh();
-    for (int i=0;i<numVertices / 3;i++)
-    {
+    for (int i=0;i<numVertices / 3 ; i = i + 3)
+    { 
         trimesh->addTriangle(toBtVec3(geometry[i] ), toBtVec3(geometry[i+1] ), toBtVec3(geometry[i+2]) );
-    }
-
-    if(collisionShape != NULL)
-    {
-        delete collisionShape; 
-        collisionShape = NULL;
     }
 
     if(movingDynamic)
