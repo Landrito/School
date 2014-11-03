@@ -16,12 +16,29 @@
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/type_ptr.hpp> //Makes passing matrices to shaders easier
 
+#include <math.h>
+
 #include "ShaderLoader.h" 
 
 #include <btBulletDynamicsCommon.h>
 using namespace std;
 
-enum object {FLOOR, CUBE, CYL, SPHERE};
+#define BIT(x) (1<<(x))
+const short COL_NOTHING = 0; //<collide with invisibleWall
+const short COL_PUCK = BIT(0); //<collide with puck
+const short COL_PADDLE_ONE = BIT(1); //<collide with paddleone
+const short COL_PADDLE_TWO= BIT(2); //<collide with paddletwo
+const short COL_WALL = BIT(3);
+const short COL_TABLE = BIT(4);
+	
+
+short wallCollidesWith = COL_PADDLE_ONE | COL_PADDLE_TWO | COL_TABLE ;
+short puckCollidesWith = COL_PADDLE_ONE | COL_PADDLE_TWO | COL_TABLE;
+short paddleOneCollidesWith = COL_PUCK | COL_WALL | COL_TABLE;
+short paddleTwoCollidesWith = COL_PUCK | COL_WALL | COL_TABLE;
+short tableCollidesWith = COL_PADDLE_ONE | COL_PADDLE_TWO | COL_PUCK | COL_WALL;
+
+enum object {TABLE, PADDLEONE, PADDLETWO, PUCK};
 
 //This is the structure that will be
 struct Vertex
@@ -59,12 +76,10 @@ public:
 	int numVertices;
 	Magick::Image * image;
 	Magick::Blob * blob;
-    bool movingDynamic;
-    btCollisionShape * collisionShape;
-    
+	btTriangleMesh* trimesh;
 };
 
-//Global Variables
+//////////////////////////////////////////////Global Variables///////////////////////////////////////
 vector<Object> * gameObjects;
 int w, h;
 glm::mat4 view;
@@ -73,79 +88,38 @@ GLuint program;
 GLint loc_position;
 GLint loc_texture;
 GLint loc_mvpmat;
+bool pause = false;
+int redScore = 0;
+int blueScore = 0;
+int scoreTimer = 0;
+btTransform startingTransform;
 
-int sphereX =0;
-int sphereZ =0; 
-int cylX =0;
-int cylZ =0;
+int paddleOneX =0;
+int paddleOneZ =0; 
+int paddleTwoX =0;
+int paddleTwoZ =0;
 
-
-
-    // BULLET initialize
-    //build broadphase
+  /////////////////////////////////////////// BULLET initialize////////////////////////////////////
+    //BUILD BROADPHASE
     btBroadphaseInterface* broadphase = new btDbvtBroadphase();
 
-    // set up the collision config, and dispatcher
+    // SET UP THE COLLISION CONFIGURATION AND DISPATCHER
     btDefaultCollisionConfiguration* collisionConfiguration = new btDefaultCollisionConfiguration();
     btCollisionDispatcher* dispatcher = new btCollisionDispatcher(collisionConfiguration);
-    // actual physics solver
+    // ACTUAL PHYSICS SOLVER
     btSequentialImpulseConstraintSolver* solver = new btSequentialImpulseConstraintSolver;
 
-    // the world
+    // DECLARE THE DYNAMIC WORLD
     btDiscreteDynamicsWorld* dynamicsWorld = new btDiscreteDynamicsWorld(dispatcher, broadphase, solver, collisionConfiguration);
-    // declare ground collisionshape and sphere and cylinder and cube
-    btCollisionShape* groundShape = new btStaticPlaneShape(btVector3(0, 1, 0), 1);
-    btCollisionShape* frontShape = new btStaticPlaneShape(btVector3(0,0,1),1);
-    /*
-    btCollisionShape* backShape = new btStaticPlaneShape(btVector3(0,0,1),1);
-    btCollisionShape* rightShape = new btStaticPlaneShape(btVector3(1,0,0),1);
-    btCollisionShape* leftShape = new btStaticPlaneShape(btVector3(1,0,0),1);
-    */
-    btCollisionShape* fallShape = new btSphereShape(1);
-    btCollisionShape* cylinderShape = new btCylinderShape(btVector3(1,1,0));
-    btCollisionShape* cubeShape = new btBoxShape(btVector3(1,1,1));
+    ////////////////////////////////////////////////////////////////////////////////////////////////////
+ 
+btRigidBody* puckRigidBody; 
+btRigidBody* paddleOneRigidBody;
+btRigidBody* paddleTwoRigidBody; 
+btRigidBody* tableRigidBody;
+btRigidBody* invisibleWallRigidBody;
 
-    //declare ground motion state
-    btDefaultMotionState* groundMotionState = new btDefaultMotionState(btTransform(btQuaternion(0, 0, 0, 1), btVector3(0, -1, 0)));
-    btRigidBody::btRigidBodyConstructionInfo
-    groundRigidBodyCI(0, groundMotionState, groundShape, btVector3(0, 0, 0));
-    btRigidBody* groundRigidBody = new btRigidBody(groundRigidBodyCI);
-    //declare front wall
-    /*  btDefaultMotionState* frontMotionState = new btDefaultMotionState(btTransform(btQuaternion(0, 0, 0, 1), btVector3(0, 0, 10)));
-    btRigidBody::btRigidBodyConstructionInfo
-    frontRigidBodyCI(0, frontMotionState, frontShape, btVector3(0, 0, 0));
-    btRigidBody* frontRigidBody = new btRigidBody(frontRigidBodyCI);
-    //declare back wall
-    btDefaultMotionState* backMotionState = new btDefaultMotionState(btTransform(btQuaternion(0, 0, 0, 1), btVector3(0, 0, -10)));
-    btRigidBody::btRigidBodyConstructionInfo
-    backRigidBodyCI(0, backMotionState, backShape, btVector3(0, 0, 0));
-    btRigidBody* backRigidBody = new btRigidBody(backRigidBodyCI);
-    //declare right wall
-    btDefaultMotionState* rightMotionState = new btDefaultMotionState(btTransform(btQuaternion(0, 0, 0, 1), btVector3(10, 0, 0)));
-    btRigidBody::btRigidBodyConstructionInfo
-    rightRigidBodyCI(0, rightMotionState, rightShape, btVector3(0, 0, 0));
-    btRigidBody* rightRigidBody = new btRigidBody(rightRigidBodyCI);
-    //declare left wall
-    btDefaultMotionState* leftMotionState = new btDefaultMotionState(btTransform(btQuaternion(0, 0, 0, 1), btVector3(-10, 0, 0)));
-    btRigidBody::btRigidBodyConstructionInfo
-    leftRigidBodyCI(0, leftMotionState, leftShape, btVector3(0, 0, 0));
-    btRigidBody* leftRigidBody = new btRigidBody(leftRigidBodyCI);
-    */ //declare sphere motion state
-    btDefaultMotionState* fallMotionState =
-    new btDefaultMotionState(btTransform(btQuaternion(0, 0, 0, 1), btVector3(0, 50, 0)));
-    btScalar mass = 1;
-    btVector3 fallInertia(0, 0, 0);
-    btRigidBody* fallRigidBody; 
-    //declare cylinder motion state
-    btDefaultMotionState* cylinderMotionState =
-    new btDefaultMotionState(btTransform(btQuaternion(0, 0, 0, 1), btVector3(0, 0, 0)));
-    btRigidBody* cylinderRigidBody; 
-    //declare cube motion state
-    btDefaultMotionState* cubeMotionState =
-    new btDefaultMotionState(btTransform(btQuaternion(0, 0, 0, 1), btVector3(-3, 0, 0)));
-    btRigidBody::btRigidBodyConstructionInfo
-    cubeRigidBodyCI(0, cubeMotionState, cubeShape, btVector3(0, 0, 0));
-    btRigidBody* cubeRigidBody = new btRigidBody(cubeRigidBodyCI);
+
 
 //--GLUT Callbacks
 void render();
@@ -154,6 +128,7 @@ void reshape(int n_w, int n_h);
 void keyboard(unsigned char key, int x_pos, int y_pos);
 void arrowKey( int key, int x_pos, int y_pos );
 void mouse(int button, int state, int x_pos, int y_pos);
+void mouseMove(int x_pos, int y_pos);
 void menu(int id);
 
 //Start and enders for the program
@@ -164,25 +139,28 @@ void cleanUp();
 float getDT();
 std::chrono::time_point<std::chrono::high_resolution_clock> t1,t2;
 
-btVector3 toBtVec3(Vertex vec);
+
 
 
 int main(int argc, char **argv)
 {
+   
     gameObjects = new vector<Object>;
-	//This object is only used to be able to be able to access the static members in the class
-	Object bufferHolder;
-    
     // Initialize glut
     glutInit(&argc, argv);
     glutInitDisplayMode(GLUT_DOUBLE | GLUT_DEPTH);
     glutInitWindowSize(w, h);
     // Name and create the Window
-    glutCreateWindow("Solar System");
+    glutCreateWindow("AIR HOCKEY");
 
     // Create menu
     glutCreateMenu(menu);
-    glutAddMenuEntry("Exit", 1);
+    glutAddMenuEntry("Start", 1);
+    glutAddMenuEntry("Stop", 2);
+    glutAddMenuEntry("Pause", 3);
+    glutAddMenuEntry("Harris-ify", 4);
+    glutAddMenuEntry("Normal-ify", 5);
+    glutAddMenuEntry("Exit", 6);
     glutAttachMenu(GLUT_RIGHT_BUTTON);
     // Now that the window is created the GL context is fully set up
     // Because of that we can now initialize GLEW to prepare work with shaders
@@ -199,11 +177,11 @@ int main(int argc, char **argv)
     glutReshapeFunc(reshape);// Called if the window is resized
     glutIdleFunc(update);// Called if there is nothing else to do
     glutKeyboardFunc(keyboard);// Called if there is keyboard input
+    glutMotionFunc(mouseMove);
     glutMouseFunc(mouse);
     glutSpecialFunc(arrowKey);
     // Initialize all of our resources(shaders, geometry)
-    //Initialize the objects
-    gameObjects = initialize();
+   gameObjects = initialize();
     if(gameObjects != NULL)
     {
         t1 = std::chrono::high_resolution_clock::now();
@@ -216,9 +194,23 @@ int main(int argc, char **argv)
 
 void render()
 {
+
     //clear the screen
     glClearColor(0.0, 0.0, 0.2, 1.0);
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+
+    glUseProgram(0);
+
+    string displayString = "Red Team: " + to_string(redScore) + "   Blue Team: " + to_string(blueScore);
+
+
+    glColor4f(1.0f, 1.0f, 1.0f, 1.0f);    // A
+    glRasterPos2f(-0.5,0.9);     // B
+    for( size_t i = 0; i < displayString.size(); ++i )
+    {
+        glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18, displayString[i]);
+    }
+
 
     for(unsigned int i = 0; i < gameObjects->size(); i++)
     {
@@ -267,39 +259,93 @@ void render()
     glutSwapBuffers();
 }
 
+bool tableRendered = false;
+
 void update()
 {
-    float dt = getDT();// if you have anything moving, use dt.
+	if(!pause)
+	{
+		
 
-    btTransform trans;
-    btScalar m[16];
-    
-    fallRigidBody->applyCentralImpulse(btVector3(sphereX, 0, sphereZ));
-    fallRigidBody->getMotionState()->getWorldTransform(trans);
-    trans.getOpenGLMatrix(m);
-    sphereX = 0;
-    sphereZ = 0;
-    (*gameObjects)[SPHERE].model = glm::make_mat4(m);
+	    float dt = getDT();// if you have anything moving, use dt.
 
-    cylinderRigidBody->applyCentralImpulse(btVector3(cylX, 0, cylZ));
-    cylinderRigidBody->getMotionState()->getWorldTransform(trans);
-    trans.getOpenGLMatrix(m);
-    cylX = 0;
-    cylZ = 0;
-    (*gameObjects)[CYL].model = glm::make_mat4(m);
+	    btTransform trans;
+	    btScalar m[16];
+	    btVector3 v;
 
-    groundRigidBody->getMotionState()->getWorldTransform(trans);
-    trans.getOpenGLMatrix(m);
-    (*gameObjects)[FLOOR].model = glm::make_mat4(m);
+	    if(paddleOneX != 0 || paddleOneZ != 0){
+	    	paddleOneRigidBody->applyCentralImpulse(btVector3(paddleOneX, 0, paddleOneZ));
+	    	paddleOneX = 0;
+	    	paddleOneZ = 0;
+	    }
+	    paddleOneRigidBody->getMotionState()->getWorldTransform(trans);
+	    trans.getOpenGLMatrix(m);
+	    (*gameObjects)[PADDLEONE].model = glm::make_mat4(m);
 
-    cubeRigidBody->getMotionState()->getWorldTransform(trans);
-    trans.getOpenGLMatrix(m);
-    (*gameObjects)[CUBE].model = glm::make_mat4(m);
 
-    dynamicsWorld->stepSimulation(dt,10);
+	    if(paddleTwoX != 0 || paddleTwoZ != 0){	
+	    	paddleTwoRigidBody->applyCentralImpulse(btVector3(paddleTwoX, 0, paddleTwoZ));
+	    	paddleTwoX = 0;
+	    	paddleTwoZ = 0;
+	    }
+	    paddleTwoRigidBody->getMotionState()->getWorldTransform(trans);
+	    trans.getOpenGLMatrix(m);
+	    (*gameObjects)[PADDLETWO].model = glm::make_mat4(m);
 
-    // Update the state of the scene
-    glutPostRedisplay();//call the display callback
+
+	    if(!tableRendered){
+	    	tableRendered = true;
+	    	tableRigidBody->getMotionState()->getWorldTransform(trans);
+	    	trans.getOpenGLMatrix(m);
+	   		(*gameObjects)[TABLE].model = glm::make_mat4(m);
+	    }
+	   
+	   puckRigidBody->getMotionState()->getWorldTransform(trans);
+	    trans.getOpenGLMatrix(m);
+	    glm::mat4 transformMatrix = glm::make_mat4(m);
+	    glm::vec4 puckPosition = transformMatrix * glm::vec4(1.0f);
+
+	    if(puckPosition.x < -12.1 && puckPosition.z < 2.5 && puckPosition.z > -2.5){
+	    	puckRigidBody->setWorldTransform(startingTransform);
+	    	puckRigidBody->setLinearVelocity(btVector3(0,0,0));
+	    	if(scoreTimer == 0){
+	    		redScore++;
+	    		scoreTimer = 10;
+	    	}
+	    	
+	    } else if(puckPosition.x > 8.7 && puckPosition.z < 2.5 && puckPosition.z > -2.5){
+	    	puckRigidBody->setWorldTransform(startingTransform);
+	    	puckRigidBody->setLinearVelocity(btVector3(0,0,0));
+	    	if(scoreTimer == 0){
+		    	blueScore++;
+		    	scoreTimer = 10;
+	    	}
+	    } else if(puckPosition.z > 6 || puckPosition.z < -6) {
+	    	puckRigidBody->setWorldTransform(startingTransform);
+	    	puckRigidBody->setLinearVelocity(btVector3(0,0,0));
+	    }
+
+	    if(scoreTimer > 0){
+		    scoreTimer--;
+	    }
+
+
+	    (*gameObjects)[PUCK].model = glm::make_mat4(m);
+
+	    dynamicsWorld->stepSimulation(dt, 5);
+
+	    glm::vec3 target_pos; // up will stay the same
+	    target_pos.x = puckPosition.x / 9;
+	    target_pos.y = puckPosition.y / 9;
+	    target_pos.z = puckPosition.z / 9;
+
+	   	view = glm::lookAt( glm::vec3(0.0, 12.0, -16.0),
+		target_pos, 
+		glm::vec3( 0.0, 1.0, 0.0));
+
+	    // Update the state of the scene
+	    glutPostRedisplay();//call the display callback
+	}
 }
 
 void reshape(int n_w, int n_h)
@@ -322,24 +368,24 @@ void keyboard(unsigned char key, int x_pos, int y_pos)
     }
     else if( key == 115 )// S
        {
-     // move sphere back
-        sphereZ--;
+     // move PADDLEONE back
+        paddleOneZ--;
        }
     else if( key == 97 )// A
        {
-        // move sphere left
-          sphereX++;
+        // move PADDLEONE left
+          paddleOneX++;
        }
 
     else if( key == 119 ) // W
       {
-    // move sphere forward
-           sphereZ++;
+    // move PADDLEONE forward
+           paddleOneZ++;
       }
     else if( key == 100 ) // D
       {
-       // Move sphere right
-      sphereX--;
+       // Move PADDLEONE right
+      	   paddleOneX--;
       }
 }
 
@@ -347,49 +393,102 @@ void arrowKey( int key, int x_pos, int y_pos  )
 {
     if( key == GLUT_KEY_RIGHT) // ->
       {
-    // move cylinder right
-          cylX--;
+    // move PADDLETWO right
+          paddleTwoX--;
       }
     else if( key == GLUT_KEY_UP) // ->
       {
-    // move cylinder back
-          cylZ++;
+    // move PADDLETWO back
+          paddleTwoZ++;
       }
     else if( key == GLUT_KEY_DOWN) // ->
       {
-    // move cylinder forward
-          cylZ--;
+    // move PADDLETWO forward
+          paddleTwoZ--;
       }
      else if( key == GLUT_KEY_LEFT ) // <-
       {
-    // move cylinder left
-          cylX++;
+    // move PADDLETWO left
+          paddleTwoX++;
       }
 
 }
 
 void mouse(int button, int state, int x_pos, int y_pos) {}
 
+
+int previous_x_pos = 0;
+int previous_y_pos = 0;
+
+void mouseMove(int x_pos, int y_pos)
+{
+	int xDel = x_pos - previous_x_pos;
+	int yDel = y_pos - previous_y_pos;
+	if( abs(xDel) > abs(yDel) ){
+		paddleTwoX = -xDel / abs(xDel);
+	} else {
+		paddleTwoZ = -yDel / abs(yDel);
+	}
+	previous_x_pos = x_pos;
+	previous_y_pos = y_pos;
+}
+
 void menu(int id)
 {
     switch(id)
-    {
-        case 1:
+    {	
+    	case 1:
+    		pause = false;
+    		break;
+    	case 2:
+    		pause = true;
+    		break;
+    	case 3:
+    		pause = !pause;
+    		break;
+    	case 4:
+    		(*gameObjects)[TABLE].loadTexture("harris.jpg");
+
+	    	//Bind the textures
+			glActiveTexture(GL_TEXTURE0);
+		    glBindTexture(GL_TEXTURE_2D, (*gameObjects)[TABLE].vbo_texture);
+		    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, (*gameObjects)[TABLE].getImage()->columns(), 
+		    	(*gameObjects)[TABLE].getImage()->rows(), 0, GL_RGBA, GL_UNSIGNED_BYTE, 
+		    	(*gameObjects)[TABLE].getBlob()->data() );
+		    glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+		    glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+
+    		break;
+    	case 5:
+    		(*gameObjects)[TABLE].loadTexture("Grey.jpg");
+
+	    	//Bind the textures
+			glActiveTexture(GL_TEXTURE0);
+		    glBindTexture(GL_TEXTURE_2D, (*gameObjects)[TABLE].vbo_texture);
+		    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, (*gameObjects)[TABLE].getImage()->columns(), 
+		    	(*gameObjects)[TABLE].getImage()->rows(), 0, GL_RGBA, GL_UNSIGNED_BYTE, 
+		    	(*gameObjects)[TABLE].getBlob()->data() );
+		    glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+		    glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+
+    		break;
+        case 6:
           exit(0); //start spinning case
           break;
     }
 }
 
 Object::Object() : model(1.0f), vbo_geometry(0), vbo_texture(0), geometry(NULL), numVertices(0), 
-    image(new Magick::Image), blob(new Magick::Blob) {}
+    image(new Magick::Image), blob(new Magick::Blob), trimesh(NULL){}
 
 Object::Object(const Object & src) : 
     model(src.model), 
     vbo_geometry(src.vbo_geometry), 
     vbo_texture(src.vbo_texture),
-    numVertices(src.numVertices), 
+    numVertices(src.numVertices),
     image(new Magick::Image( *(src.image) ) ), 
-    blob( new Magick::Blob( *(src.blob) ) )
+    blob( new Magick::Blob( *(src.blob) ) ),
+    trimesh(new btTriangleMesh(*(src.trimesh)))
     
 {
     geometry = new Vertex[numVertices];
@@ -421,6 +520,7 @@ Object& Object::operator=(const Object & src)
 		this->geometry = new Vertex[numVertices];
 		this->blob = new Magick::Blob( *(src.blob) );
 		this->image = new Magick::Image( *(src.image) );
+		this->trimesh = new btTriangleMesh(*(src.trimesh) );
         this->vbo_texture = src.vbo_texture;
         this->vbo_geometry = src.vbo_geometry;
 
@@ -446,6 +546,7 @@ bool Object::loadObject(const char * path)
     {
 
         aiMesh ** mesh = new aiMesh * [scene->mNumMeshes];
+	trimesh = new btTriangleMesh();
 
         for(unsigned int i = 0; i < scene->mNumMeshes; i++)
         {
@@ -457,6 +558,7 @@ bool Object::loadObject(const char * path)
         }
 
         geometry = new Vertex[ numVertices ];
+	btVector3 * array = new btVector3[3];
 
         for(unsigned int h = 0; h < scene->mNumMeshes; h++)
         {
@@ -473,6 +575,9 @@ bool Object::loadObject(const char * path)
                     geometry->position[0] = pos.x;
                     geometry->position[1] = pos.y;
                     geometry->position[2] = pos.z;
+		    
+		    //trimesh
+		    array[j]=btVector3(pos.x, pos.y,pos.z);
 
                     aiVector3D uv = mesh[h]->mTextureCoords[0][ face.mIndices[j] ];
 
@@ -480,6 +585,7 @@ bool Object::loadObject(const char * path)
                     geometry->uv[1] = uv.y;
                     geometry++;
                 }
+		trimesh->addTriangle(array[0],array[1],array[2]);
             }
         }
 
@@ -535,66 +641,100 @@ Magick::Blob * Object::getBlob() const
 
 vector<Object> * initialize()
 {
-    
     //initialize dynamics world
     dynamicsWorld->setGravity(btVector3(0,-9.81, 0));
-    // put ground rigid body in to dynamics world
-    dynamicsWorld->addRigidBody(groundRigidBody);
-    
-    //calculate inertia and mass put sphere rigid body in to dynamics world
-    fallShape->calculateLocalInertia(mass, fallInertia);
-    btRigidBody::btRigidBodyConstructionInfo fallRigidBodyCI(mass, fallMotionState, fallShape, fallInertia);
-    fallRigidBody = new btRigidBody(fallRigidBodyCI);    
-    dynamicsWorld->addRigidBody(fallRigidBody);
-    //cylinder
-    cylinderShape->calculateLocalInertia(mass, fallInertia);
-    btRigidBody::btRigidBodyConstructionInfo cylinderRigidBodyCI(mass, cylinderMotionState, cylinderShape, fallInertia);
-    cylinderRigidBody = new btRigidBody( cylinderRigidBodyCI);
-    dynamicsWorld->addRigidBody(cylinderRigidBody);
-    //cube
-    dynamicsWorld->addRigidBody(cubeRigidBody);
+   
 
-    //Initialize objects to put into the list;
-    Object board, puck, paddleOne, paddleTwo;
+//Initialize objects to put into the list;
+    Object table, paddleOne, paddleTwo, puck;
 
-
-
-
-    //If any of the load objects doesn't work return;
-    if( !board.loadObject("objects/tablev1.obj") ||
-    	!puck.loadObject("objects/puck.obj") ||
+//If any of the load objects doesn't work return;
+    if( !table.loadObject("objects/simple_table.obj") ||
+    	!puck.loadObject("objects/big_puck.obj") ||
     	!paddleOne.loadObject("objects/paddle.obj") ||
     	!paddleTwo.loadObject("objects/paddle.obj") )
     	return NULL;
 
     //If any of the load textures doesn't work return;
-    if( !board.loadTexture("Grey.jpg") ||
-    	!puck.loadTexture("texture_earth_clouds.jpg") ||
-    	!paddleOne.loadTexture("texture_earth_clouds.jpg") ||
-    	!paddleTwo.loadTexture("texture_earth_clouds.jpg") )
+    if( !table.loadTexture("Grey.jpg") ||
+    	!puck.loadTexture("White.jpg") ||
+    	!paddleOne.loadTexture("Maroon.jpg") ||
+    	!paddleTwo.loadTexture("Green.jpg") )
     	return NULL;
+bool useQuantization = true;
+    //declare collisionShapes
+    btCollisionShape* tableShape = new btBvhTriangleMeshShape(table.trimesh,useQuantization);
+    btCollisionShape* puckShape = new btConvexTriangleMeshShape(puck.trimesh);
+    btCollisionShape* paddleOneShape = new btConvexTriangleMeshShape(paddleOne.trimesh);
+    btCollisionShape* paddleTwoShape = new btConvexTriangleMeshShape(paddleTwo.trimesh);
+    btCollisionShape* invisibleWallShape = new btBoxShape(btVector3(0.1,10,10));
+    
+    //set motion states
+	//table
+    	 btDefaultMotionState* tableMotionState = new btDefaultMotionState(btTransform(btQuaternion(0, 0, 0, 1), btVector3(0, 0, 0)));
+        //puck
+	btDefaultMotionState* puckMotionState = new btDefaultMotionState(btTransform(btQuaternion(0, 0, 0, 1), btVector3(-2.8, 0.5, -1)));
+	//paddleOne
+	btDefaultMotionState* paddleOneMotionState = new btDefaultMotionState(btTransform(btQuaternion(0, 0, 0, 1), btVector3(3, 0, 0)));
+	//paddleTwo
+	btDefaultMotionState* paddleTwoMotionState = new btDefaultMotionState(btTransform(btQuaternion(0, 0, 0, 1), btVector3(-3, 0, 0)));
+	//Invisible wall
+	btDefaultMotionState* invisibleWallMotionState = new btDefaultMotionState(btTransform(btQuaternion(0, 0, 0, 1), btVector3(0, 0, 0)));
 
-    //set if the object is a dynamic moving object
-    board.movingDynamic = false;
-    puck.movingDynamic = true;
-    paddleOne.movingDynamic = true;
-    paddleTwo.movingDynamic = true;
+    //construct rigid bodies
+    //table
+    btRigidBody::btRigidBodyConstructionInfo tableRigidBodyCI(0, tableMotionState, tableShape,btVector3(0, 0, 0));
+    tableRigidBodyCI.m_restitution = 0.999f;
+	//puck
+	btRigidBody::btRigidBodyConstructionInfo puckRigidBodyCI(0.05f, puckMotionState, puckShape,btVector3(0, 0, 0));
+	puckRigidBodyCI.m_restitution = 0.999f;
+	//paddleOne
+	btRigidBody::btRigidBodyConstructionInfo paddleOneRigidBodyCI(2, paddleOneMotionState, paddleOneShape,btVector3(0, 0, 0));
+	paddleOneRigidBodyCI.m_restitution = 0.999f;
+	//paddleTwo
+	btRigidBody::btRigidBodyConstructionInfo paddleTwoRigidBodyCI(2, paddleTwoMotionState, paddleTwoShape,btVector3(0, 0, 0));
+	paddleTwoRigidBodyCI.m_restitution = 0.999f;
+	//Invisible wall
+	btRigidBody::btRigidBodyConstructionInfo invisibleWallRigidBodyCI(0, invisibleWallMotionState, invisibleWallShape,btVector3(0, 0, 0));
+	invisibleWallRigidBodyCI.m_restitution = 1.0f;
 
-    //set the collision shapes
-    board.setCollisionShape();
-    puck.setCollisionShape();
-    paddleOne.collisionShape = new btCylinderShape( btVector3(1,1,0) );
-    paddleTwo.collisionShape = new btCylinderShape( btVector3(1,1,0) );
+    //set rigid bodies
+	//table
+	tableRigidBody = new btRigidBody(tableRigidBodyCI);
+	//puck
+	puckRigidBody = new btRigidBody(puckRigidBodyCI);
+	//paddleOne
+	paddleOneRigidBody = new btRigidBody(paddleOneRigidBodyCI);
+	//paddleTwo
+	paddleTwoRigidBody = new btRigidBody(paddleTwoRigidBodyCI);
+	//invisible wall
+	invisibleWallRigidBody = new btRigidBody(invisibleWallRigidBodyCI);
+	
+	paddleOneRigidBody->setLinearFactor(btVector3(1,0,1));
+	paddleTwoRigidBody->setLinearFactor(btVector3(1,0,1));
+	puckRigidBody->setLinearFactor(btVector3(1,0,1));
 
+	paddleOneRigidBody->setActivationState(DISABLE_DEACTIVATION);
+	paddleTwoRigidBody->setActivationState(DISABLE_DEACTIVATION);
+
+    //place in dynamic world
+	dynamicsWorld->addRigidBody(tableRigidBody, COL_TABLE, tableCollidesWith);
+    dynamicsWorld->addRigidBody(puckRigidBody, COL_PUCK, puckCollidesWith);
+	dynamicsWorld->addRigidBody(paddleOneRigidBody, COL_PADDLE_ONE, paddleOneCollidesWith);
+	dynamicsWorld->addRigidBody(paddleTwoRigidBody, COL_PADDLE_TWO, paddleTwoCollidesWith);
+	dynamicsWorld->addRigidBody(invisibleWallRigidBody, COL_WALL, wallCollidesWith);
+
+    
     //push each object into the vector
     vector<Object> * objectVector = new vector<Object>;
     
-    objectVector->push_back(board);
-    objectVector->push_back(puck);
+    objectVector->push_back(table);
     objectVector->push_back(paddleOne);
     objectVector->push_back(paddleTwo);
-    
+    objectVector->push_back(puck);
 
+
+	
     //for readibilities sake!
     int numObjects = objectVector->size();
 
@@ -732,7 +872,7 @@ vector<Object> * initialize()
     //  if you will be having a moving camera the view matrix will need to more dynamic
     //  ...Like you should update it before you render more dynamic 
     //  for this project having them static will be fine
-    view = glm::lookAt( glm::vec3(0.0, 8.0, -16.0), //Eye Position
+    view = glm::lookAt( glm::vec3(0.0, 12.0, -16.0), //Eye Position
                         glm::vec3(0.0, 0.0, 0.0), //Focus point
                         glm::vec3(0.0, 1.0, 0.0)); //Positive Y is up
 
@@ -744,6 +884,8 @@ vector<Object> * initialize()
     //enable depth testing
     glEnable(GL_DEPTH_TEST);
     glDepthFunc(GL_LESS);
+
+    puckRigidBody->getMotionState()->getWorldTransform(startingTransform);
 
     return objectVector;
 }
@@ -769,25 +911,3 @@ float getDT()
     return ret;
 }
 
-void Object::setCollisionShape()
-{
-    btTriangleMesh* trimesh = new btTriangleMesh();
-    for (int i=0;i<numVertices / 3 ; i = i + 3)
-    { 
-        trimesh->addTriangle(toBtVec3(geometry[i] ), toBtVec3(geometry[i+1] ), toBtVec3(geometry[i+2]) );
-    }
-
-    if(movingDynamic)
-        collisionShape = new btConvexTriangleMeshShape(trimesh);
-
-    else
-    {
-        bool useQuantization = true;
-        collisionShape = new btBvhTriangleMeshShape(trimesh,useQuantization);
-    }
-}
-
-btVector3 toBtVec3( Vertex vec)
-{
-    return btVector3(vec.position[0], vec.position[1], vec.position[2]);
-}
